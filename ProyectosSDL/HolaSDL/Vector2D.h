@@ -1,0 +1,20 @@
+#ifndef VectoR2D
+#define VectoR2D
+
+using namespace std;
+
+class Vector2D {
+private:
+	int X = 0;
+	int Y = 0;
+
+public:
+	Vector2D() { X = 0; Y = 0; };
+	Vector2D(int x, int y) { X= x; Y = y; };
+
+	int getX() const { return X; };
+	int getY() const { return Y; };
+	void SumaVectores();
+};
+
+#endif
