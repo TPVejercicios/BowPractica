@@ -15,7 +15,7 @@ Game::Game() {				//Constructora, inicializa el juego y todos sus objetos
 			Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
 			textures.push_back(aux);
 		}
-		bow = new Bow(textures.at(1));
+		bow = new Bow(textures.at(1), textures.at(2));
 		arrow = new Arrow(textures.at(3));
 
 		//vector de ballons
@@ -51,7 +51,8 @@ void Game::render() const {		//Dibuja cada objeto en el SDL_Renderer
 
 void Game::update() {
 	bow->update();
-	//sarrow->update();
+	arrow->update();
+	cout << "ARROW" << arrow->valorNeed();
 	/*for (int i = 0; i < ballons.size; i++) {
 		ballons.at(i)->update();
 	}*/
@@ -76,20 +77,7 @@ void Game::handleEvents() {
 			}*/
 		}
 		else exit = true;
-		/*else if (event.type == SDL_KEYDOWN) {
-			if (event.key.keysym.sym == SDLK_DOWN)		//tecla abajo
-				cout << "ABAJO" << endl;
-			else if (event.key.keysym.sym == SDLK_UP)	//tecla arriba
-				cout << "ARRIBA" << endl;
-			else if (event.key.keysym.sym == SDLK_LEFT)	//tecla izquierda
-				cout << "Recarga" << endl;
-		}
-		else if (event.type == SDL_MOUSEBUTTONUP) {
-			if (event.button.button == SDL_BUTTON_LEFT)
-				cout << "TECLA DE RATON" << endl;
-		}*/
 	}
-	cout << "sale del while" << endl;
 }
 
 //Carga las imagenes individualmente
