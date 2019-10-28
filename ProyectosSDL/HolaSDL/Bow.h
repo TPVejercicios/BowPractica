@@ -10,6 +10,7 @@ const int VELOCITYB = 1;
 class Bow {
 private:
 	int xC = 100, xD = 40, y = 100, dist = 31;	//Tamaño
+	int tirosRestantes;
 	Vector2D dir;	//Direccion del arco
 	Point2D pos;	//Esquina superior izquierda
 	Texture* textureC = nullptr;
@@ -20,13 +21,10 @@ private:
 	bool cargado = true;
 
 public:
-	Bow(Texture* t1, Texture* t2);
+	Bow(Texture* t1, Texture* t2, int r);
 	~Bow() {};
 	void update();
 	void handleEvents(const SDL_Event event);		//Contrala el input
 	void render(SDL_Renderer* renderer) const;
-
-
-	//Auxiliar boorrable
-	int devuelvePos() { return pos.getY(); };
+	int devuelvePosY() { return pos.getY(); };		//La flecha necesita esta posicion
 };

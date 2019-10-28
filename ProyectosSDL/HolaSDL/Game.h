@@ -13,6 +13,7 @@ const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
 const uint NUM_TEXTURES = 7;
 const uint FRAME_RATE = 30;
+const uint NUM_ARROWS = 5;
 const string PATHS[] = { "..\\images\\bg1.png","..\\images\\Bow1.png","..\\images\\Bow2.png","..\\images\\Arrow1.png","..\\images\\Arrow2.png","..\\images\\balloons.png","..\\images\\digits1.png" };
 
 struct image
@@ -30,7 +31,6 @@ private:
 	vector<Texture*> textures;
 	vector<image> images;
 	int points = 0;
-	int numArrow = NUM_ARROWS;
 	Bow* bow = nullptr;				//Puntero a globo
 	Arrow* arrow = nullptr;			//Puntero a flecha
 	vector<Ballon*> ballons;

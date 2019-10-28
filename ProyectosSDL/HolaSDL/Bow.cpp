@@ -1,6 +1,7 @@
 #include "Bow.h"
 
-Bow::Bow(Texture* t1, Texture* t2) { 
+Bow::Bow(Texture* t1, Texture* t2, int r) {
+	tirosRestantes = r - 1;
 	textureC = t1;
 	textureD = t2;
 	pos.setX(0);
@@ -50,8 +51,9 @@ void Bow::handleEvents(const SDL_Event event) {
 		else if (event.key.keysym.sym == SDLK_RIGHT) {	//Tecla disparo
 			cargado = false;
 		}
-		else if (event.key.keysym.sym == SDLK_LEFT) {	//Tecla disparo
+		else if (event.key.keysym.sym == SDLK_LEFT && !cargado && tirosRestantes > 0) {	//Tecla disparo
 			cargado = true;
+			tirosRestantes--;
 		}
 	}
 	else {

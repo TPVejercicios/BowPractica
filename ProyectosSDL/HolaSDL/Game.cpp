@@ -15,8 +15,8 @@ Game::Game() {				//Constructora, inicializa el juego y todos sus objetos
 			Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
 			textures.push_back(aux);
 		}
-		bow = new Bow(textures.at(1), textures.at(2));
-		arrow = new Arrow(textures.at(3));
+		bow = new Bow(textures.at(1), textures.at(2), NUM_ARROWS);
+		arrow = new Arrow(textures.at(3), textures.at(4), NUM_ARROWS);
 
 		//vector de ballons
 	}
@@ -43,6 +43,7 @@ void Game::render() const {		//Dibuja cada objeto en el SDL_Renderer
 	SDL_RenderCopy(renderer, textures.at(0)->getTexture(), nullptr, nullptr); // Copia en buffer
 	bow->render(renderer);
 	arrow->render(renderer);
+	arrow->renderHUD(renderer);
 	/*for (int i = 0; i < ballons.size; i++) {
 		ballons.at(i)->render(renderer);
 	}*/
@@ -52,7 +53,6 @@ void Game::render() const {		//Dibuja cada objeto en el SDL_Renderer
 void Game::update() {
 	bow->update();
 	arrow->update();
-	cout << "ARROW" << arrow->valorNeed();
 	/*for (int i = 0; i < ballons.size; i++) {
 		ballons.at(i)->update();
 	}*/
@@ -71,7 +71,7 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			bow->handleEvents(event);
-			arrow->handleEvents(event);
+			arrow->handleEvents(event, bow->devuelvePosY());
 			/*for (int i = 0; i < ballons.size; i++) {
 				ballons.at(i)->handleEvents(event);
 			}*/
