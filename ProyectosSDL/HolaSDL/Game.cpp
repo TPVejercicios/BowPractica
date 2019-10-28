@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() {
+Game::Game() {				//Constructora, inicializa el juego y todos sus objetos
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow("First test with SDL", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
@@ -10,45 +10,51 @@ Game::Game() {
 	else
 	{
 		LoadPaths();
-		////Carga texturas
+		//Carga texturas
 		for (int i = 0; i < NUM_TEXTURES; i++) {
 			Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
 			textures.push_back(aux);
 		}
 		bow = new Bow(textures.at(1));
+		arrow = new Arrow(textures.at(3));
 
 		//vector de ballons
 	}
 }
 
-void Game::DeleteGame() {
+void Game::DeleteGame() {		//Destructora
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 	//Llama a todos los destructores
 }
 
-void Game::run() {
+void Game::run() {				//Bucle principal del juego
 	while (!exit) { // Falta el control de tiempo FRAME_
-		SDL_Event current = handleEvents();
-		if(current.type != SDL_QUIT){
-			update(current);
-			render();
-			cout << "running" << endl;
-		}
-		else {
-			cout << "Salir" << endl;
-		}
+		handleEvents();
+		update();
+		render();
 	}
+	cout << "Fin del juego" << endl;
 }
 
-void Game::render() const {
-	bow->render();
+void Game::render() const {		//Dibuja cada objeto en el SDL_Renderer
+	SDL_RenderClear(renderer);
+	SDL_RenderCopy(renderer, textures.at(0)->getTexture(), nullptr, nullptr); // Copia en buffer
+	bow->render(renderer);
+	arrow->render(renderer);
+	/*for (int i = 0; i < ballons.size; i++) {
+		ballons.at(i)->render(renderer);
+	}*/
+	SDL_RenderPresent(renderer); // Muestra la escena
 }
 
-void Game::update(SDL_Event event) {
-	bow->update(event);
-	
+void Game::update() {
+	bow->update();
+	//sarrow->update();
+	/*for (int i = 0; i < ballons.size; i++) {
+		ballons.at(i)->update();
+	}*/
 }
 
 void Game::throwArrow() {
@@ -59,12 +65,18 @@ void Game::createBallons() {
 
 }
 
-SDL_Event Game::handleEvents() {
+void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
-		if (event.type == SDL_QUIT)
-			exit = true;
-		else if (event.type == SDL_KEYDOWN) {
+		if (event.type != SDL_QUIT) {
+			bow->handleEvents(event);
+			arrow->handleEvents(event);
+			/*for (int i = 0; i < ballons.size; i++) {
+				ballons.at(i)->handleEvents(event);
+			}*/
+		}
+		else exit = true;
+		/*else if (event.type == SDL_KEYDOWN) {
 			if (event.key.keysym.sym == SDLK_DOWN)		//tecla abajo
 				cout << "ABAJO" << endl;
 			else if (event.key.keysym.sym == SDLK_UP)	//tecla arriba
@@ -75,9 +87,9 @@ SDL_Event Game::handleEvents() {
 		else if (event.type == SDL_MOUSEBUTTONUP) {
 			if (event.button.button == SDL_BUTTON_LEFT)
 				cout << "TECLA DE RATON" << endl;
-		}
+		}*/
 	}
-	return event;
+	cout << "sale del while" << endl;
 }
 
 //Carga las imagenes individualmente

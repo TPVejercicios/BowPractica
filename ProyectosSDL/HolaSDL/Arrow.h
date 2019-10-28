@@ -7,19 +7,18 @@ const int VELOCITYA = 20;
 class Arrow
 {
 private:
-	Point2D pos;		//Posición
-	int x = 100, y = 100;	//Ancho y alto
+	Point2D pos;			//Posición
+	int x = 100, y = 20;	//Ancho y alto
 	Vector2D dir;
 	Texture* texture = nullptr;
 	bool disparada = false;
 
 public:
-	Arrow() {};
 	Arrow(Texture* t);
 	~Arrow() {};
 	void update();
-	void handleEvents();		//Contrala el input
-	void render() const;
+	void handleEvents(const SDL_Event event);		//Contrala el input
+	void render(SDL_Renderer* renderer) const;
 	void recargar(int);
 	void setDisparada(bool estado) { disparada = estado; };
 	bool getDisparada() { return disparada; };
