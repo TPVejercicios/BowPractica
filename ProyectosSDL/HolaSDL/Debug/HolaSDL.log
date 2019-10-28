@@ -1,7 +1,8 @@
-﻿  Bow.cpp
+﻿  Arrow.cpp
+  Bow.cpp
   Game.cpp
   main.cpp
-c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\crtdbg.h(302): warning C4005: '_malloca': redefinición de macro
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\malloc.h(121): note: vea la definición anterior de '_malloca'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005:  '_malloca': redefinición de macro
   Generando código...
-  HolaSDL.vcxproj -> G:\2do\TPV1\prac1\ProyectosSDL\bin\HolaSDLDebug.exe
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message :  vea la definición anterior de '_malloca'
+  HolaSDL.vcxproj -> C:\Users\Oskar\Desktop\MiPractica1\bin\HolaSDLDebug.exe

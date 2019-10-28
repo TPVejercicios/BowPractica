@@ -9,11 +9,13 @@ private:
 	int Y = 0;
 
 public:
-	Vector2D() { X = 0; Y = 0; };
-	Vector2D(int x, int y) { X= x; Y = y; };
+	Vector2D() {};
+	Vector2D(int x, int y) { X = x; Y = y; };
 
 	int getX() const { return X; };
 	int getY() const { return Y; };
+	void setX(int valor) { X = valor; };
+	void setY(int valor) { Y = valor; };
 	void SumaVectores();
 };
 
