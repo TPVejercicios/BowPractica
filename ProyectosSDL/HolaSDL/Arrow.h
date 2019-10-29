@@ -25,7 +25,7 @@ private:
 
 public:
 	Arrow(Texture* t, Texture* t2, int r);
-	~Arrow() {};
+	~Arrow();
 	void update();
 	void handleEvents(const SDL_Event event, const int posYArco);		//Contrala el input
 	void render(SDL_Renderer* renderer) const;

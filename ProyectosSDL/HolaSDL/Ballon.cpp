@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//Destructora de Ballon
 Ballon::~Ballon() {
 	texture = nullptr;
 	game = nullptr;
@@ -22,17 +23,17 @@ Ballon::Ballon(Texture* t, Game* g) {
 	numTexture = rand() % (texture->getNumCols() + 1);
 	game = g;
 	ballonBody = new SDL_Rect();
-	ballonBody->h = 80;
-	ballonBody->w = 80;
-	ballonBody->x = pos.getX() + 10;
-	ballonBody->y = pos.getY() + 10;
+	ballonBody->h = bodySize;
+	ballonBody->w = bodySize;
+	ballonBody->x = pos.getX() + gap;
+	ballonBody->y = pos.getY() + gap;
 }
 
 //Renderiza el globo
 void Ballon::render(SDL_Renderer* renderer) const {
 	SDL_Rect des;
-	des.h = 100;
-	des.w = 100;
+	des.h = bodySize;
+	des.w = bodySize;
 	des.x = pos.getX();
 	des.y = pos.getY();
 	texture->renderFrame(des, numTexture,collFrame,1,SDL_FLIP_NONE);
@@ -42,8 +43,8 @@ void Ballon::render(SDL_Renderer* renderer) const {
 bool Ballon::update() {
 	bool destroy = false;
 	if (status == SWOLLEN) {
-		ballonBody->x = pos.getX() + 10;
-		ballonBody->y = pos.getY() + 10;
+		ballonBody->x = pos.getX() + gap;
+		ballonBody->y = pos.getY() + gap;
 		pos.restaVectorEnY(vel);
 		game->checkCrushBallon();
 		if (pos.getY() < -100) {
@@ -60,16 +61,3 @@ bool Ballon::update() {
 	return destroy;
 
 }
-
-//cambia el estado del globo para empezar la animación de rotura
-void Ballon::ballonPunctured(uint time) {
-	uint animTime = 1000;
-	cout << "Globo pinchado" << endl;
-	status = PUNCTURED;
-	timePunctured = time;
-	//empezar animacion 
-}
-
-
-
-

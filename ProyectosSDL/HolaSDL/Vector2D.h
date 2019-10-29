@@ -1,5 +1,4 @@
-#ifndef VectoR2D
-#define VectoR2D
+#pragma once
 
 using namespace std;
 
@@ -19,4 +18,3 @@ public:
 	void restaVectorEnY(Vector2D vel) { Y -= vel.Y; };
 };
 
-#endif

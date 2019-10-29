@@ -19,9 +19,7 @@ private:
 	Point2D pos;
 	Vector2D vel;
 	uint timePunctured;
-	int numTexture;
-	int numBallon;
-	int collFrame = 0;
+	int numTexture, numBallon, collFrame = 0, gap = 10, bodySize = 80;
 	Texture* texture = nullptr;
 	Game* game = nullptr;
 	SDL_Rect* ballonBody = nullptr;
@@ -31,8 +29,11 @@ public:
 	~Ballon();
 	bool update();
 	void render(SDL_Renderer* renderer) const;
-	void ballonPunctured(uint time);
+	//cambia el estado del globo para empezar la animación de rotura
+	void ballonPunctured() { status = PUNCTURED; };	
+	//Devuelve el Rect del ballon
 	SDL_Rect* returnBallonBody() { return ballonBody; };
+	//Devuelve true si el globo está inflado 
 	bool returnState() { return status == SWOLLEN ? true : false; };
 };
 

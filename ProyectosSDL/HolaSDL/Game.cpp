@@ -17,25 +17,25 @@ Game::Game() {
 			textures.push_back(aux);
 		}
 
+		//background = textures.at(0);
 		bow = new Bow(textures.at(1), textures.at(2), NUM_ARROWS);
 		arrow = new Arrow(textures.at(3), textures.at(4), NUM_ARROWS);
 	}
 }
 
-//Destructora
-void Game::DeleteGame() {
-	delete bow;
-	delete arrow;
-	for (int i = globos.size() - 1; i >= 0; i++) {
-		delete globos.at(i);
-		//globos.erase(globos.begin() + i);
-	}
+//Destructora, llama a todos los destructores de la clase game
+Game::~Game() {
+	for (int i = 0; i < globos.size(); i++) delete globos.at(i);
 	globos.clear();
-	//delete[] globos;
+	for (int i = 0; i < textures.size(); i++) textures.at(i)->liberar();
+	textures.clear();
+	delete arrow;
+	delete bow;
+	arrow = nullptr;
+	bow = nullptr;
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
-	//Llama a todos los destructores
 }
 
 //Bucle principal del juego
@@ -146,7 +146,7 @@ void Game::checkCrushBallon() {
 		for (int i = 0; i < globos.size(); i++) {
 			if (globos.at(i)->returnState() && SDL_HasIntersection(globos.at(i)->returnBallonBody() , arrow->returnArrowHead())) {
 				points += 10;
-				globos.at(i)->ballonPunctured(SDL_GetTicks());
+				globos.at(i)->ballonPunctured();
 			}
 		}
 	}

@@ -1,6 +1,14 @@
 #include "Arrow.h"
 #include "Game.h"
 
+Arrow::~Arrow() {
+	texture->liberar();
+	texture2->liberar();
+	arrowHead = nullptr;
+	game = nullptr;
+}
+
+//Crea una flecha
 Arrow::Arrow(Texture* t, Texture* t2, int r) {
 	restantes = r - 1;
 	pos.setX(0);
@@ -16,7 +24,7 @@ Arrow::Arrow(Texture* t, Texture* t2, int r) {
 	arrowHead->y = pos.getY();
 };
 
-
+//Renderiza una flecha en movimiento
 void Arrow::render(SDL_Renderer* renderer) const {
 	SDL_Rect* des = new SDL_Rect();
 	des->x = pos.getX();
@@ -26,7 +34,7 @@ void Arrow::render(SDL_Renderer* renderer) const {
 	SDL_RenderCopy(renderer, texture->getTexture(), nullptr, des); // Copia en buffer
 }
 
-
+//Renderiza las flechas que aparecen en el HUD
 void Arrow::renderHUD(SDL_Renderer* renderer) const {
 	SDL_Rect* des = new SDL_Rect();
 	des->y = hudY;
@@ -38,7 +46,8 @@ void Arrow::renderHUD(SDL_Renderer* renderer) const {
 	}
 }
 
-void Arrow::update() {		//Valores que no me dan confianza, debería poder acceder a las variables globales WEIGHT Y HEIGHT
+//Actualiza la posición de la flecha mientras viaja
+void Arrow::update() {		
 	arrowHead->x = pos.getX() + 80;
 	arrowHead->y = pos.getY();
 
@@ -59,7 +68,7 @@ void Arrow::update() {		//Valores que no me dan confianza, debería poder acceder
 	}
 }
 
-
+//Controla todos los eventos referentes al input ¿OSCAR por qué tienes esto aquí?
 void Arrow::handleEvents(const SDL_Event event, const int posYArco) {
 	if (event.type == SDL_KEYDOWN) {
 		if (event.key.keysym.sym == SDLK_DOWN && !disparada) {	//Tecla abajo
@@ -81,6 +90,7 @@ void Arrow::handleEvents(const SDL_Event event, const int posYArco) {
 	}
 }
 
+//Comprueba las flechas que quedan y recarga si es posible
 void Arrow::recargar(const int posYArco) {
 	if (restantes > 0) {
 		finDisparo = false;

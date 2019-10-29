@@ -10,7 +10,12 @@ Bow::Bow(Texture* t1, Texture* t2, int r) {
 	dir.setX(0);
 	dir.setY(0);
 }
-
+//Destructora de bow
+Bow::~Bow() {
+	textureC = nullptr;
+	textureD = nullptr;
+}
+//Renderiza el bow 
 void Bow::render(SDL_Renderer* renderer) const {	
 	SDL_Rect* des = new SDL_Rect();
 	des->h = y;
@@ -29,6 +34,7 @@ void Bow::render(SDL_Renderer* renderer) const {
 
 }
 
+//Actualiza la posición del bow y lo limita para que no se salga de la escena
 void Bow::update() {
 	pos.setY(pos.getY() + dir.getY() * VELOCITYB);
 	if (pos.getY() < 0) {
@@ -39,7 +45,7 @@ void Bow::update() {
 	}
 }
 
-
+//Controla el input para mover el arco en el eje Y
 void Bow::handleEvents(const SDL_Event event) {
 	if (event.type == SDL_KEYDOWN) {
 		if (event.key.keysym.sym == SDLK_DOWN) {	//Tecla abajo

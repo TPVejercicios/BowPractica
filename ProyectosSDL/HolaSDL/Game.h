@@ -32,28 +32,21 @@ private:
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;
 	vector<Texture*> textures;
-	vector<Texture*> texBallons;
 	vector<image> images;
-	Texture* background = nullptr;
 	Bow* bow = nullptr;				//Puntero a globo
 	Arrow* arrow = nullptr;			//Puntero a flecha
-	Goblos globos;					//Vector de punteros de globos
-	void createBallons();			//Genera globos en funcion del frame rate
+	Goblos globos;					//Vector de punteros a globos
+	void createBallons();			
 public:
 	Game();
-	~Game() { DeleteGame(); }
+	~Game();
 	void LoadPaths();
-	void DeleteGame();
 	void run();
 	void render() const;
 	void handleEvents();
-	void update();			//Manda actualizarse a cada objeto del juego
-	void checkCrushBallon();
+	void update();					
+	void checkCrushBallon();		
 	void showPoints() { system("cls"); cout << "PUNTOS: " << points << endl; };
-
-	//un método para determinar si
-	//dado un globo alguna punta de flecha choca con ´el(que invocar´a el propio globo al actualizarse), y
-	//finalmente,
 };
 
 
