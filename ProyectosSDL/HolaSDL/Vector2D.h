@@ -16,7 +16,7 @@ public:
 	int getY() const { return Y; };
 	void setX(int valor) { X = valor; };
 	void setY(int valor) { Y = valor; };
-	void SumaVectores();
+	void restaVectorEnY(Vector2D vel) { Y -= vel.Y; };
 };
 
 #endif

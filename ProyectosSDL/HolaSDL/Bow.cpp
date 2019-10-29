@@ -1,6 +1,8 @@
 #include "Bow.h"
+#include "Game.h"
 
-Bow::Bow(Texture* t1, Texture* t2) { 
+Bow::Bow(Texture* t1, Texture* t2, int r) {
+	tirosRestantes = r - 1;
 	textureC = t1;
 	textureD = t2;
 	pos.setX(0);
@@ -32,14 +34,13 @@ void Bow::update() {
 	if (pos.getY() < 0) {
 		pos.setY(0);
 	}
-	else if (pos.getY() > 600 - y) {
-		pos.setY(600 - y);
+	else if (pos.getY() > WIN_HEIGHT - y) {
+		pos.setY(WIN_HEIGHT - y);
 	}
 }
 
 
 void Bow::handleEvents(const SDL_Event event) {
-	//No se si esto va en handleEvents o que
 	if (event.type == SDL_KEYDOWN) {
 		if (event.key.keysym.sym == SDLK_DOWN) {	//Tecla abajo
 			dir.setY(1);
@@ -50,8 +51,9 @@ void Bow::handleEvents(const SDL_Event event) {
 		else if (event.key.keysym.sym == SDLK_RIGHT) {	//Tecla disparo
 			cargado = false;
 		}
-		else if (event.key.keysym.sym == SDLK_LEFT) {	//Tecla disparo
+		else if (event.key.keysym.sym == SDLK_LEFT && !cargado && tirosRestantes > 0) {	//Tecla disparo
 			cargado = true;
+			tirosRestantes--;
 		}
 	}
 	else {

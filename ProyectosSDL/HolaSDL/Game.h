@@ -8,11 +8,14 @@
 #include "Ballon.h"
 
 using namespace std;
-
+using Goblos = vector<Ballon*>;
 const uint WIN_WIDTH = 800;
 const uint WIN_HEIGHT = 600;
 const uint NUM_TEXTURES = 7;
 const uint FRAME_RATE = 30;
+const uint FRAME_BALLON = 1000;
+const uint NUM_ARROWS = 5;
+const string BASE_NAME = "..\\images\\";
 const string PATHS[] = { "..\\images\\bg1.png","..\\images\\Bow1.png","..\\images\\Bow2.png","..\\images\\Arrow1.png","..\\images\\Arrow2.png","..\\images\\balloons.png","..\\images\\digits1.png" };
 
 struct image
@@ -24,16 +27,17 @@ struct image
 
 class Game {
 private:
+	int points = 0;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;
 	vector<Texture*> textures;
+	vector<Texture*> texBallons;
 	vector<image> images;
-	int points = 0;
-	int numArrow = NUM_ARROWS;
+	Texture* background = nullptr;
 	Bow* bow = nullptr;				//Puntero a globo
 	Arrow* arrow = nullptr;			//Puntero a flecha
-	vector<Ballon*> ballons;
+	Goblos globos;					//Vector de punteros de globos
 	void createBallons();			//Genera globos en funcion del frame rate
 public:
 	Game();
@@ -44,9 +48,10 @@ public:
 	void render() const;
 	void handleEvents();
 	void update();			//Manda actualizarse a cada objeto del juego
-	void throwArrow();		//Lanza nueva flecha
+	void checkCrushBallon();
+	void showPoints() { system("cls"); cout << "PUNTOS: " << points << endl; };
 
-	//un m´etodo para determinar si
+	//un método para determinar si
 	//dado un globo alguna punta de flecha choca con ´el(que invocar´a el propio globo al actualizarse), y
 	//finalmente,
 };

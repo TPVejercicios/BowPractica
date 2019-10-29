@@ -1,2 +1,12 @@
-﻿  Game.cpp
-  HolaSDL.vcxproj -> D:\Documentos\GitHub\BowPractica\ProyectosSDL\bin\HolaSDLDebug.exe
+﻿  Arrow.cpp
+  Ballon.cpp
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(35,10): error C3646: 'b': especificador de invalidación desconocido
+  Bow.cpp
+  Game.cpp
+  main.cpp
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(35,10): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
+  Texture.cpp
+  Vector2D.cpp
+  Generando código...
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
