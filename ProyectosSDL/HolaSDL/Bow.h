@@ -1,31 +1,27 @@
 #pragma once
-
 #include "Texture.h"
-//#include "Vector2D.h"
-#include "Game.h"
+#include "Vector2D.h"
+class Game;
 
-const int VELOCITY = 5;
 using namespace std;
-//using Point2D = Vector2D;
+using Point2D = Vector2D;
+const int VELOCITYB = 20;
 
 class Bow {
 private:
-	uint w = 0;
-	uint h = 0;
-	int x = 100, y = 100;
-	//Vector2D dir;	//direccion del arco
-	//Point2D pos;	//Esquina superior izquierda
-	Texture* texture = nullptr;
-	//Puntero a la flecha cargada
-	//Puntero al juego para informar sobre flechas lanzadas
-	//Game* game = nullptr;
-	bool charged = true;
+	int xC = 100, xD = 40, y = 100, dist = 31;	//Tamaño
+	int tirosRestantes;
+	Vector2D dir;					//Direccion del arco
+	Point2D pos;					//Esquina superior izquierda
+	Texture* textureC = nullptr;
+	Texture* textureD = nullptr;
+	bool cargado = true;
 
 public:
-	Bow() {};
-	Bow(Texture* t) { texture = t; };
-	~Bow() {};
+	Bow(Texture* t1, Texture* t2, int r);
+	~Bow();
 	void update();
-	void handleEvents();		//Contrala el input
-	void render() const;
+	void handleEvents(const SDL_Event event);		
+	void render(SDL_Renderer* renderer) const;
+	int devuelvePosY() { return pos.getY(); };		//Devuelve la posición en Y del bow
 };

@@ -1,56 +1,106 @@
 #include "Game.h"
 
-void Game::DeleteGame() {
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
-	SDL_Quit();
-	//Llama a todos los destructores
-}
+//Constructora, inicializa el juego y todos sus objetos
+Game::Game() {				
+	SDL_Init(SDL_INIT_EVERYTHING);
+	window = SDL_CreateWindow("First test with SDL", SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	if (window == nullptr || renderer == nullptr)
+		cout << "Error cargando SDL" << endl;
+	else
+	{
+		LoadPaths();
+		//Carga texturas
+		for (int i = 0; i < NUM_TEXTURES; i++) {
+			Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
+			textures.push_back(aux);
+		}
 
-void Game::run() {
-
-	while (!exit) { // Falta el control de tiempo FRAME_
-		handleEvents();
-		update();
-		render();
+		//background = textures.at(0);
+		bow = new Bow(textures.at(1), textures.at(2), NUM_ARROWS);
+		arrow = new Arrow(textures.at(3), textures.at(4), NUM_ARROWS);
 	}
 }
 
-void Game::render() const {
-
+//Destructora, llama a todos los destructores de la clase game
+Game::~Game() {
+	for (int i = 0; i < globos.size(); i++) delete globos.at(i);
+	globos.clear();
+	for (int i = 0; i < textures.size(); i++) textures.at(i)->liberar();
+	textures.clear();
+	delete arrow;
+	delete bow;
+	arrow = nullptr;
+	bow = nullptr;
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
 }
 
+//Bucle principal del juego
+void Game::run() {				
+	uint32_t startTime, frameTime, createBallon, ballonCreated;
+	startTime = ballonCreated = SDL_GetTicks();
+	while (!exit) {
+		showPoints();
+		handleEvents();
+		createBallon = SDL_GetTicks() - ballonCreated;
+		frameTime = SDL_GetTicks() - startTime;
+		if (frameTime >= FRAME_RATE) {
+			update();
+			startTime = SDL_GetTicks();
+		}
+		if (createBallon >= FRAME_BALLON) {
+			createBallons();
+			ballonCreated = SDL_GetTicks();
+		}
+		render();
+	}
+	cout << "Fin del juego" << endl;
+}
+
+//Dibuja cada objeto en el SDL_Renderer
+void Game::render() const {		
+	SDL_RenderClear(renderer);
+	SDL_RenderCopy(renderer, textures.at(0)->getTexture(), nullptr, nullptr); // Copia en buffer
+	bow->render(renderer);
+	arrow->render(renderer);
+	arrow->renderHUD(renderer);
+	for (int i = 0; i < globos.size(); i++) {
+		globos.at(i)->render(renderer);
+	}
+	SDL_RenderPresent(renderer); // Muestra la escena
+}
+
+//Hace las llamadas a los updates de bow, arrow y a todos los globos
 void Game::update() {
-
+	bow->update();
+	arrow->update();
+	for (int i = 0; i < globos.size(); i++) {
+		if (globos.at(i)->update())
+		{
+			delete globos.at(i);
+			globos.erase(globos.begin() + i);
+		}
+	}
 }
 
-void Game::throwArrow() {
-
-}
-
+//Crea un globo y lo mete al vector de globos
 void Game::createBallons() {
-
+	Ballon* aux = new Ballon(textures.at(5), this);
+	globos.push_back(aux);
 }
 
+//Hace la llamada a los eventos de arrow y bow
 void Game::handleEvents() {
 	SDL_Event event;
-
-	while (!exit) {
-		while (SDL_PollEvent(&event) && !exit) {
-			if (event.type == SDL_QUIT)
-				exit = true;
-			else if (event.type == SDL_KEYDOWN) {
-				if (event.key.keysym.sym == SDLK_DOWN)		//tecla abajo
-					cout << "ABAJO" << endl;
-				else if (event.key.keysym.sym == SDLK_UP)	//tecla arriba
-					cout << "ARRIBA" << endl;
-			}
-			else if (event.type == SDL_MOUSEBUTTONUP) {
-				if (event.button.button == SDL_BUTTON_LEFT) 
-					cout << "TECLA DE RATON" << endl;
-
-			}
+	while (SDL_PollEvent(&event) && !exit) {
+		if (event.type != SDL_QUIT) {
+			bow->handleEvents(event);
+			arrow->handleEvents(event, bow->devuelvePosY());
 		}
+		else exit = true;
 	}
 }
 
@@ -61,7 +111,6 @@ void Game::LoadPaths() {
 	aux.path = PATHS[0];
 	aux.colls = aux.rows = 1;
 	images.push_back(aux);
-	
 	//BOW1
 	aux.path = PATHS[1];
 	aux.colls = aux.rows = 1;
@@ -90,5 +139,17 @@ void Game::LoadPaths() {
 	images.push_back(aux);
 }
 
+//Comprueba si una flecha a colisionado contra un globo
+void Game::checkCrushBallon() {
 
+	if (arrow->getDisparada()) {
+		for (int i = 0; i < globos.size(); i++) {
+			if (globos.at(i)->returnState() && SDL_HasIntersection(globos.at(i)->returnBallonBody() , arrow->returnArrowHead())) {
+				points += 10;
+				globos.at(i)->ballonPunctured();
+			}
+		}
+	}
+}
+ 
 
