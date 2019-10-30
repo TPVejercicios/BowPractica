@@ -1,5 +1,6 @@
 # BowPractica
 Primera práctica con SDL
-Compila 
+Compila. 
+
 *errores  
   Hay memoria que no se elimina
