@@ -1,58 +1,65 @@
 #include "Arrow.h"
+#include "Bow.h"
 #include "Game.h"
 
 Arrow::~Arrow() {
 	texture->liberar();
 	texture2->liberar();
 	delete arrowHead;
-	game = nullptr;
+	delete arrowFull;
 }
 
 //Crea una flecha
-Arrow::Arrow(Texture* t, Texture* t2, int r) {
-	restantes = r - 1;
+Arrow::Arrow(Texture* t, Texture* t2, int r,Bow* b) {
+	bow = b;
+	restantes = r;
 	pos.setX(0);
 	pos.setY(disT);
 	dir.setX(1);
 	dir.setY(0);
 	texture = t;
 	texture2 = t2;
+	//El rect de la flecha entera para dibujarla
+	arrowFull = new SDL_Rect();
+	arrowFull->x = pos.getX();
+	arrowFull->y = pos.getY();
+	arrowFull->w = x;
+	arrowFull->h = y;
 	//El rect de la punta de la flecha, evitando el palo para detectar las colisiones
 	arrowHead = new SDL_Rect();
 	arrowHead->h = y;
 	arrowHead->w = x/5;
 	arrowHead->x = pos.getX() + 80;
 	arrowHead->y = pos.getY();
-
+	//El rect de las flechas del HUD
+	arrowHUD = new SDL_Rect();
+	arrowHUD->y = hudY;
+	arrowHUD->w = hudW;
+	arrowHUD->h = hudH;
+	arrowHUD->x = hudX;
 };
 
-//Renderiza una flecha en movimiento OSCAR hay que usar el metodo render de texture
-void Arrow::render(SDL_Renderer* renderer) const {
-	SDL_Rect* des = new SDL_Rect();
-	des->x = pos.getX();
-	des->y = pos.getY();
-	des->w = x;
-	des->h = y;
-	SDL_RenderCopy(renderer, texture->getTexture(), nullptr, des); // Copia en buffer
-	delete des;
+//Renderiza una flecha en movimiento
+void Arrow::render() const {
+	if (disparada) {
+		texture->render(*arrowFull, SDL_FLIP_NONE);
+	}
 }
 
 //Renderiza las flechas que aparecen en el HUD OSCAR hay que usar el metodo render de texture
-void Arrow::renderHUD(SDL_Renderer* renderer) const {
-	SDL_Rect* des = new SDL_Rect();
-	des->y = hudY;
-	des->w = hudW;
-	des->h = hudH;
+void Arrow::renderHUD() const {
 	for (int i = 0; i < restantes; i++) {
-		des->x = hudX + i * 10;
-		SDL_RenderCopy(renderer, texture2->getTexture(), nullptr, des); // Copia en buffer
+		arrowHUD->x = hudX + i * 10;
+		texture2->render(*arrowHUD, SDL_FLIP_NONE);
 	}
-	delete des;
+	arrowHUD->x = hudX;
 }
 
 //Actualiza la posición de la flecha mientras viaja
 void Arrow::update() {		
-	arrowHead->x = pos.getX() + 80;
+	arrowFull->x = pos.getX();
+	arrowFull->y = pos.getY();
+	arrowHead->x = pos.getX() + gap;
 	arrowHead->y = pos.getY();
 
 	if (!disparada) {
@@ -72,27 +79,11 @@ void Arrow::update() {
 	}
 }
 
-//Controla todos los eventos referentes al input ¿OSCAR por qué tienes esto aquí?
-void Arrow::handleEvents(const SDL_Event event, const int posYArco) {
-	if (event.type == SDL_KEYDOWN) {
-		if (event.key.keysym.sym == SDLK_DOWN && !disparada) {	//Tecla abajo
-			dir.setY(1);
-		}
-		else if (event.key.keysym.sym == SDLK_UP && !disparada) {	//Tecla ariba
-			dir.setY(-1);
-		}
-		else if (event.key.keysym.sym == SDLK_RIGHT) {	//Tecla disparo
-			disparada = true;
-			dir.setX(1);
-		}
-		else if (event.key.keysym.sym == SDLK_LEFT && disparada && finDisparo) {	//Tecla disparo
-			recargar(posYArco);
-		}
-	}
-	else {
-		dir.setY(0);
-	}
+void Arrow::setDirection(int x, int y) {
+	dir.setX(x);
+	dir.setY(y);
 }
+
 
 //Comprueba las flechas que quedan y recarga si es posible
 void Arrow::recargar(const int posYArco) {
