@@ -1,6 +1,8 @@
 #pragma once
 #include "Texture.h"
 #include "Vector2D.h"
+#include "Arrow.h"
+
 class Game;
 
 using namespace std;
@@ -17,12 +19,15 @@ private:
 	Texture* textureD = nullptr;
 	SDL_Rect* bodyBow = nullptr;
 	bool cargado = true;
+	Arrow* arrow = nullptr;
 
 public:
-	Bow(Texture* t1, Texture* t2, int r);
+	Bow(Texture* t1, Texture* t2, Texture* t3, Texture* t4, int r);
 	~Bow();
 	void update();
 	void handleEvents(const SDL_Event event);		
 	void render() const;
 	int devuelvePosY() { return pos.getY(); };		//Devuelve la posición en Y del bow
+	bool getDisparadaBow() { return arrow->getDisparada(); };
+	SDL_Rect* returnArrowHeadBow() { return arrow->returnArrowHead(); };
 };

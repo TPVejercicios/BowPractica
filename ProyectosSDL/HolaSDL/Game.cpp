@@ -18,10 +18,7 @@ Game::Game() {
 			textures.push_back(aux);
 			aux = nullptr;
 		}
-
-		bow = new Bow(textures.at(1), textures.at(2), NUM_ARROWS);
-		arrow = new Arrow(textures.at(3), textures.at(4), NUM_ARROWS);
-
+		bow = new Bow(textures.at(1), textures.at(2), textures.at(3), textures.at(4), NUM_ARROWS);
 		//Carga scala de puntajes
 		firstPointer = new SDL_Rect();
 		secondPointer = new SDL_Rect();
@@ -43,7 +40,6 @@ Game::~Game() {
 	//Llamo al destructor de cada textura y limpio el vector de globos
 	for (int i = 0; i < textures.size(); i++) textures.at(i)->liberar();
 	textures.clear();
-	delete arrow;
 	delete bow;
 	delete firstPointer;
 	delete secondPointer;
@@ -81,8 +77,6 @@ void Game::render() const {
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, textures.at(0)->getTexture(), nullptr, nullptr); // Copia en buffer
 	bow->render();
-	arrow->render(renderer);
-	arrow->renderHUD(renderer);
 	renderPoints();
 	for (int i = 0; i < globos.size(); i++) {
 		globos.at(i)->render();
@@ -93,7 +87,6 @@ void Game::render() const {
 //Hace las llamadas a los updates de bow, arrow y a todos los globos
 void Game::update() {
 	bow->update();
-	arrow->update();
 	updatePoints();
 	for (int i = 0; i < globos.size(); i++) {
 		if (globos.at(i)->update())			//Si el update de ballon devuelve true destruyo el ballon
@@ -117,7 +110,6 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			bow->handleEvents(event);
-			arrow->handleEvents(event, bow->devuelvePosY());
 		}
 		else exit = true;
 	}
@@ -160,10 +152,9 @@ void Game::LoadPaths() {
 
 //Comprueba si una flecha a colisionado contra un globo
 void Game::checkCrushBallon() {
-
-	if (arrow->getDisparada()) {
+	if (bow->getDisparadaBow()) {
 		for (int i = 0; i < globos.size(); i++) {
-			if (globos.at(i)->returnState() && SDL_HasIntersection(globos.at(i)->returnBallonBody() , arrow->returnArrowHead())) {
+			if (globos.at(i)->returnState() && SDL_HasIntersection(globos.at(i)->returnBallonBody() , bow->returnArrowHeadBow())) {
 				points += 10;
 				globos.at(i)->ballonPunctured();
 			}
@@ -174,12 +165,12 @@ void Game::checkCrushBallon() {
 //Actualiza el valor del iterador de cada rect del puntaje
 void Game::updatePoints() {
 	string pointsString = to_string(points);
-
+	//48 es el valor a restar para convertir char en int (Codigo ASCII)
 	if (points < 10) {
 		first = points;
 	}
 	else if (points < 100) {
-		first =  ((int)(pointsString[1]) - 48);
+		first =  ((int)(pointsString[1]) - 48);		
 		second = ((int)(pointsString[0]) - 48);
 	}
 	else

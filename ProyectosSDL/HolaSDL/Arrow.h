@@ -1,6 +1,7 @@
 #pragma once
 #include "Texture.h"
 #include "Vector2D.h"
+class Bow;
 class Game;
 
 using Point2D = Vector2D;
@@ -15,24 +16,27 @@ private:
 	int x = 100, y = 20;		//Ancho y alto
 	int disT = 44, disD = 37;	//Valores de centrado de la flecha con respecto al arco
 	int hudX = 200, hudY = 0, hudW = y/2, hudH = x/2;	//Posiciones de las flechas de la recámara
+	int gap = 80;				//Distancia para coger el rect de la cabeza de la flecha
 	int restantes;				//Número de flechas restantes
 	Vector2D dir;				//Vector dirección del disparo
 	Texture* texture = nullptr;
 	Texture* texture2 = nullptr;
+	SDL_Rect* arrowFull = nullptr;
 	SDL_Rect* arrowHead = nullptr;
-	Game* game = nullptr;
+	SDL_Rect* arrowHUD = nullptr;
+	Bow* bow = nullptr;
 	bool disparada = false, finDisparo = false;
 
 public:
-	Arrow(Texture* t, Texture* t2, int r);
+	Arrow(Texture* t, Texture* t2, int r,Bow* b);
 	~Arrow();
 	void update();
-	void handleEvents(const SDL_Event event, const int posYArco);		//Contrala el input
-	void render(SDL_Renderer* renderer) const;
-	void Arrow::renderHUD(SDL_Renderer* renderer) const;
+	void render() const;
+	void Arrow::renderHUD() const;
 	void recargar(const int posYArco);
 	void setDisparada(bool estado) { disparada = estado; };
 	bool getDisparada() { return disparada; };
 	bool devuelveFin() { return finDisparo; };
 	SDL_Rect* returnArrowHead() { return arrowHead; };
+	void setDirection(int x, int y);
 };

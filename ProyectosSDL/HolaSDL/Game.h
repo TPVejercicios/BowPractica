@@ -34,7 +34,7 @@ private:
 	vector<Texture*> textures;
 	vector<image> images;
 	Bow* bow = nullptr;				//Puntero a globo
-	Arrow* arrow = nullptr;			//Puntero a flecha
+	//Arrow* arrow = nullptr;			//Puntero a flecha
 	Goblos globos;					//Vector de punteros a globos
 	SDL_Rect* firstPointer = nullptr;
 	SDL_Rect* secondPointer = nullptr;
