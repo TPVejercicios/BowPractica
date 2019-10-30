@@ -1,5 +1,5 @@
 # BowPractica
 Primera práctica con SDL
-
-Game iniciado
-Bow implementado
+Compila 
+*errores  
+  Hay memoria que no se elimina
