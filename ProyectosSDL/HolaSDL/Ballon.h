@@ -28,7 +28,7 @@ public:
 	Ballon(Texture* t, Game* g);
 	~Ballon();
 	bool update();
-	void render(SDL_Renderer* renderer) const;
+	void render() const;
 	//cambia el estado del globo para empezar la animación de rotura
 	void ballonPunctured() { status = PUNCTURED; };	
 	//Devuelve el Rect del ballon

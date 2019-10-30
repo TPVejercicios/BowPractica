@@ -15,6 +15,7 @@ private:
 	Point2D pos;					//Esquina superior izquierda
 	Texture* textureC = nullptr;
 	Texture* textureD = nullptr;
+	SDL_Rect* bodyBow = nullptr;
 	bool cargado = true;
 
 public:
@@ -22,6 +23,6 @@ public:
 	~Bow();
 	void update();
 	void handleEvents(const SDL_Event event);		
-	void render(SDL_Renderer* renderer) const;
+	void render() const;
 	int devuelvePosY() { return pos.getY(); };		//Devuelve la posición en Y del bow
 };

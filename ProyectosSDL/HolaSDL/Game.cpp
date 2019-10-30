@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <math.h>
 
 //Constructora, inicializa el juego y todos sus objetos
 Game::Game() {				
@@ -15,24 +16,39 @@ Game::Game() {
 		for (int i = 0; i < NUM_TEXTURES; i++) {
 			Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
 			textures.push_back(aux);
+			aux = nullptr;
 		}
 
-		//background = textures.at(0);
 		bow = new Bow(textures.at(1), textures.at(2), NUM_ARROWS);
 		arrow = new Arrow(textures.at(3), textures.at(4), NUM_ARROWS);
+
+		//Carga scala de puntajes
+		firstPointer = new SDL_Rect();
+		secondPointer = new SDL_Rect();
+		thirdPointer = new SDL_Rect();
+		firstPointer->h = firstPointer->w = POINTS_SCALE;
+		secondPointer->h = secondPointer->w = POINTS_SCALE;
+		thirdPointer->h = thirdPointer->w = POINTS_SCALE;
+		firstPointer->x = 150; firstPointer->y = 0;
+		secondPointer->x = 120; secondPointer->y = 0;
+		thirdPointer->x = 90; thirdPointer->y = 0;
 	}
 }
 
 //Destructora, llama a todos los destructores de la clase game
 Game::~Game() {
+	//Llamo el destructor de cada globo y limpio el vector de globos
 	for (int i = 0; i < globos.size(); i++) delete globos.at(i);
 	globos.clear();
+	//Llamo al destructor de cada textura y limpio el vector de globos
 	for (int i = 0; i < textures.size(); i++) textures.at(i)->liberar();
 	textures.clear();
 	delete arrow;
 	delete bow;
-	arrow = nullptr;
-	bow = nullptr;
+	delete firstPointer;
+	delete secondPointer;
+	delete thirdPointer;
+	images.clear();
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
@@ -43,7 +59,7 @@ void Game::run() {
 	uint32_t startTime, frameTime, createBallon, ballonCreated;
 	startTime = ballonCreated = SDL_GetTicks();
 	while (!exit) {
-		showPoints();
+		updatePoints();
 		handleEvents();
 		createBallon = SDL_GetTicks() - ballonCreated;
 		frameTime = SDL_GetTicks() - startTime;
@@ -64,11 +80,12 @@ void Game::run() {
 void Game::render() const {		
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, textures.at(0)->getTexture(), nullptr, nullptr); // Copia en buffer
-	bow->render(renderer);
+	bow->render();
 	arrow->render(renderer);
 	arrow->renderHUD(renderer);
+	renderPoints();
 	for (int i = 0; i < globos.size(); i++) {
-		globos.at(i)->render(renderer);
+		globos.at(i)->render();
 	}
 	SDL_RenderPresent(renderer); // Muestra la escena
 }
@@ -77,8 +94,9 @@ void Game::render() const {
 void Game::update() {
 	bow->update();
 	arrow->update();
+	updatePoints();
 	for (int i = 0; i < globos.size(); i++) {
-		if (globos.at(i)->update())
+		if (globos.at(i)->update())			//Si el update de ballon devuelve true destruyo el ballon
 		{
 			delete globos.at(i);
 			globos.erase(globos.begin() + i);
@@ -88,8 +106,9 @@ void Game::update() {
 
 //Crea un globo y lo mete al vector de globos
 void Game::createBallons() {
-	Ballon* aux = new Ballon(textures.at(5), this);
-	globos.push_back(aux);
+	Ballon* currBallon = new Ballon(textures.at(5), this);
+	globos.push_back(currBallon);
+	currBallon = nullptr;
 }
 
 //Hace la llamada a los eventos de arrow y bow
@@ -151,5 +170,38 @@ void Game::checkCrushBallon() {
 		}
 	}
 }
+
+//Actualiza el valor del iterador de cada rect del puntaje
+void Game::updatePoints() {
+	string pointsString = to_string(points);
+
+	if (points < 10) {
+		first = points;
+	}
+	else if (points < 100) {
+		first =  ((int)(pointsString[1]) - 48);
+		second = ((int)(pointsString[0]) - 48);
+	}
+	else
+	{
+		first = ((int)(pointsString[2]) - 48);
+		second = ((int)(pointsString[1]) - 48);
+		third = ((int)(pointsString[0]) - 48);
+	}
+
+
+
+}
+
+//Renderiza el puntaje
+void Game::renderPoints() const {
+	textures.at(6)->renderFrame(*firstPointer, 0,first, 0, SDL_FLIP_NONE);
+	textures.at(6)->renderFrame(*secondPointer, 0, second, 0, SDL_FLIP_NONE);
+	textures.at(6)->renderFrame(*thirdPointer, 0,third , 0, SDL_FLIP_NONE);
+}
+
+
+
+
  
 

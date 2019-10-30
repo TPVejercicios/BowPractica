@@ -8,7 +8,7 @@ using namespace std;
 Ballon::~Ballon() {
 	texture = nullptr;
 	game = nullptr;
-	ballonBody = nullptr;
+	delete ballonBody;
 }
 
 //Genera un globo y pone valores aleatorios
@@ -30,13 +30,8 @@ Ballon::Ballon(Texture* t, Game* g) {
 }
 
 //Renderiza el globo
-void Ballon::render(SDL_Renderer* renderer) const {
-	SDL_Rect des;
-	des.h = bodySize;
-	des.w = bodySize;
-	des.x = pos.getX();
-	des.y = pos.getY();
-	texture->renderFrame(des, numTexture,collFrame,1,SDL_FLIP_NONE);
+void Ballon::render() const {
+	texture->renderFrame(*ballonBody, numTexture,collFrame,1,SDL_FLIP_NONE);
 }
 
 //Mueve el globo en función de su velocidad
@@ -45,9 +40,9 @@ bool Ballon::update() {
 	if (status == SWOLLEN) {
 		ballonBody->x = pos.getX() + gap;
 		ballonBody->y = pos.getY() + gap;
-		pos.restaVectorEnY(vel);
+		pos.subVectorInY(vel);
 		game->checkCrushBallon();
-		if (pos.getY() < -100) {
+		if (pos.getY() < -100) {		//Si el ballon sale por arriba 
 			destroy = true;
 		}
 	}

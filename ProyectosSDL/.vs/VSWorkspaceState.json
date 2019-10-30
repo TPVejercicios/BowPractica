@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HolaSDL"
+    "\\HolaSDL",
+    "\\images"
   ],
-  "SelectedNode": "\\HolaSDL\\main.cpp",
+  "SelectedNode": "\\images\\digits1.png",
   "PreviewInSolutionExplorer": false
 }

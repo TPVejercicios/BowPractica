@@ -4,7 +4,7 @@
 Arrow::~Arrow() {
 	texture->liberar();
 	texture2->liberar();
-	arrowHead = nullptr;
+	delete arrowHead;
 	game = nullptr;
 }
 
@@ -17,14 +17,16 @@ Arrow::Arrow(Texture* t, Texture* t2, int r) {
 	dir.setY(0);
 	texture = t;
 	texture2 = t2;
+	//El rect de la punta de la flecha, evitando el palo para detectar las colisiones
 	arrowHead = new SDL_Rect();
 	arrowHead->h = y;
 	arrowHead->w = x/5;
 	arrowHead->x = pos.getX() + 80;
 	arrowHead->y = pos.getY();
+
 };
 
-//Renderiza una flecha en movimiento
+//Renderiza una flecha en movimiento OSCAR hay que usar el metodo render de texture
 void Arrow::render(SDL_Renderer* renderer) const {
 	SDL_Rect* des = new SDL_Rect();
 	des->x = pos.getX();
@@ -32,9 +34,10 @@ void Arrow::render(SDL_Renderer* renderer) const {
 	des->w = x;
 	des->h = y;
 	SDL_RenderCopy(renderer, texture->getTexture(), nullptr, des); // Copia en buffer
+	delete des;
 }
 
-//Renderiza las flechas que aparecen en el HUD
+//Renderiza las flechas que aparecen en el HUD OSCAR hay que usar el metodo render de texture
 void Arrow::renderHUD(SDL_Renderer* renderer) const {
 	SDL_Rect* des = new SDL_Rect();
 	des->y = hudY;
@@ -44,6 +47,7 @@ void Arrow::renderHUD(SDL_Renderer* renderer) const {
 		des->x = hudX + i * 10;
 		SDL_RenderCopy(renderer, texture2->getTexture(), nullptr, des); // Copia en buffer
 	}
+	delete des;
 }
 
 //Actualiza la posición de la flecha mientras viaja

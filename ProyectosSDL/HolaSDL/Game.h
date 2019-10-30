@@ -15,8 +15,8 @@ const uint NUM_TEXTURES = 7;
 const uint FRAME_RATE = 30;
 const uint FRAME_BALLON = 1000;
 const uint NUM_ARROWS = 5;
-const string BASE_NAME = "..\\images\\";
 const string PATHS[] = { "..\\images\\bg1.png","..\\images\\Bow1.png","..\\images\\Bow2.png","..\\images\\Arrow1.png","..\\images\\Arrow2.png","..\\images\\balloons.png","..\\images\\digits1.png" };
+const int POINTS_SCALE = 50;
 
 struct image
 {
@@ -27,7 +27,7 @@ struct image
 
 class Game {
 private:
-	int points = 0;
+	int points = 0, first = 0, second = 0, third = 0;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;
@@ -36,6 +36,10 @@ private:
 	Bow* bow = nullptr;				//Puntero a globo
 	Arrow* arrow = nullptr;			//Puntero a flecha
 	Goblos globos;					//Vector de punteros a globos
+	SDL_Rect* firstPointer = nullptr;
+	SDL_Rect* secondPointer = nullptr;
+	SDL_Rect* thirdPointer = nullptr;
+
 	void createBallons();			
 public:
 	Game();
@@ -46,7 +50,8 @@ public:
 	void handleEvents();
 	void update();					
 	void checkCrushBallon();		
-	void showPoints() { system("cls"); cout << "PUNTOS: " << points << endl; };
+	void updatePoints(); 
+	void renderPoints() const;
 };
 
 
