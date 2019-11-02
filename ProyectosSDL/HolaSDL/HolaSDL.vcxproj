@@ -72,6 +72,7 @@
     <ClCompile Include="Bow.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ScoreBoard.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
@@ -79,7 +80,9 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Ballon.h" />
     <ClInclude Include="Bow.h" />
+    <ClInclude Include="EnumClass.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>

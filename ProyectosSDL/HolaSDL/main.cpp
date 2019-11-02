@@ -3,6 +3,7 @@
 #include "checkML.h"
 #include <iostream>
 #include "Game.h"
+#include <stdexcept>
 
 using namespace std;
 
