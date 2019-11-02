@@ -1,7 +1,7 @@
 #pragma once
 #include "Texture.h"
 #include "Vector2D.h"
-#include "EnumClass.h"
+
 
 class Game;
 
@@ -9,11 +9,12 @@ using namespace std;
 using Point2D = Vector2D;
 const int MAX_BALLON_SPEED = 5;			//Velocidad de movimiento del ballon
 
-/*enum punctured
+enum punctured
 {
 	PUNCTURED = 0,						//Pinchado
 	SWOLLEN = 1							//Hinchado
-};*/
+};
+
 
 class Ballon{
 private:

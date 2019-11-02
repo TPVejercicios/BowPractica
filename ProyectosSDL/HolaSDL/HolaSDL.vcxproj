@@ -80,7 +80,6 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Ballon.h" />
     <ClInclude Include="Bow.h" />
-    <ClInclude Include="EnumClass.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="Texture.h" />
