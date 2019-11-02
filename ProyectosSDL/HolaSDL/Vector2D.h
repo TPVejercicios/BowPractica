@@ -1,11 +1,12 @@
 #pragma once
 
 using namespace std;
+//using Point2D = Vector2D;
 
 class Vector2D {
 private:
-	int X = 0;
-	int Y = 0;
+	double X = 0;
+	double Y = 0;
 
 public:
 	Vector2D() {};
@@ -17,5 +18,10 @@ public:
 	void setY(int valor) { Y = valor; };
 	void subVectorInY(Vector2D vel) { Y -= vel.Y; };
 	void multiply(int n) { X* n; Y* n; };
+	void normalize();
+	Vector2D operator+(const Vector2D& v) const;
+	Vector2D operator*(double d) const;
+	double operator*(const Vector2D& d) const;
+
 };
 
