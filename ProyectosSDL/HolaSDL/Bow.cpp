@@ -1,87 +1,111 @@
 #include "Bow.h"
 #include "Game.h"
+#include <iostream>
 
 //Constructora de bow
-Bow::Bow(Texture* t1, Texture* t2, Texture* t3, Texture* t4, int r) {
-	r--;
-	arrow = new Arrow(t3, t4, r,this);
-	tirosRestantes = r;
-	textureC = t1;
-	textureD = t2;
+Bow::Bow(Texture* bowChar, Texture* bowDisChar, Texture* arrowSprite) {
+	arrowTexture = arrowSprite;
+	remainingShots = START_ARROWS;
+	bowCharged = currBow =  bowChar;
+	bowDischarged = bowDisChar;
 	pos.setX(0);
 	pos.setY(0);
 	dir.setX(0);
 	dir.setY(0);
+	//Rect del arco para renderizar 
 	bodyBow = new SDL_Rect();
-	bodyBow->h = y;
-	bodyBow->w = xC;
+	bodyBow->h = bowCharged->getH() / SCALE_DIV;
+	bodyBow->w = bowCharged->getW() / SCALE_DIV;
 	bodyBow->x = pos.getX();
 	bodyBow->y = pos.getY();
 }
 
 //Destructora de bow
 Bow::~Bow() {
-	textureC->liberar();
-	textureD->liberar();
-	delete bodyBow;
-	delete arrow;
+	try {
+
+		for (int i = 0; i < quiver.size(); i++) delete quiver.at(i);
+
+		quiver.clear();
+		arrowTexture = nullptr;
+		currBow = nullptr;
+		bowCharged = nullptr;
+		bowDischarged = nullptr;
+		delete bodyBow;
+		cout << "Se ha destruido el bow" << endl;
+	}
+	catch (exception e) {
+		cout << "Error deleting a bow" << e.what() << endl;
+	}
+
 }
 
 //Renderiza el bow 
-void Bow::render() const {	
-	bodyBow->h = y;
-	if (cargado) {
-		bodyBow->x = pos.getX();
-		bodyBow->w = xC;
-		textureC->render(*bodyBow, SDL_FLIP_NONE);
+void Bow::render() {
+	currBow->render(*bodyBow,SDL_FLIP_NONE);
+	if (!quiver.empty()) {
+		for (int i = 0; i < quiver.size(); i++) {
+			quiver.at(i)->render();
+		}
 	}
-	else
-	{
-		bodyBow->x = pos.getX() + dist;
-		bodyBow->w = xD;
-		textureD->render(*bodyBow, SDL_FLIP_NONE);
-	}
-	arrow->render();
-	arrow->renderHUD();
 }
 
 //Actualiza la posición del bow y lo limita para que no se salga de la escena
 void Bow::update() {
-	pos.setY(pos.getY() + dir.getY() * VELOCITYB);
+	pos.setY(pos.getY() + dir.getY() * BOW_SPEED);
 	if (pos.getY() < 0) {
 		pos.setY(0);
 	}
-	else if (pos.getY() > WIN_HEIGHT - y) {
-		pos.setY(WIN_HEIGHT - y);
+	else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
+		pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
 	}
 	bodyBow->y = pos.getY();
-	arrow->update();
+	if (!quiver.empty()) {
+		for (int i = 0; i < quiver.size(); i++) {
+			if (quiver.at(i)->update()) {
+				delete quiver.at(i);
+				quiver.erase(quiver.begin() + i);
+			}
+		}
+	}
 }
 
 //Controla el input para mover el arco en el eje Y
 void Bow::handleEvents(const SDL_Event event) {
 	if (event.type == SDL_KEYDOWN) {
-		if (event.key.keysym.sym == SDLK_DOWN) {	//Tecla abajo
-			dir.setY(1);
-			if(!arrow->getDisparada()) arrow->setDirection(0, 1); //La flecha solo se mueve para abajo si no esta disparada
+		//Tecla abajo
+		if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1); 
+		//Tecla ariba
+		else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
+		//Tecla disparo
+		else if (event.key.keysym.sym == SDLK_RIGHT && charged) {	
+			charged = false;
+			bodyBow->x = pos.getX() + gap;
+			bodyBow->w = bowDischarged->getW() / SCALE_DIV;
+			currBow = bowDischarged;
+			Arrow* currArrow = new Arrow(arrowTexture);
+			quiver.push_back(currArrow);
+			currArrow = nullptr;
+			Vector2D shootPos;
+			shootPos.setX(pos.getX());
+			shootPos.setY(pos.getY() + (bodyBow->h / 2) - 6);
+			quiver.back()->shootArrow(shootPos);
 		}
-		else if (event.key.keysym.sym == SDLK_UP) {	//Tecla ariba
-			dir.setY(-1);
-			if (!arrow->getDisparada()) arrow->setDirection(0, -1);
+		//Tecla recarga
+		else if (event.key.keysym.sym == SDLK_LEFT && !charged && remainingShots > 0) {	
+			remainingShots--;
+			bodyBow->x = pos.getX();
+			bodyBow->w = bowCharged->getH() / SCALE_DIV;
+			currBow = bowCharged;
+			charged = true;
 		}
-		else if (event.key.keysym.sym == SDLK_RIGHT) {	//Tecla disparo
-			cargado = false;
-			arrow->setDirection(1, 0);
-		}
-		else if (event.key.keysym.sym == SDLK_LEFT && !cargado && tirosRestantes > 0) {	//Tecla disparo
-			arrow->setDirection(0, 0);
-			cargado = true;
-			tirosRestantes--;
+		//Para testeo, aumenta la cantidad de flechas para disparar en 100
+		else if (event.key.keysym.sym == SDLK_p) {
+			remainingShots += 100;
 		}
 	}
 	else {
 		dir.setY(0);
-		arrow->setDirection(0, 0);
 	}
 
 }

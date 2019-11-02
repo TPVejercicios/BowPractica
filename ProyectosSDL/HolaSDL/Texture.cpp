@@ -1,17 +1,24 @@
 #include "Texture.h"
+#include <iostream>
 
 using namespace std;
 
-void Texture::liberar() {
-	SDL_DestroyTexture(texture);
-	texture = nullptr;
-	w = h = 0;
+ Texture::~Texture() {
+	 try {
+		 SDL_DestroyTexture(texture);
+		 texture = nullptr;
+		 w = h = 0;
+	 }
+	 catch (exception e) {
+		 cout << "Error deleting texture " << e.what() << endl;
+	 }
 }
 
 void Texture::load(string filename, uint nRows, uint nCols) {
 	SDL_Surface* tempSurface = IMG_Load(filename.c_str());
-	if (tempSurface == nullptr) throw "Error loading surface from " + filename;
-	liberar();
+	if (tempSurface == nullptr) throw std::invalid_argument("Error loading surface from " + filename);// ("Error loading surface from " + filename);
+	//texture = nullptr;
+	//this->~Texture();
 	texture = SDL_CreateTextureFromSurface(renderer, tempSurface);
 	if (texture == nullptr) throw "Error loading texture from " + filename;
 	numRows = nRows;

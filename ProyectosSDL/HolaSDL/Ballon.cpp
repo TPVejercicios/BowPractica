@@ -6,9 +6,16 @@ using namespace std;
 
 //Destructora de Ballon
 Ballon::~Ballon() {
-	texture = nullptr;
-	game = nullptr;
-	delete ballonBody;
+
+	try {
+		texture = nullptr;
+		game = nullptr;
+		delete ballonBody;
+		cout << "Se ha eliminado un globo " << endl;
+	}
+	catch (exception e) {
+		cout << "Error deleting ballon" << e.what() << endl;
+	}
 }
 
 //Genera un globo y pone valores aleatorios
@@ -23,8 +30,8 @@ Ballon::Ballon(Texture* t, Game* g) {
 	numTexture = rand() % (texture->getNumCols() + 1);
 	game = g;
 	ballonBody = new SDL_Rect();
-	ballonBody->h = bodySize;
-	ballonBody->w = bodySize;
+	ballonBody->h = texture->getH() / 40;
+	ballonBody->w = texture->getW() / 30;
 	ballonBody->x = pos.getX() + gap;
 	ballonBody->y = pos.getY() + gap;
 }
@@ -42,7 +49,7 @@ bool Ballon::update() {
 		ballonBody->y = pos.getY() + gap;
 		pos.subVectorInY(vel);
 		game->checkCrushBallon();
-		if (pos.getY() < -100) {		//Si el ballon sale por arriba 
+		if (pos.getY() < -100) {//Si el ballon sale por arriba con un extra de 100 para que se vea como sale de escena
 			destroy = true;
 		}
 	}
