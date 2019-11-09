@@ -10,15 +10,9 @@ Game::Game() {
 		cout << "Error cargando SDL" << endl;
 	else
 	{
-		//Cargar imagenes del fichero
-		LoadPaths();
 		//Carga texturas
 		try {
-			for (int i = 0; i < NUM_TEXTURES; i++) {
-				Texture* aux = new Texture(renderer, images[i].path, images[i].rows, images[i].colls);
-				textures.push_back(aux);
-				aux = nullptr;
-			}
+			loadTextures();
 		}
 		catch (exception e) {
 			cout << loadingIMG << e.what() << endl;
@@ -27,7 +21,7 @@ Game::Game() {
 
 		//Creación del bow
 		try {
-			bow = new Bow(textures.at(1), textures.at(2), textures.at(3));
+			//bow = new Bow(textures.at(1), textures.at(2), textures.at(3));
 		}
 		catch (exception e) {
 			cout << "Error creating bow " << e.what() << endl;
@@ -37,7 +31,7 @@ Game::Game() {
 
 		//Creación del scoreboard
 		try {
-			scoreBoard = new ScoreBoard(textures.at(6), textures.at(4));
+			//scoreBoard = new ScoreBoard(textures.at(6), textures.at(4));
 		}
 		catch (exception e) {
 			cout << "Error creating scoreBoard " << e.what() << endl;
@@ -50,18 +44,22 @@ Game::Game() {
 //Destructora, llama a todos los destructores de la clase game
 Game::~Game() {
 	try {
-		//Llamo el destructor de cada globo y limpio el vector de globos
-		for (int i = 0; i < ballons.size(); i++) delete ballons.at(i);
-		ballons.clear();
-		delete scoreBoard;
-		delete bow;
-		delete pointsPointer;
-		delete backgroundPos;
-		delete arrowHUD;
+		//Llamo al destructor virtual de cada tipo de objeto (nose si esto se hace así)
+		for (int i = gameObjects.size(); i > 0; i--) {
+			delete gameObjects.at(i);
+			gameObjects.pop_back();
+		}
+		////llamo el destructor de cada globo y limpio el vector de globos
+		//for (int i = 0; i < ballons.size(); i++) delete ballons.at(i);
+		//ballons.clear();
+		//delete scoreboard;
+		//delete bow;
+		//delete pointspointer;
+		//delete backgroundpos;
+		//delete arrowhud;
 		//Llamo al destructor de cada textura 
 		for (int i = 0; i < textures.size(); i++) delete textures.at(i);
 		textures.clear();
-		images.clear();
 		SDL_DestroyRenderer(renderer);
 		SDL_DestroyWindow(window);
 		SDL_Quit();
@@ -98,25 +96,16 @@ void Game::run() {
 //Dibuja cada objeto en el SDL_Renderer
 void Game::render() {		
 	SDL_RenderClear(renderer);
-	textures.at(0)->render(*backgroundPos,SDL_FLIP_NONE);
-	bow->render();
-
-	for (int i = 0; i < ballons.size(); i++) {
-		ballons.at(i)->render();
+	for (int i = 0; i < gameObjects.size(); i++) {
+		gameObjects.at(i)->update();
 	}
-	scoreBoard->render(points, bow->arrowsLeft());
 	SDL_RenderPresent(renderer);
 }
 
-//Hace las llamadas a los updates de bow, arrow y a todos los globos
+//Hace las llamadas a los updates de todos los objetos del juego
 void Game::update() {
-	bow->update();
-	for (int i = 0; i < ballons.size(); i++) {
-		if (ballons.at(i)->update())			//Si el update de ballon devuelve true destruyo el ballon
-		{
-			delete ballons.at(i);
-			ballons.erase(ballons.begin() + i);
-		}
+	for (int i = 0; i < gameObjects.size(); i++) {
+		gameObjects.at(i)->update();
 	}
 }
 
@@ -132,51 +121,10 @@ void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
-			bow->handleEvents(event);
+			//bow->handleEvents(event);
 		}
 		else exit = true;
 	}
-}
-
-//Carga las imagenes individualmente
-void Game::LoadPaths() {
-	image aux;
-	//BACKGROUND
-	aux.path = PATHS[0];
-	aux.colls = aux.rows = 1;
-	images.push_back(aux);
-
-	//BOW1
-	aux.path = PATHS[1];
-	aux.colls = aux.rows = 1;
-	images.push_back(aux);
-
-	//BOW2
-	aux.path = PATHS[2];
-	aux.colls = aux.rows = 1;
-	images.push_back(aux);
-
-	//ARROW1
-	aux.path = PATHS[3];
-	aux.colls = aux.rows = 1;
-	images.push_back(aux);
-
-	//ARROW2
-	aux.path = PATHS[4];
-	aux.colls = aux.rows = 1;
-	images.push_back(aux);
-
-	//BALLONS
-	aux.path = PATHS[5];
-	aux.colls = 6;
-	aux.rows = 7;
-	images.push_back(aux);
-
-	//DIGITS
-	aux.path = PATHS[6];
-	aux.colls = 10;
-	aux.rows = 1;
-	images.push_back(aux);
 }
 
 //Comprueba si una flecha a colisionado contra un globo
@@ -191,6 +139,15 @@ void Game::checkCrushBallon() {
 			}
 
 		}
+	}
+}
+
+//Carga las texturas en un vector
+void Game::loadTextures() {
+	for (int i = 0; i < NUM_TEXTURES; i++) {
+		Texture* aux = new Texture(renderer, PATHS[i].filename, PATHS[i].rows, PATHS[i].colls);
+		textures.push_back(aux);
+		aux = nullptr;
 	}
 }
 
