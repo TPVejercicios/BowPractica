@@ -3,10 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "Bow.h"
-#include "Arrow.h"
-#include "Ballon.h"
-#include "ScoreBoard.h"
+#include "GameObject.h"
 
 using namespace std;
 using Ballons = vector<Ballon*>;

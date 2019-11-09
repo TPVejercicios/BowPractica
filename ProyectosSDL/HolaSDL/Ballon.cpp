@@ -42,6 +42,7 @@ void Ballon::render() const {
 }
 
 //Mueve el globo en función de su velocidad
+//Segund implementación meter el objecto a una lista de objectos a borrar
 bool Ballon::update() {
 	bool destroy = false;
 	if (status == SWOLLEN) {
@@ -50,7 +51,7 @@ bool Ballon::update() {
 		pos.subVectorInY(vel);
 		game->checkCrushBallon();
 		if (pos.getY() < -100) {//Si el ballon sale por arriba con un extra de 100 para que se vea como sale de escena
-			destroy = true;
+			destroy = true;//Aqui llamar a killObject();
 		}
 	}
 	else

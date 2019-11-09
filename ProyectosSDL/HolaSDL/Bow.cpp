@@ -4,6 +4,11 @@
 
 //Constructora de bow
 Bow::Bow(Texture* bowChar, Texture* bowDisChar, Texture* arrowSprite) {
+	pos.setX(0);
+	pos.setY(0);
+	dir.setX(0);
+	dir.setY(0);
+	ArrowGameObject()
 	arrowTexture = arrowSprite;
 	remainingShots = START_ARROWS;
 	bowCharged = currBow =  bowChar;

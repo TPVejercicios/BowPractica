@@ -3,6 +3,7 @@
 #include "Vector2D.h"
 #include "Arrow.h"
 #include <vector>
+#include "ArrowGameObject.h"
 
 class Game;
 
@@ -13,17 +14,11 @@ const int START_ARROWS = 10;							//Cantidad de arrows con las que se inicia el
 const int BOW_SPEED = 20;								//Velocidad de movimiento del bow
 
 
-class Bow {
+class Bow : public ArrowGameObject {
 private:
 	int			gap = 31;								//Desface gráfico que hay entre el bow cargado y el descargado
 	int			remainingShots;							//Variable que lleva la cuenta de las arrows que quedan
-	bool		charged			= true;					//Variable que determina si el bow está cargado
-	Vector2D	dir;									//Direccion del arco
-	Point2D		pos;									//Esquina superior izquierda
-	Texture*	arrowTexture	= nullptr;				//Textura del arrow
-	Texture*	bowCharged		= nullptr;				//Textura del bow cargado
-	Texture*	bowDischarged	= nullptr;				//Textura del bow descargado
-	Texture*	currBow			= nullptr;				//Textura del bow que uso
+	bool		charged			= true;					//Variable que determina si el bow está cargado	
 	SDL_Rect*	bodyBow			= nullptr;				//Rect de bow para renderizar
 	Quiver		quiver;									//Vector de punteros de arrows
 

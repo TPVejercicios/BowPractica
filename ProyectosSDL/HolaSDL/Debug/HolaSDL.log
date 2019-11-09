@@ -39,8 +39,13 @@ G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(54,21): warning C4
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(62,21): warning C4018: '<': no coinciden signed/unsigned
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(104,20): warning C4018: '<': no coinciden signed/unsigned
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(114,20): warning C4018: '<': no coinciden signed/unsigned
-  main.cpp
+  GameObject.cpp
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(185,21): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\GameObject.cpp(9,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  main.cpp
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\GameObject.cpp(10,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005: '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message : vea la definición anterior de '_malloca'
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
@@ -49,5 +54,4 @@ G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning 
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
   Generando código...
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-  LINK : no se encontr¾ G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\bin\HolaSDLDebug.exe o no lo gener¾ el ·ltimo vÝnculo incremental; ejecutando vÝnculo completo
   HolaSDL.vcxproj -> G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\bin\HolaSDLDebug.exe
