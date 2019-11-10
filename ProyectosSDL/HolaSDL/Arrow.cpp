@@ -40,9 +40,7 @@ void Arrow::render() {
 }
 
 //Actualiza la posición de la flecha mientras viaja
-bool Arrow::update() {
-
-	bool destroy = false;
+void Arrow::update() {
 	if (shooted) {
 		pos.setX(pos.getX() + (dir.getX() * ARROW_SPEED));
 		arrowFull->x = pos.getX();
@@ -50,8 +48,6 @@ bool Arrow::update() {
 		arrowHead->x = pos.getX() + gap;
 		arrowHead->y = pos.getY();
 	}
-	destroy = shooted && pos.getX() > WIN_WIDTH;
-	return destroy;
 }
 
 void Arrow::shootArrow(Vector2D shootPos) {

@@ -7,6 +7,13 @@ const int START_ARROW_POS = 200;
 const int ARROW_GAP = 10;
 const int POINTS_GAP = 35;
 
+class Game;
+class ArrowGameObject;
+class Vector2D;
+class Texture;
+class SDL_Rect;
+using Point2D = Vector2D;
+
 class ScoreBoard{
 private:
 	int currentPoints = 0, arrowLeft = 0;

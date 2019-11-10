@@ -2,12 +2,13 @@
 #include "Texture.h"
 #include "Vector2D.h"
 class Game;
+class ArrowGameObject;
 
 using Point2D = Vector2D;
 const int ARROW_SPEED = 20;				//Velocidad de movimiento de arrow
 
-class Arrow
-{
+//La clase Arrow hereda de ArrowGameObject
+class Arrow : public ArrowGameObject {
 private:
 	Point2D		pos;					//Posición en el eje x e y
 	int disT =	44;						//Valor de centrado de la flecha con respecto al arco
@@ -21,7 +22,7 @@ private:
 public:
 	Arrow(Texture* arrowSpite);
 	~Arrow();
-	bool update();
+	void update();
 	void render();
 	SDL_Rect* returnArrowHead() { return arrowHead; };
 	void shootArrow(Vector2D shootPos);

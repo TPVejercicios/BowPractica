@@ -1,5 +1,6 @@
 #pragma once
-class Background
-{
+class Background : public ArrowGameObject {
+public:
+private:
 };
 

@@ -3,7 +3,7 @@
 //Constructora, inicializa el juego y todos sus objetos
 Game::Game() {				
 	SDL_Init(SDL_INIT_EVERYTHING);
-	window = SDL_CreateWindow("First test with SDL", SDL_WINDOWPOS_CENTERED,
+	window = SDL_CreateWindow("Practica2", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 	if (window == nullptr || renderer == nullptr)
@@ -21,7 +21,9 @@ Game::Game() {
 
 		//Creación del bow
 		try {
-			//bow = new Bow(textures.at(1), textures.at(2), textures.at(3));
+			/*Bow* bow = new Bow(_pos, _angle, _scale, _game, textures.at(2) , _body);
+			gameObjects.push_back(bow);
+			bow = nullptr;*/
 		}
 		catch (exception e) {
 			cout << "Error creating bow " << e.what() << endl;
@@ -31,7 +33,7 @@ Game::Game() {
 
 		//Creación del scoreboard
 		try {
-			//scoreBoard = new ScoreBoard(textures.at(6), textures.at(4));
+			
 		}
 		catch (exception e) {
 			cout << "Error creating scoreBoard " << e.what() << endl;

@@ -3,35 +3,17 @@
 #include <iostream>
 
 //Constructora de bow
-Bow::Bow(Texture* bowChar, Texture* bowDisChar, Texture* arrowSprite) {
-	pos.setX(0);
-	pos.setY(0);
-	dir.setX(0);
-	dir.setY(0);
-	ArrowGameObject();
-	arrowTexture = arrowSprite;
-	remainingShots = START_ARROWS;
-	bowCharged = currBow =  bowChar;
-	bowDischarged = bowDisChar;
-	pos.setX(0);
-	pos.setY(0);
-	dir.setX(0);
-	dir.setY(0);
-	//Rect del arco para renderizar 
-	bodyBow = new SDL_Rect();
-	bodyBow->h = bowCharged->getH() / SCALE_DIV;
-	bodyBow->w = bowCharged->getW() / SCALE_DIV;
-	bodyBow->x = pos.getX();
-	bodyBow->y = pos.getY();
+Bow::Bow(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) : 
+	ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body) {
+	remainingShots = 10;
 }
 
 //Destructora de bow
 Bow::~Bow() {
+	/*
 	try {
-
-		for (int i = 0; i < quiver.size(); i++) delete quiver.at(i);
-
-		quiver.clear();
+		for (int i = 0; i < arrows.size(); i++) delete arrows.at(i);
+		arrows.clear();
 		arrowTexture = nullptr;
 		currBow = nullptr;
 		bowCharged = nullptr;
@@ -41,16 +23,15 @@ Bow::~Bow() {
 	}
 	catch (exception e) {
 		cout << "Error deleting a bow" << e.what() << endl;
-	}
-
+	}*/
 }
 
 //Renderiza el bow 
 void Bow::render() {
 	currBow->render(*bodyBow,SDL_FLIP_NONE);
-	if (!quiver.empty()) {
-		for (int i = 0; i < quiver.size(); i++) {
-			quiver.at(i)->render();
+	if (!arrows.empty()) {
+		for (int i = 0; i < arrows.size(); i++) {
+			arrows.at(i)->render();
 		}
 	}
 }
@@ -65,8 +46,8 @@ void Bow::update() {
 		pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
 	}
 	bodyBow->y = pos.getY();
-	if (!quiver.empty()) {
-		for (int i = 0; i < quiver.size(); i++) {
+	if (!arrows.empty()) {
+		for (int i = 0; i < arrows.size(); i++) {
 			if (quiver.at(i)->update()) {
 				delete quiver.at(i);
 				quiver.erase(quiver.begin() + i);
@@ -89,7 +70,7 @@ void Bow::handleEvents(const SDL_Event event) {
 			bodyBow->w = bowDischarged->getW() / SCALE_DIV;
 			currBow = bowDischarged;
 			Arrow* currArrow = new Arrow(arrowTexture);
-			quiver.push_back(currArrow);
+			arrows.push_back(currArrow);
 			currArrow = nullptr;
 			Vector2D shootPos;
 			shootPos.setX(pos.getX());

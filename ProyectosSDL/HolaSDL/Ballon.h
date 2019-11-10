@@ -4,6 +4,7 @@
 
 
 class Game;
+class ArrowGameObject;
 
 using namespace std;
 using Point2D = Vector2D;
@@ -15,8 +16,8 @@ enum punctured
 	SWOLLEN = 1							//Hinchado
 };
 
-
-class Ballon{
+//La clase Ballon hereda de ArrowGameObject
+class Ballon : public ArrowGameObject {
 private:
 	Point2D		pos;					//Posición del ballon en el eje x e y
 	Vector2D	vel;					//Dirección del ballon
@@ -29,7 +30,7 @@ private:
 public:
 	Ballon(Texture* t, Game* g);
 	~Ballon();
-	bool update();
+	void update();
 	void render() const;
 	//cambia el estado del globo para empezar la animación de rotura
 	void ballonPunctured() { status = PUNCTURED; };	

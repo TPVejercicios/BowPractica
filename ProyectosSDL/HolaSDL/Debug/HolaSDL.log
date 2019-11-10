@@ -1,281 +1,183 @@
 ﻿  Arrow.cpp
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(25,25): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(26,25): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(33,28): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(34,25): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(47,23): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(48,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(49,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(50,29): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(45,23): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(46,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(47,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(48,29): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
   ArrowGameObject.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(51,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,9): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,9): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,33): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,9): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,9): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,33): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,10): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,10): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,34): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,10): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,10): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,32): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(21,44): error C2061:  error de sintaxis: identificador 'Texture'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(49,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(65,1): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.cpp(11,37): error C2084:  la función 'ArrowGameObject::~ArrowGameObject(void)' ya tiene un cuerpo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+  Background.cpp
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
   Ballon.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(24): message :  vea la definición anterior de '{dtor}'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(35,29): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(36,29): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(46,23): error C2556:  'bool Ballon::update(void)': la función sobrecargada solo se diferencia de 'void Ballon::update(void)' por el tipo de valor devuelto
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(33): message :  vea la declaración de 'Ballon::update'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(46,14): error C2371:  'Ballon::update': nueva definición; tipos básicos distintos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(33): message :  vea la declaración de 'Ballon::update'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(49,30): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(50,30): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(52,26): error C2248:  'Game::checkCrushBallon': no se puede obtener acceso al miembro private miembro declarado en la clase 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(47): message :  vea la declaración de 'Game::checkCrushBallon'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(33): message :  vea la declaración de 'Game'
   Bow.cpp
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(60,17): warning C4018:  '>': no coinciden signed/unsigned
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(6,71): error C2512:  'ArrowGameObject': no hay disponible un constructor predeterminado adecuado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(11,7): message :  vea la declaración de 'ArrowGameObject'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(9,2): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(10,2): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(11,19): error C2512:  'ArrowGameObject': no hay disponible un constructor predeterminado adecuado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(11,19): message :  Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(12,2): error C2065:  'arrowTexture': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(14,2): error C2065:  'bowCharged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(14,15): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(15,2): error C2065:  'bowDischarged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(18,2): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(19,2): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(22,15): error C2065:  'bowCharged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(23,15): error C2065:  'bowCharged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(24,23): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(25,23): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(32,21): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(35,3): error C2065:  'arrowTexture': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(36,3): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(37,3): error C2065:  'bowCharged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(38,3): error C2065:  'bowDischarged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(50,2): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(52,21): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(60,24): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(64,37): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(65,25): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(67,23): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(69,21): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(82,42): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,45): error C2065:  'dir': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(88,28): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(89,17): error C2065:  'bowDischarged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(90,4): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(90,14): error C2065:  'bowDischarged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(91,33): error C2065:  'arrowTexture': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(95,26): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(96,48): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(102,25): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(103,17): error C2065:  'bowCharged': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(104,4): error C2065:  'currBow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(104,14): error C2065:  'bowCharged': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(31,2): error C2065:  'currBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(31,19): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(33,21): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(41,24): error C2065:  'dir': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(45,37): error C2065:  'currBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(46,25): error C2065:  'currBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(48,2): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(50,21): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(51,8): error C2065:  'quiver': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(52,12): error C2065:  'quiver': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(53,5): error C2065:  'quiver': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(53,18): error C2065:  'quiver': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(63,42): error C2065:  'dir': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(65,45): error C2065:  'dir': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(69,4): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(70,4): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(70,17): error C2065:  'bowDischarged': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(71,4): error C2065:  'currBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(71,14): error C2065:  'bowDischarged': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(72,33): error C2065:  'arrowTexture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(76,26): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(77,32): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(78,4): error C2065:  'quiver': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(83,4): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,4): error C2065:  'bodyBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,17): error C2065:  'bowCharged': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,4): error C2065:  'currBow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,14): error C2065:  'bowCharged': identificador no declarado
+  Butterfly.cpp
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(94,3): error C2065:  'dir': identificador no declarado
   Game.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(113,3): error C2065:  'dir': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(65,1): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(61,21): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(99,20): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(107,20): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(115,2): error C2065:  'ballons': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(132,6): error C2065:  'bow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(133,23): error C2065:  'ballons': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(134,24): error C2065:  'bow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,9): error C2065:  'ballons': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,61): error C2065:  'ballons': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,96): error C2065:  'bow': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,8): error C2660:  'SDL_HasIntersection': la función no acepta 1 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(63,21): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(101,20): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(109,20): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(117,2): error C2065:  'ballons': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(134,6): error C2065:  'bow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,23): error C2065:  'ballons': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(136,24): error C2065:  'bow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,9): error C2065:  'ballons': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,61): error C2065:  'ballons': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,96): error C2065:  'bow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,8): error C2660:  'SDL_HasIntersection': la función no acepta 1 argumentos
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(101,34): message :  vea la declaración de 'SDL_HasIntersection'
   GameObject.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,6): error C2065:  'ballons': identificador no declarado
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,9): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,9): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13,33): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,9): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,9): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,33): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,10): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,10): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(15,34): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,10): error C2143:  error de sintaxis: falta ';' delante de '*'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,10): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,32): error C2238:  símbolos (token) inesperados delante de ';'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(21,44): error C2061:  error de sintaxis: identificador 'Texture'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(139,6): error C2065:  'ballons': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(65,1): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
   main.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\crtdbg.h(303,1): warning C4005:  '_malloca': redefinición de macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\malloc.h(122): message :  vea la definición anterior de '_malloca'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
+  Reward.cpp
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,60): error C2504:  'EventHandler': clase base sin definir
   ScoreBoard.cpp
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.cpp(3,115): error C2614:  'Reward': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(65,1): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,36): error C2504:  'ArrowGameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(12,1): error C2504:  'GameObject': clase base sin definir
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,13): error C2146:  error de sintaxis: falta ';' delante del identificador 'PATHS'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C4430:  falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,35): error C2078:  hay demasiados inicializadores
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,36): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,70): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,104): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(20,144): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,1): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,41): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,81): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,121): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,161): message :  El inicializador contiene demasiados elementos
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,206): error C2440:  'inicializando': no se puede realizar la conversión de 'initializer list' a 'int'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(11,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(20,39): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(17,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Butterfly.h(7,41): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(7,15): warning C4099:  'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message :  vea la declaración de 'SDL_Rect'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.h(12,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Background.h(2,43): error C2504:  'ArrowGameObject': clase base sin definir
   Generando código...
-C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.h(22,1): message :  El inicializador contiene demasiados elementos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.h(13,1): error C2504:  'GameObject': clase base sin definir

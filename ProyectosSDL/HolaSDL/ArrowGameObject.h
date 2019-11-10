@@ -5,6 +5,7 @@
 #include "Bow.h"
 #include "Butterfly.h"
 #include "Reward.h"
+#include "Background.h"
 
 
 
@@ -19,13 +20,13 @@ protected:
 	Texture* texture = nullptr;
 	//vector<Texture*> textures; Si tenemos aqui un vector de texturas podremos tener las 2 texturas del arco por ejemplo para cambiar entre ellas
 	SDL_Rect* body = nullptr;
-	ArrowGameObject(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game);
+	ArrowGameObject(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body);
 public:
-	virtual ~ArrowGameObject() {};
+	virtual ~ArrowGameObject();
 	virtual void render() const ;
 	virtual void update();
 	virtual SDL_Rect* getDestRect() { return body; };
-	virtual SDL_Rect* getCollisionRect() { return nullptr; };
+	virtual SDL_Rect* getCollisionRect() { return body; };
 	void loadFromFile() {};
 	void saveToFile() {};
 };
