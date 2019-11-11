@@ -3,8 +3,19 @@
 #include <iostream>
 
 //Constructora de bow
-Bow::Bow(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) : 
-	ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body) {
+Bow::Bow(Texture* _texture) {
+	Point2D* pos;
+	pos->setX = 0;
+	pos->setY = 0;
+	Vector2D* angle;
+	angle->setX = 0;
+	angle->setY = 0; 
+	Vector2D* scale;
+	scale->setX = 0;
+	scale->setY = 0;
+	SDL_Rect* body = new SDL_Rect();
+	body.
+	ArrowGameObject(pos, angle, scale, _texture, body);
 	remainingShots = 10;
 }
 
@@ -28,70 +39,69 @@ Bow::~Bow() {
 
 //Renderiza el bow 
 void Bow::render() {
-	currBow->render(*bodyBow,SDL_FLIP_NONE);
-	if (!arrows.empty()) {
-		for (int i = 0; i < arrows.size(); i++) {
-			arrows.at(i)->render();
-		}
-	}
+	//currBow->render(*bodyBow,SDL_FLIP_NONE);
+	//if (!arrows.empty()) {
+	//	for (int i = 0; i < arrows.size(); i++) {
+	//		arrows.at(i)->render();
+	//	}
+	//}
 }
 
 //Actualiza la posición del bow y lo limita para que no se salga de la escena
 void Bow::update() {
-	pos.setY(pos.getY() + dir.getY() * BOW_SPEED);
-	if (pos.getY() < 0) {
-		pos.setY(0);
-	}
-	else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
-		pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
-	}
-	bodyBow->y = pos.getY();
-	if (!arrows.empty()) {
-		for (int i = 0; i < arrows.size(); i++) {
-			if (quiver.at(i)->update()) {
-				delete quiver.at(i);
-				quiver.erase(quiver.begin() + i);
-			}
-		}
-	}
+	//pos.setY(pos.getY() + dir.getY() * BOW_SPEED);
+	//if (pos.getY() < 0) {
+	//	pos.setY(0);
+	//}
+	//else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
+	//	pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
+	//}
+	//bodyBow->y = pos.getY();
+	//if (!arrows.empty()) {
+	//	for (int i = 0; i < arrows.size(); i++) {
+	//		if (arrows.at(i)->update()) {
+	//			delete arrows.at(i);
+	//			arrows.erase(arrows.begin() + i);
+	//		}
+	//	}
+	//}
 }
 
 //Controla el input para mover el arco en el eje Y
 void Bow::handleEvents(const SDL_Event event) {
-	if (event.type == SDL_KEYDOWN) {
-		//Tecla abajo
-		if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1); 
-		//Tecla ariba
-		else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
-		//Tecla disparo
-		else if (event.key.keysym.sym == SDLK_RIGHT && charged) {	
-			charged = false;
-			bodyBow->x = pos.getX() + gap;
-			bodyBow->w = bowDischarged->getW() / SCALE_DIV;
-			currBow = bowDischarged;
-			Arrow* currArrow = new Arrow(arrowTexture);
-			arrows.push_back(currArrow);
-			currArrow = nullptr;
-			Vector2D shootPos;
-			shootPos.setX(pos.getX());
-			shootPos.setY(pos.getY() + (bodyBow->h / 2) - 6);
-			quiver.back()->shootArrow(shootPos);
-		}
-		//Tecla recarga
-		else if (event.key.keysym.sym == SDLK_LEFT && !charged && remainingShots > 0) {	
-			remainingShots--;
-			bodyBow->x = pos.getX();
-			bodyBow->w = bowCharged->getH() / SCALE_DIV;
-			currBow = bowCharged;
-			charged = true;
-		}
-		//Para testeo, aumenta la cantidad de flechas para disparar en 100
-		else if (event.key.keysym.sym == SDLK_p) {
-			remainingShots += 100;
-		}
-	}
-	else {
-		dir.setY(0);
-	}
-
+	//if (event.type == SDL_KEYDOWN) {
+	//	//Tecla abajo
+	//	if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1); 
+	//	//Tecla ariba
+	//	else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
+	//	//Tecla disparo
+	//	else if (event.key.keysym.sym == SDLK_RIGHT && charged) {	
+	//		charged = false;
+	//		bodyBow->x = pos.getX() + gap;
+	//		bodyBow->w = bowDischarged->getW() / SCALE_DIV;
+	//		currBow = bowDischarged;
+	//		Arrow* currArrow = new Arrow(arrowTexture);
+	//		arrows.push_back(currArrow);
+	//		currArrow = nullptr;
+	//		Vector2D shootPos;
+	//		shootPos.setX(pos.getX());
+	//		shootPos.setY(pos.getY() + (bodyBow->h / 2) - 6);
+	//		quiver.back()->shootArrow(shootPos);
+	//	}
+	//	//Tecla recarga
+	//	else if (event.key.keysym.sym == SDLK_LEFT && !charged && remainingShots > 0) {	
+	//		remainingShots--;
+	//		bodyBow->x = pos.getX();
+	//		bodyBow->w = bowCharged->getH() / SCALE_DIV;
+	//		currBow = bowCharged;
+	//		charged = true;
+	//	}
+	//	//Para testeo, aumenta la cantidad de flechas para disparar en 100
+	//	else if (event.key.keysym.sym == SDLK_p) {
+	//		remainingShots += 100;
+	//	}
+	//}
+	//else {
+	//	dir.setY(0);
+	//}
 }

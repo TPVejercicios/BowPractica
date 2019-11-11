@@ -1,4 +1,7 @@
 #include "Game.h"
+#include <iostream>
+
+using namespace std;
 
 //Constructora, inicializa el juego y todos sus objetos
 Game::Game() {				
@@ -11,19 +14,27 @@ Game::Game() {
 	else
 	{
 		//Carga texturas
-		try {
-			loadTextures();
-		}
-		catch (exception e) {
-			cout << loadingIMG << e.what() << endl;
-			exit = true;
-		}
-
+		loadTextures();
 		//Creación del bow
 		try {
-			/*Bow* bow = new Bow(_pos, _angle, _scale, _game, textures.at(2) , _body);
+			Point2D* _pos;
+			_pos->setX = 0;
+			_pos->setY = 0;
+			Vector2D* _angle;
+			_angle->setX = 0;
+			_angle->setY = 0;
+			Vector2D* _scale;
+			_scale->setX = 0;
+			_scale->setY = 0;
+			SDL_Rect* _body = new SDL_Rect();
+			_body->h = 100;
+			_body->w = 100;
+			_body->x = 0;
+			_body->y = 0;
+			Game* game;
+			Bow* bow = new Bow(_pos, _angle, _scale, game, textures.at(2), _body);
 			gameObjects.push_back(bow);
-			bow = nullptr;*/
+			bow = nullptr;
 		}
 		catch (exception e) {
 			cout << "Error creating bow " << e.what() << endl;
@@ -113,9 +124,9 @@ void Game::update() {
 
 //Crea un globo y lo mete al vector de globos
 void Game::createBallons() {
-	Ballon* currBallon = new Ballon(textures.at(5), this);
+	/*Ballon* currBallon = new Ballon(textures.at(5), this);
 	ballons.push_back(currBallon);
-	currBallon = nullptr;
+	currBallon = nullptr;*/
 }
 
 //Hace la llamada a los eventos de arrow y bow
@@ -131,7 +142,7 @@ void Game::handleEvents() {
 
 //Comprueba si una flecha a colisionado contra un globo
 void Game::checkCrushBallon() {
-	if (bow->bowShoted()) {
+	/*if (bow->bowShoted()) {
 		for (int i = 0; i < ballons.size(); i++) {
 			for (int j = 0; j < bow->arrowShooted(); j++) {
 				if (ballons.at(i)->returnState() && SDL_HasIntersection(ballons.at(i)->returnBallonBody(), bow->returnArrowHeadBow(j))) {
@@ -141,15 +152,26 @@ void Game::checkCrushBallon() {
 			}
 
 		}
-	}
+	}*/
 }
 
-//Carga las texturas en un vector
+//Carga las texturas en un vector (couts for debug)
 void Game::loadTextures() {
-	for (int i = 0; i < NUM_TEXTURES; i++) {
-		Texture* aux = new Texture(renderer, PATHS[i].filename, PATHS[i].rows, PATHS[i].colls);
-		textures.push_back(aux);
-		aux = nullptr;
+	Texture* aux = nullptr;
+	try {
+		cout << "Intentamos cargar texturas" << endl;
+		for (int i = 0; i < NUM_TEXTURES; i++) {
+			aux = new Texture(renderer, PATHS[i].filename, PATHS[i].rows, PATHS[i].colls);
+			textures.push_back(aux);
+			delete aux;
+			cout << "Textura(" << i << ") cargada" << endl;
+		}
+		cout << "TEXTURAS CARGADAS CORRECTAMENTE" << endl;
 	}
+	catch (exception e) {
+		cout << loadingIMG << endl;
+		exit = true;
+	}
+	aux = nullptr;
 }
 

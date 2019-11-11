@@ -1,5 +1,8 @@
 #include "Game.h"
 #include "ScoreBoard.h"
+#include <iostream>
+
+using namespace std;
 
 //Constructor de scoreBoard
 ScoreBoard::ScoreBoard(Texture* score, Texture* arrow) {

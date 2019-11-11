@@ -1,5 +1,6 @@
 #pragma once
 
+
 const int SLIP_ARROW = 8;
 const int SLIP_POINTS = 10;
 const int SCALE_POINTS = 50;
@@ -11,10 +12,10 @@ class Game;
 class ArrowGameObject;
 class Vector2D;
 class Texture;
-class SDL_Rect;
 using Point2D = Vector2D;
 
-class ScoreBoard{
+//Scorebord hereda de GameObject
+class ScoreBoard : public GameObject {
 private:
 	int currentPoints = 0, arrowLeft = 0;
 	Texture*	arrowTexture	= nullptr;

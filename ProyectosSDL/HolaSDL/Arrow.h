@@ -1,7 +1,6 @@
 #pragma once
 #include "ArrowGameObject.h"
 
-
 using Point2D = Vector2D;
 const int ARROW_SPEED = 20;				//Velocidad de movimiento de arrow
 

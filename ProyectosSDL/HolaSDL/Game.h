@@ -1,12 +1,13 @@
 #pragma once
-#include <iostream>
 #include <vector>
 #include <string>
-#include "GameObject.h"
 #include "SDL.h"
 #include "SDL_image.h"
+#include "Texture.h"
+#include "GameObject.h"
 
 using namespace std;
+using uint = unsigned int;
 
 const uint WIN_WIDTH = 800;							//Anchura del juego
 const uint WIN_HEIGHT = 600;						//Altura del juego
@@ -32,7 +33,7 @@ private:
 	SDL_Window*	window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;						//Bool que determina el bucle del juego
-	//vector<Texture*> textures;				//Vector de texturas
+	vector<Texture*> textures;				//Vector de texturas
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
 
 	void loadTextures();

@@ -1,644 +1,141 @@
 ﻿  Arrow.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(18,122): error C2084: la función 'Arrow::Arrow(Texture *,Point2D,Vector2D,Vector2D,Game *,Texture *,SDL_Rect *)' ya tiene un cuerpo
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24): message : vea la definición anterior de '{ctor}'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(26,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(27,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(34,28): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(35,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(46,23): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(47,26): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(48,26): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(49,29): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(21,9): error C2065:  'Arrow': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(21,15): error C2059:  error de sintaxis: '>'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,20): error C2661:  'ArrowGameObject::ArrowGameObject': ninguna función sobrecargada acepta 6 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(25,23): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(26,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(27,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(28,29): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
   ArrowGameObject.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(50,26): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(29,26): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.cpp(7,16): error C2440:  '=': no se puede realizar la conversión de 'Vector2D' a 'int'
   Background.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\ArrowGameObject.cpp(7,10): message :  No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
   Ballon.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(21,21): error C3646: 'timePunctured': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(21,21): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(21,125): error C2084: la función 'Ballon::Ballon(Texture *,Point2D,Vector2D,Vector2D,Game *,Texture *,SDL_Rect *)' ya tiene un cuerpo
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(28): message : vea la definición anterior de '{ctor}'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(28,44): error C2039: 'getNumCols': no es un miembro de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(13): message : vea la declaración de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(29,9): error C2065: 'g': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(33,29): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(34,29): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(44,23): error C2556: 'bool Ballon::update(void)': la función sobrecargada solo se diferencia de 'void Ballon::update(void)' por el tipo de valor devuelto
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(32): message : vea la declaración de 'Ballon::update'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(44,14): error C2371: 'Ballon::update': nueva definición; tipos básicos distintos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(32): message : vea la declaración de 'Ballon::update'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(47,30): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(48,30): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(50,26): error C2248: 'Game::checkCrushBallon': no se puede obtener acceso al miembro private miembro declarado en la clase 'Game'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(43): message : vea la declaración de 'Game::checkCrushBallon'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(3): message : vea la declaración de 'Game'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(58,6): error C2039: 'getNumCols': no es un miembro de 'Texture'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(30,19): error C2661:  'ArrowGameObject::ArrowGameObject': ninguna función sobrecargada acepta 6 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(28,30): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(29,30): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
   Bow.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(13): message : vea la declaración de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(31,2): error C2065: 'currBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(31,19): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(33,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(41,24): error C2065: 'dir': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(45,37): error C2065: 'currBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(46,25): error C2065: 'currBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(48,2): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(50,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(51,8): error C2065: 'quiver': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(52,12): error C2065: 'quiver': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(53,5): error C2065: 'quiver': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(53,18): error C2065: 'quiver': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(63,42): error C2065: 'dir': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(65,45): error C2065: 'dir': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(69,4): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(70,4): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(70,17): error C2065: 'bowDischarged': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(71,4): error C2065: 'currBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(71,14): error C2065: 'bowDischarged': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(72,33): error C2065: 'arrowTexture': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(76,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(77,32): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(78,4): error C2065: 'quiver': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(83,4): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,4): error C2065: 'bodyBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,17): error C2065: 'bowCharged': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,4): error C2065: 'currBow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,14): error C2065: 'bowCharged': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(39,17): warning C4018:  '>': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,20): error C2661:  'ArrowGameObject::ArrowGameObject': ninguna función sobrecargada acepta 6 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(8,15): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(9,15): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(11,17): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(12,17): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(14,17): error C2659:  '=': función como operando izquierdo
   Butterfly.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(94,3): error C2065: 'dir': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(15,17): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
   Game.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(63,23): error C2065: 'textures': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(63,52): error C2065: 'textures': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(64,3): error C2065: 'textures': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(84,17): warning C4018: '>=': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(89,20): warning C4018: '>=': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(101,20): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(109,20): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(116,2): error C2065: 'Ballon': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(116,10): error C2065: 'currBallon': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(116,33): error C2061: error de sintaxis: identificador 'Ballon'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(117,2): error C2065: 'ballons': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(117,20): error C2065: 'currBallon': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(118,2): error C2065: 'currBallon': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(134,6): error C2065: 'bow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(135,23): error C2065: 'ballons': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(136,24): error C2065: 'bow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,9): error C2065: 'ballons': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,61): error C2065: 'ballons': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,96): error C2065: 'bow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(137,8): error C2660: 'SDL_HasIntersection': la función no acepta 1 argumentos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(101,34): message : vea la declaración de 'SDL_HasIntersection'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(139,6): error C2065: 'ballons': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(150,3): error C2065: 'Texture': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(150,12): error C2065: 'aux': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(150,29): error C2061: error de sintaxis: identificador 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(151,3): error C2065: 'textures': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(151,22): error C2065: 'aux': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(21,18): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(22,18): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(24,20): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(25,20): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(27,20): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(28,20): error C2659:  '=': función como operando izquierdo
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(35,73): error C2661:  'Bow::Bow': ninguna función sobrecargada acepta 6 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): error C2664:  'void std::vector<GameObject *,std::allocator<_Ty>>::push_back(_Ty &&)': el argumento 1 no puede convertirse de 'Bow *' a 'const _Ty &'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): error C2664:         with
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): error C2664:         [
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): error C2664:             _Ty=GameObject *
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): error C2664:         ]
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): message :  Razón: no se puede realizar la conversión de 'Bow *' a 'const _Ty'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): message :         with
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): message :         [
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): message :             _Ty=GameObject *
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,29): message :         ]
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(36,26): message :  Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(74,21): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(112,20): warning C4018:  '<': no coinciden signed/unsigned
   GameObject.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(152,3): error C2065: 'aux': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(120,20): warning C4018:  '<': no coinciden signed/unsigned
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
   main.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\main.cpp(9,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
   Reward.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,9): error C2065: 'GameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(36,20): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(11,26): error C2378: 'uint': nueva definición; no se puede sobrecargar el símbolo con typedef
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C3646: 'w': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(17,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C3646: 'h': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,9): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(18,12): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C3646: 'fw': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(19,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C3646: 'fh': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,10): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(20,13): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C3646: 'numCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C3646: 'numRows': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,15): error C2059: error de sintaxis: '='
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(22,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,80): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C3646: 'getNumCols': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,17): error C2059: error de sintaxis: '('
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(32,26): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(35,34): error C2061: error de sintaxis: identificador 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,111): error C2065: 'numRows': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(26,120): error C2065: 'numCols': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(30,28): error C2065: 'w': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Texture.h(31,28): error C2065: 'h': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Reward.h(8,15): warning C4099: 'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir
   ScoreBoard.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message : vea la declaración de 'SDL_Rect'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_WIDTH'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11,24): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,12): error C2146: error de sintaxis: falta ';' delante del identificador 'WIN_HEIGHT'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(12,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,12): error C2146: error de sintaxis: falta ';' delante del identificador 'NUM_TEXTURES'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(13,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,23): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_RATE'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(14,25): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,25): error C2086: 'const int uint': nueva definición
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(11): message : vea la declaración de 'uint'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,12): error C2146: error de sintaxis: falta ';' delante del identificador 'FRAME_BALLON'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(15,27): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C3646: 'colls': especificador de invalidación desconocido
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,12): error C2059: error de sintaxis: ','
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(21,18): error C2238: símbolos (token) inesperados delante de ';'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(25,52): error C2078: hay demasiados inicializadores
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(14,15): warning C4099: 'SDL_Rect': nombre de tipo visto anteriormente usando 'struct' ahora se ve usando 'class'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\SDL2-2.0.4\include\SDL_rect.h(64): message : vea la declaración de 'SDL_Rect'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.cpp(10,29): error C2027: uso del tipo 'Texture' sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13): message : vea la declaración de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.cpp(11,29): error C2027: uso del tipo 'Texture' sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13): message : vea la declaración de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.cpp(54,15): error C2027: uso del tipo 'Texture' sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13): message : vea la declaración de 'Texture'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.cpp(64,15): error C2027: uso del tipo 'Texture' sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Reward.cpp(3,177): error C2661:  'ArrowGameObject::ArrowGameObject': ninguna función sobrecargada acepta 6 argumentos
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(8,38): error C2504:  'ArrowGameObject': clase base sin definir
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(23,3): error C2061:  error de sintaxis: identificador 'Game'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,43): error C2065:  '_game': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,50): error C2065:  '_texture': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,60): error C2065:  '_body': identificador no declarado
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(24,5): error C2614:  'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
   Generando código...
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(13): message : vea la declaración de 'Texture'
+C:\Users\Oskar\Desktop\BowPractica\ProyectosSDL\HolaSDL\Bow.h(16,35): error C2504:  'ArrowGameObject': clase base sin definir

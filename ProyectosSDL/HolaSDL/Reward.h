@@ -5,7 +5,6 @@
 class Game;
 class Vector2D;
 class Texture;
-class SDL_Rect;
 using Point2D = Vector2D;
 
 

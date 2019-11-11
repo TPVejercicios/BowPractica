@@ -12,8 +12,8 @@ using Point2D = Vector2D;
 const int START_ARROWS = 10;							//Cantidad de arrows con las que se inicia el juego
 const int BOW_SPEED = 20;								//Velocidad de movimiento del bow
 
-//La clase Reward es hija de ArrowGameObject y también de EventHandler
-class Bow : public ArrowGameObject, public EventHandler {
+//La clase Bow es hija de ArrowGameObject y también de EventHandler
+class Bow : public ArrowGameObject{
 private:
 	int	gap = 31;								//Desface gráfico que hay entre el bow cargado y el descargado
 	int	remainingShots;							//Variable que lleva la cuenta de las arrows que quedan
@@ -21,7 +21,8 @@ private:
 	vector<Arrow*> arrows;				//Vector de punteros de arrows
 
 public:
-	Bow(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body);
+	Bow() {};
+	Bow(Texture* _texture);
 	~Bow();
 	void update();
 	void handleEvents(const SDL_Event event);		

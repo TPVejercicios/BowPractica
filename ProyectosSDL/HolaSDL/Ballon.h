@@ -18,15 +18,20 @@ class Ballon : public ArrowGameObject {
 private:
 	Point2D		pos;					//Posición del ballon en el eje x e y
 	Vector2D	vel;					//Dirección del ballon
-	uint		timePunctured;			//El tiempo en el que el ballon es pinchado
-	int			numTexture, numBallon, collFrame = 0, gap = 10;
+	uint		timePunctured = 10;			//El tiempo en el que el ballon es pinchado
+	int			numTexture = 0, numBallon = 0, collFrame = 0, gap = 10;
 	punctured	status		= SWOLLEN;	//Enum que representa el estado del ballon
 	Texture*	texture		= nullptr;	//Textura del ballon
 	Game*		game		= nullptr;	//Puntero a game
 	SDL_Rect*	ballonBody	= nullptr;	//Rect dele ballon para renderizar y controlar colisiones
 public:
+	Ballon() {};
 	Ballon(Texture* ballonSprite, Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) 
-		:ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body),texture(ballonSprite) {};
+		:ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body),texture(ballonSprite) {
+		timePunctured = 10;
+		numBallon = 0;
+		numTexture = 0;
+	};
 
 	~Ballon();
 	void update();
