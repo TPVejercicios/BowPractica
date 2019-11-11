@@ -1,7 +1,6 @@
 #pragma once
-#include "ScoreBoard.h"
-#include "EventHandler.h"
-#include "ArrowGameObject.h"
+#include "Game.h"
+
 
 class GameObject
 {

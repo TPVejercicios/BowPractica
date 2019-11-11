@@ -1,13 +1,9 @@
 #pragma once
 #include "GameObject.h"
-#include "Arrow.h"
-#include "Ballon.h"
-#include "Bow.h"
-#include "Butterfly.h"
-#include "Reward.h"
-#include "Background.h"
+#include "Vector2D.h"
+#include "Texture.h"
 
-
+using Point2D = Vector2D;
 
 class ArrowGameObject : public GameObject
 {
@@ -21,7 +17,9 @@ protected:
 	//vector<Texture*> textures; Si tenemos aqui un vector de texturas podremos tener las 2 texturas del arco por ejemplo para cambiar entre ellas
 	SDL_Rect* body = nullptr;
 	ArrowGameObject(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body);
+	ArrowGameObject() {};
 public:
+	
 	virtual ~ArrowGameObject();
 	virtual void render() const ;
 	virtual void update();

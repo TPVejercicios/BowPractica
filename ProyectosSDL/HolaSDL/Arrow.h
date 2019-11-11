@@ -1,8 +1,6 @@
 #pragma once
-#include "Texture.h"
-#include "Vector2D.h"
-class Game;
-class ArrowGameObject;
+#include "ArrowGameObject.h"
+
 
 using Point2D = Vector2D;
 const int ARROW_SPEED = 20;				//Velocidad de movimiento de arrow
@@ -20,10 +18,19 @@ private:
 	bool		shooted = false;		//Determina si el arrow está siedo disparada
 
 public:
-	Arrow(Texture* arrowSpite);
+	//Constructor
+	//	ArrowGameObject(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body);
+
+	Arrow(Texture* arrowSprite, Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body)
+		: ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body), texture(arrowSprite) {};
+
+		
+	//Destructor
 	~Arrow();
+	//Métodos genericos
 	void update();
 	void render();
+	//Métodos propios de la clase arrow
 	SDL_Rect* returnArrowHead() { return arrowHead; };
 	void shootArrow(Vector2D shootPos);
 };

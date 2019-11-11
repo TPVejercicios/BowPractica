@@ -1,6 +1,5 @@
 #include "Ballon.h"
-#include <iostream>
-#include "Game.h"
+
 
 using namespace std;
 
@@ -19,10 +18,9 @@ Ballon::~Ballon() {
 }
 
 //Genera un globo y pone valores aleatorios
-Ballon::Ballon(Texture* t, Game* g) {
+Ballon::Ballon(Texture* t, Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) {
 	int seed = rand() % 100;
 	srand(seed);
-	texture = t;
 	pos.setX((rand()% (WIN_WIDTH/2)) + (WIN_WIDTH / 2) - 50);
 	pos.setY(WIN_HEIGHT);
 	vel.setX(0);

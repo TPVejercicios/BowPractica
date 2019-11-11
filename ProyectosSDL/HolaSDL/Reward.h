@@ -1,7 +1,8 @@
 #pragma once
+#include "ArrowGameObject.h"
+#include "EventHandler.h"
 
 class Game;
-class ArrowGameObject;
 class Vector2D;
 class Texture;
 class SDL_Rect;

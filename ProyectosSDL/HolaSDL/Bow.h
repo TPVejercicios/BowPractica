@@ -1,12 +1,11 @@
 #pragma once
-#include "Texture.h"
-#include "Vector2D.h"
-#include "Arrow.h"
 #include <vector>
 #include "ArrowGameObject.h"
+#include "Arrow.h"
+#include "EventHandler.h"
 
 class Game;
-class ArrowGameObject;
+
 
 using namespace std;
 using Point2D = Vector2D;						
@@ -19,7 +18,8 @@ private:
 	int	gap = 31;								//Desface gráfico que hay entre el bow cargado y el descargado
 	int	remainingShots;							//Variable que lleva la cuenta de las arrows que quedan
 	bool charged = true;				//Variable que determina si el bow está cargado
-	vector<Arrow*> arrows;						//Vector de punteros de arrows
+	vector<Arrow*> arrows;				//Vector de punteros de arrows
+
 public:
 	Bow(Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body);
 	~Bow();

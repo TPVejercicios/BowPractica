@@ -1,10 +1,7 @@
 #pragma once
-#include "Texture.h"
-#include "Vector2D.h"
-
-
+#include "ArrowGameObject.h"
 class Game;
-class ArrowGameObject;
+
 
 using namespace std;
 using Point2D = Vector2D;
@@ -28,7 +25,9 @@ private:
 	Game*		game		= nullptr;	//Puntero a game
 	SDL_Rect*	ballonBody	= nullptr;	//Rect dele ballon para renderizar y controlar colisiones
 public:
-	Ballon(Texture* t, Game* g);
+	Ballon(Texture* ballonSprite, Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) 
+		:ArrowGameObject(_pos, _angle, _scale, _game, _texture, _body),texture(ballonSprite) {};
+
 	~Ballon();
 	void update();
 	void render() const;

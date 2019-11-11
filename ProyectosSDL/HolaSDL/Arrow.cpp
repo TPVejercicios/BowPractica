@@ -1,5 +1,6 @@
 #include "Arrow.h"
-#include "Game.h"
+
+
 
 Arrow::~Arrow() {
 	try {
@@ -14,7 +15,7 @@ Arrow::~Arrow() {
 }
 
 //Crea una flecha
-Arrow::Arrow(Texture* t) {
+Arrow::Arrow(Texture* t,Point2D _pos, Vector2D _angle, Vector2D _scale, Game* _game, Texture* _texture, SDL_Rect* _body) {
 	texture = t;
 	pos.setX(0);
 	pos.setY(disT);
@@ -32,7 +33,7 @@ Arrow::Arrow(Texture* t) {
 	arrowHead->w = texture->getW() / 100;
 	arrowHead->x = pos.getX() + gap;
 	arrowHead->y = pos.getY();
-};
+}
 
 //Renderiza una flecha en movimiento
 void Arrow::render() {
