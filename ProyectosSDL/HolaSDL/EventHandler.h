@@ -1,7 +1,17 @@
 #pragma once
-class EventHandler
+#include "GameObject.h"
+#include "Game.h"
+
+class EventHandler : public GameObject
 {
+protected:
+	EventHandler() {};
+
 public:
-	virtual void handleEvent() = 0;
+	~EventHandler() {};
+	virtual void render() const = 0;
+	virtual void update() = 0;
+	//
+	virtual void handleEvent(const SDL_Event event) = 0;
 };
 

@@ -1,107 +1,105 @@
 #include "Bow.h"
-#include "Game.h"
 #include <iostream>
 
 //Constructora de bow
-Bow::Bow(Texture* _texture) {
-	Point2D* pos;
-	pos->setX = 0;
-	pos->setY = 0;
-	Vector2D* angle;
-	angle->setX = 0;
-	angle->setY = 0; 
-	Vector2D* scale;
-	scale->setX = 0;
-	scale->setY = 0;
-	SDL_Rect* body = new SDL_Rect();
-	body.
-	ArrowGameObject(pos, angle, scale, _texture, body);
-	remainingShots = 10;
+Bow::Bow(Texture* _bowCharged,Texture*_bowDiscarged,Texture* _arrowSprite, Game* _game)
+	:ArrowGameObject(_game), EventHandler()
+{
+	currBow = bowCharged = _bowCharged;
+	bowDischarged = _bowDiscarged;
+	arrowSprite = _arrowSprite;
+	remainingShots = START_ARROWS;
+	scale = 4;
+	body->h = currBow->getH() / scale;
+	body->w = currBow->getW() / scale;
+	body->x = pos.getX();
+	body->y = pos.getY();
 }
 
 //Destructora de bow
 Bow::~Bow() {
-	/*
+	
 	try {
-		for (int i = 0; i < arrows.size(); i++) delete arrows.at(i);
-		arrows.clear();
-		arrowTexture = nullptr;
+		for (int i = 0; i < quiver.size(); i++) delete quiver.at(i);
+		quiver.clear();
+		arrowSprite = nullptr;
 		currBow = nullptr;
 		bowCharged = nullptr;
 		bowDischarged = nullptr;
-		delete bodyBow;
 		cout << "Se ha destruido el bow" << endl;
 	}
 	catch (exception e) {
 		cout << "Error deleting a bow" << e.what() << endl;
-	}*/
+	}
 }
 
 //Renderiza el bow 
-void Bow::render() {
-	//currBow->render(*bodyBow,SDL_FLIP_NONE);
-	//if (!arrows.empty()) {
-	//	for (int i = 0; i < arrows.size(); i++) {
-	//		arrows.at(i)->render();
-	//	}
-	//}
+void Bow::render() const {
+	currBow->render(*body, SDL_FLIP_NONE);
+	if (!quiver.empty()) {
+		for (int i = 0; i < quiver.size(); i++) {
+			quiver.at(i)->render();
+		}
+	}
 }
 
+//Falta borrar una flecha que se ha salido de la pantalla
 //Actualiza la posición del bow y lo limita para que no se salga de la escena
 void Bow::update() {
-	//pos.setY(pos.getY() + dir.getY() * BOW_SPEED);
-	//if (pos.getY() < 0) {
-	//	pos.setY(0);
-	//}
-	//else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
-	//	pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
-	//}
-	//bodyBow->y = pos.getY();
-	//if (!arrows.empty()) {
-	//	for (int i = 0; i < arrows.size(); i++) {
-	//		if (arrows.at(i)->update()) {
-	//			delete arrows.at(i);
-	//			arrows.erase(arrows.begin() + i);
-	//		}
-	//	}
-	//}
+	pos.setY(pos.getY() + dir.getY() * BOW_SPEED);
+	if (pos.getY() < 0) {
+		pos.setY(0);
+	}
+	else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
+		pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
+	}
+	body->y = pos.getY();
+	if (!quiver.empty()) {
+		for (int i = 0; i < quiver.size(); i++) {
+			quiver.at(i)->update();
+			/*if () {
+				delete quiver.at(i);
+				quiver.erase(quiver.begin() + i);
+			}*/
+		}
+	}
 }
 
 //Controla el input para mover el arco en el eje Y
-void Bow::handleEvents(const SDL_Event event) {
-	//if (event.type == SDL_KEYDOWN) {
-	//	//Tecla abajo
-	//	if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1); 
-	//	//Tecla ariba
-	//	else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
-	//	//Tecla disparo
-	//	else if (event.key.keysym.sym == SDLK_RIGHT && charged) {	
-	//		charged = false;
-	//		bodyBow->x = pos.getX() + gap;
-	//		bodyBow->w = bowDischarged->getW() / SCALE_DIV;
-	//		currBow = bowDischarged;
-	//		Arrow* currArrow = new Arrow(arrowTexture);
-	//		arrows.push_back(currArrow);
-	//		currArrow = nullptr;
-	//		Vector2D shootPos;
-	//		shootPos.setX(pos.getX());
-	//		shootPos.setY(pos.getY() + (bodyBow->h / 2) - 6);
-	//		quiver.back()->shootArrow(shootPos);
-	//	}
-	//	//Tecla recarga
-	//	else if (event.key.keysym.sym == SDLK_LEFT && !charged && remainingShots > 0) {	
-	//		remainingShots--;
-	//		bodyBow->x = pos.getX();
-	//		bodyBow->w = bowCharged->getH() / SCALE_DIV;
-	//		currBow = bowCharged;
-	//		charged = true;
-	//	}
-	//	//Para testeo, aumenta la cantidad de flechas para disparar en 100
-	//	else if (event.key.keysym.sym == SDLK_p) {
-	//		remainingShots += 100;
-	//	}
-	//}
-	//else {
-	//	dir.setY(0);
-	//}
+void Bow::handleEvent(const SDL_Event event) {
+	if (event.type == SDL_KEYDOWN) {
+		//Tecla abajo
+		if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1); 
+		//Tecla ariba
+		else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
+		//Tecla disparo
+		else if (event.key.keysym.sym == SDLK_RIGHT && charged) {	
+			charged = false;
+			body->x = pos.getX() + gap;
+			body->w = bowDischarged->getW() / SCALE_DIV;
+			currBow = bowDischarged;
+			Arrow* currArrow = new Arrow(arrowSprite,game);
+			quiver.push_back(currArrow);
+			Vector2D shootPos;
+			shootPos.setX(pos.getX());
+			shootPos.setY(pos.getY() + (body->h / 2) - 6);
+			quiver.back()->shootArrow(shootPos);
+			game->bowShoted();
+		}
+		//Tecla recarga
+		else if (event.key.keysym.sym == SDLK_LEFT && !charged && remainingShots > 0) {	
+			remainingShots--;
+			body->x = pos.getX();
+			body->w = bowCharged->getH() / SCALE_DIV;
+			currBow = bowCharged;
+			charged = true;
+		}
+		//Para testeo, aumenta la cantidad de flechas para disparar en 100
+		else if (event.key.keysym.sym == SDLK_p) {
+			remainingShots += 100;
+		}
+	}
+	else {
+		dir.setY(0);
+	}
 }

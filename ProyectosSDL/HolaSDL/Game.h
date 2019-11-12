@@ -4,7 +4,16 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Texture.h"
+#include <iostream>
+
+#include "Bow.h"
+#include "Background.h"
+#include "Ballon.h"
+#include "ScoreBoard.h"
 #include "GameObject.h"
+
+
+
 
 using namespace std;
 using uint = unsigned int;
@@ -30,25 +39,33 @@ const image PATHS[] = { {"..\\images\\Arrow1.png", 1, 1}, {"..\\images\\Arrow2.p
 class Game {
 private:
 	int	points = 0;							//Puntos conseguidos
+	int arrowsRemain = 0;
 	SDL_Window*	window = nullptr;
 	SDL_Renderer* renderer = nullptr;
-	bool exit = false;						//Bool que determina el bucle del juego
-	vector<Texture*> textures;				//Vector de texturas
-	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
+	bool exit = false;							//Bool que determina el bucle del juego
+	vector<Texture*> textures;					//Vector de texturas
+	vector<ArrowGameObject*> gameObjects;		//Vector polimórfico con TODOS los objetos del juego
+	bool shooted = false;
+
 
 	void loadTextures();
 	void createBallons();		
 	void render();
 	void handleEvents();
 	void update();
-	void checkCrushBallon();
+
 public:
 
 	//exception 
 	string loadingIMG = "Error loading image ";
 	string deletingOBJ = "Error deleting object";
+
 	Game();
 	~Game();
+	int pointsGame() { return points; };
+	void addArrowsCounts(int arrows) { arrowsRemain = arrows; };
+	void bowShoted() { shooted = true; };
+	void checkCrushBallon(SDL_Rect* ballonColl);
 	void run();
 };
 

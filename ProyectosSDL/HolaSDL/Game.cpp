@@ -1,5 +1,7 @@
 #include "Game.h"
-#include <iostream>
+
+
+
 
 using namespace std;
 
@@ -15,24 +17,14 @@ Game::Game() {
 	{
 		//Carga texturas
 		loadTextures();
-		//Creación del bow
+
+		ArrowGameObject* Bg = new Background(textures.at(2),this);
+		gameObjects.push_back(Bg);
+		Bg = nullptr;
+
+		//Creación del bow //9
 		try {
-			Point2D* _pos;
-			_pos->setX = 0;
-			_pos->setY = 0;
-			Vector2D* _angle;
-			_angle->setX = 0;
-			_angle->setY = 0;
-			Vector2D* _scale;
-			_scale->setX = 0;
-			_scale->setY = 0;
-			SDL_Rect* _body = new SDL_Rect();
-			_body->h = 100;
-			_body->w = 100;
-			_body->x = 0;
-			_body->y = 0;
-			Game* game;
-			Bow* bow = new Bow(_pos, _angle, _scale, game, textures.at(2), _body);
+			ArrowGameObject* bow = new Bow(textures.at(9), textures.at(10), textures.at(0), this);
 			gameObjects.push_back(bow);
 			bow = nullptr;
 		}
@@ -44,7 +36,7 @@ Game::Game() {
 
 		//Creación del scoreboard
 		try {
-			
+			ArrowGameObject* scoreBoard = new ScoreBoard(textures.at(13),textures.at(1),this);
 		}
 		catch (exception e) {
 			cout << "Error creating scoreBoard " << e.what() << endl;
@@ -110,7 +102,7 @@ void Game::run() {
 void Game::render() {		
 	SDL_RenderClear(renderer);
 	for (int i = 0; i < gameObjects.size(); i++) {
-		gameObjects.at(i)->update();
+		gameObjects.at(i)->render();
 	}
 	SDL_RenderPresent(renderer);
 }
@@ -124,35 +116,45 @@ void Game::update() {
 
 //Crea un globo y lo mete al vector de globos
 void Game::createBallons() {
-	/*Ballon* currBallon = new Ballon(textures.at(5), this);
-	ballons.push_back(currBallon);
-	currBallon = nullptr;*/
+	Ballon* currBallon = new Ballon(textures.at(8), this);
+	gameObjects.push_back(currBallon);
+	currBallon = nullptr;
 }
 
 //Hace la llamada a los eventos de arrow y bow
 void Game::handleEvents() {
 	SDL_Event event;
+	int contador = 0;
 	while (SDL_PollEvent(&event) && !exit) {
-		if (event.type != SDL_QUIT) {
-			//bow->handleEvents(event);
+
+		if (event.type != SDL_QUIT)
+		{
+			dynamic_cast<EventHandler*>(gameObjects.at(1))->handleEvent(event);
 		}
-		else exit = true;
+		else
+		{
+			exit = true;
+		}
+		
 	}
 }
 
 //Comprueba si una flecha a colisionado contra un globo
-void Game::checkCrushBallon() {
-	/*if (bow->bowShoted()) {
-		for (int i = 0; i < ballons.size(); i++) {
-			for (int j = 0; j < bow->arrowShooted(); j++) {
-				if (ballons.at(i)->returnState() && SDL_HasIntersection(ballons.at(i)->returnBallonBody(), bow->returnArrowHeadBow(j))) {
-					points += 10;
-					ballons.at(i)->ballonPunctured();
-				}
-			}
+void Game::checkCrushBallon(SDL_Rect* arrowColl ) {
 
+	//SDL_Rect* currBallon = new SDL_Rect();
+	Ballon* currBallon;
+
+	for (int i = 0; i < gameObjects.size(); i++) {
+
+		if (dynamic_cast<Ballon*>(gameObjects.at(i)) && 
+			SDL_HasIntersection(dynamic_cast<ArrowGameObject*>(gameObjects.at(i))->getCollisionRect(),arrowColl)){
+
+			points += 10;
+			dynamic_cast<Ballon*>(gameObjects.at(i))->ballonPunctured();
 		}
-	}*/
+
+	}
 }
 
 //Carga las texturas en un vector (couts for debug)
@@ -163,7 +165,8 @@ void Game::loadTextures() {
 		for (int i = 0; i < NUM_TEXTURES; i++) {
 			aux = new Texture(renderer, PATHS[i].filename, PATHS[i].rows, PATHS[i].colls);
 			textures.push_back(aux);
-			delete aux;
+			
+			//delete aux;
 			cout << "Textura(" << i << ") cargada" << endl;
 		}
 		cout << "TEXTURAS CARGADAS CORRECTAMENTE" << endl;
@@ -174,4 +177,6 @@ void Game::loadTextures() {
 	}
 	aux = nullptr;
 }
+
+
 

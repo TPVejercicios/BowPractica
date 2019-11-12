@@ -1,11 +1,13 @@
-#include "Game.h"
+
 #include "ScoreBoard.h"
-#include <iostream>
+
 
 using namespace std;
 
 //Constructor de scoreBoard
-ScoreBoard::ScoreBoard(Texture* score, Texture* arrow) {
+ScoreBoard::ScoreBoard(Texture* score, Texture* arrow,Game* game) 
+	:ArrowGameObject(game)
+{
 	scoreTexture = score;
 	arrowTexture = arrow;
 	
@@ -37,9 +39,9 @@ ScoreBoard::~ScoreBoard() {
 
 }
 
+
 //Renderiza puntos y flechas restantes
-void ScoreBoard::render(int points,int arrows) {
-	currentPoints = points;
+void ScoreBoard::ActualizaHUD(int arrows) {
 	arrowLeft = arrows;
 	updatePoints();
 	updateArrowHUD();
@@ -47,7 +49,7 @@ void ScoreBoard::render(int points,int arrows) {
 
 //Actualiza los valores de puntos 
 void ScoreBoard::updatePoints() {
-	string pointsString = to_string(currentPoints);
+	string pointsString = to_string(game->pointsGame());
 	int nums = pointsString.size();
 	//48 es el valor a restar para convertir un char en int (Codigo ASCII)
 	int iter = 0;
@@ -63,6 +65,7 @@ void ScoreBoard::updatePoints() {
 //Actualiza la cantidad de flechas restantes
 void ScoreBoard::updateArrowHUD() {
 	int distance = arrowRect->x;
+
 	for (int i = 0; i < arrowLeft; i++) {
 		arrowTexture->render(*arrowRect, SDL_FLIP_NONE);
 		arrowRect->x += ARROW_GAP;
