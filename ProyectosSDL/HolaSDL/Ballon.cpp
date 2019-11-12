@@ -48,7 +48,6 @@ void Ballon::update() {
 		body->y = pos.getY() + gap;
 		pos.subVectorInY(dir);
 
-		//game->checkCrushBallon();
 		if (pos.getY() < -100) {//Si el ballon sale por arriba con un extra de 100 para que se vea como sale de escena
 			//Aqui llamar a killObject();
 		}

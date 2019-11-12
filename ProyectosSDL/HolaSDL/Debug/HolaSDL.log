@@ -1,158 +1,53 @@
 ﻿  Arrow.cpp
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(21,10): error C2065: 'Arrow': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(21,16): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(24,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(25,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(29,32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(30,29): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(41,23): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(42,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(43,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(44,24): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(25,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(26,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(30,32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(31,29): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(41,22): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(42,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(43,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(44,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
   ArrowGameObject.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(45,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.cpp(45,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
-  Background.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
   Ballon.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(21,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(22,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(46,24): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(23,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(47,24): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(48,24): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
   Bow.cpp
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.cpp(58,17): warning C4018: '>': no coinciden signed/unsigned
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(15,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(16,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(23,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(40,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(49,22): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(56,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(58,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(78,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(84,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,45): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-  Butterfly.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(92,22): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
-  EventHandler.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(18,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(19,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(25,21): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(42,21): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(51,22): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(58,20): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(60,21): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(81,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(85,26): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(86,45): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
   Game.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,56): error C2504: 'EventHandler': clase base sin definir
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.cpp(93,22): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(66,21): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(104,20): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(112,20): warning C4018: '<': no coinciden signed/unsigned
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(148,20): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(63,21): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(101,20): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(109,20): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(141,20): warning C4018: '<': no coinciden signed/unsigned
   main.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(146,10): warning C4101: 'currBallon': variable local sin referencia
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.cpp(177,20): warning C4018: '<': no coinciden signed/unsigned
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-  Reward.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\ScoreBoard.h(16,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
   ScoreBoard.cpp
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
 G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(9,38): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Arrow.h(21,11): error C2614: 'Arrow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(12,35): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Bow.h(25,10): error C2614: 'Bow': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(4,43): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(9,17): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,46): error C2614: 'Background': inicialización de miembro no válida: 'ArrowGameObject' no es una base o miembro
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(10,90): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Background.h(12,41): error C2065: 'body': identificador no declarado
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Ballon.h(15,39): error C2504: 'ArrowGameObject': clase base sin definir
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,9): error C2065: 'ArrowGameObject': identificador no declarado
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
   Generando código...
-G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Game.h(47,25): error C2059: error de sintaxis: '>'
+G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+  HolaSDL.vcxproj -> G:\2do\TPV1\DEOscar\BowPractica\ProyectosSDL\bin\HolaSDLDebug.exe

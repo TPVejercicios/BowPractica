@@ -4,6 +4,8 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include <iostream>
+#include "Vector2D.h"
+#include <list>
 
 class Bow;
 class Background;
@@ -12,6 +14,7 @@ class ScoreBoard;
 class GameObject;
 class Texture;
 class ArrowGameObject;
+class Arrow;
 
 using namespace std;
 using uint = unsigned int;
@@ -43,6 +46,7 @@ private:
 	bool exit = false;							//Bool que determina el bucle del juego
 	vector<Texture*> textures;					//Vector de texturas
 	vector<ArrowGameObject*> gameObjects;		//Vector polimórfico con TODOS los objetos del juego
+	vector<ArrowGameObject*> objectsToDelete;
 	bool shooted = false;
 
 
@@ -65,6 +69,9 @@ public:
 	void bowShoted() { shooted = true; };
 	void checkCrushBallon(SDL_Rect* ballonColl);
 	void run();
+	void killObject();
+	void addObjectToKill(ArrowGameObject* _obj) { objectsToDelete.push_back(_obj); };
+	void shootArrow(Vector2D pos);
 };
 
 

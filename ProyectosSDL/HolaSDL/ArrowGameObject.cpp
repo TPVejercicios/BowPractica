@@ -8,5 +8,7 @@ ArrowGameObject::ArrowGameObject(Game* _game) {
 }
 
 ArrowGameObject::~ArrowGameObject() {
-
+	delete body;
+	delete collisionBody;
+	game = nullptr;
 }

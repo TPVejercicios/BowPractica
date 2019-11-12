@@ -21,7 +21,6 @@ Bow::Bow(Texture* _bowCharged,Texture*_bowDiscarged,Texture* _arrowSprite, Game*
 
 //Destructora de bow
 Bow::~Bow() {
-	
 	try {
 		for (int i = 0; i < quiver.size(); i++) delete quiver.at(i);
 		quiver.clear();
@@ -53,7 +52,7 @@ void Bow::update() {
 	if (pos.getY() < 0) {
 		pos.setY(0);
 	}
-	else if (pos.getY() > WIN_HEIGHT - currBow->getH() / SCALE_DIV) {
+	else if (pos.getY() > (WIN_HEIGHT - currBow->getH()) / SCALE_DIV) {
 		pos.setY(WIN_HEIGHT - currBow->getH() / SCALE_DIV);
 	}
 	body->y = pos.getY();
@@ -61,6 +60,7 @@ void Bow::update() {
 		for (int i = 0; i < quiver.size(); i++) {
 			quiver.at(i)->update();
 			/*if () {
+			//Meter objeto a  la lista de killObject
 				delete quiver.at(i);
 				quiver.erase(quiver.begin() + i);
 			}*/
@@ -81,12 +81,10 @@ void Bow::handleEvent(const SDL_Event event) {
 			body->x = pos.getX() + gap;
 			body->w = bowDischarged->getW() / SCALE_DIV;
 			currBow = bowDischarged;
-			Arrow* currArrow = new Arrow(arrowSprite,game);
-			quiver.push_back(currArrow);
 			Vector2D shootPos;
 			shootPos.setX(pos.getX());
 			shootPos.setY(pos.getY() + (body->h / 2) - 6);
-			quiver.back()->shootArrow(shootPos);
+			game->shootArrow(shootPos);
 			game->bowShoted();
 		}
 		//Tecla recarga
@@ -106,3 +104,4 @@ void Bow::handleEvent(const SDL_Event event) {
 		dir.setY(0);
 	}
 }
+

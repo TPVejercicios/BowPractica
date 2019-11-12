@@ -18,7 +18,7 @@ protected:
 	int scale = 0;
 	Game* game = nullptr;
 	//Texture* texture = nullptr;
-	SDL_Rect* body = nullptr;
+	SDL_Rect* body = nullptr; //sobra
 	SDL_Rect* collisionBody = nullptr;
 	ArrowGameObject(Game* _game);
 	ArrowGameObject() {};

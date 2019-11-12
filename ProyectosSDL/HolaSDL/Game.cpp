@@ -6,6 +6,7 @@
 #include "GameObject.h"
 #include "Texture.h"
 #include "ArrowGameObject.h"
+#include "Arrow.h"
 
 using namespace std;
 
@@ -56,16 +57,8 @@ Game::~Game() {
 		//Llamo al destructor virtual de cada tipo de objeto (nose si esto se hace así)
 		for (int i = gameObjects.size(); i > 0; i--) {
 			delete gameObjects.at(i);
-			gameObjects.pop_back();
 		}
-		////llamo el destructor de cada globo y limpio el vector de globos
-		//for (int i = 0; i < ballons.size(); i++) delete ballons.at(i);
-		//ballons.clear();
-		//delete scoreboard;
-		//delete bow;
-		//delete pointspointer;
-		//delete backgroundpos;
-		//delete arrowhud;
+		gameObjects.clear();
 		//Llamo al destructor de cada textura 
 		for (int i = 0; i < textures.size(); i++) delete textures.at(i);
 		textures.clear();
@@ -97,7 +90,7 @@ void Game::run() {
 			createBallons();
 			ballonCreated = SDL_GetTicks();
 		}
-
+		killObject();
 	}
 	cout << "Fin del juego" << endl;
 }
@@ -139,25 +132,23 @@ void Game::handleEvents() {
 		{
 			exit = true;
 		}
-		
 	}
 }
 
 //Comprueba si una flecha a colisionado contra un globo
 void Game::checkCrushBallon(SDL_Rect* arrowColl ) {
 
-	//SDL_Rect* currBallon = new SDL_Rect();
-	Ballon* currBallon;
-
 	for (int i = 0; i < gameObjects.size(); i++) {
-
-		if (dynamic_cast<Ballon*>(gameObjects.at(i)) && 
+		cout <<"Entra en for" << endl;
+		if (typeid(gameObjects.at(i)) == typeid(ArrowGameObject)) {
+			cout << "true";
+		}
+		if (typeid(gameObjects.at(i)) == typeid(Ballon) && 
 			SDL_HasIntersection(dynamic_cast<ArrowGameObject*>(gameObjects.at(i))->getCollisionRect(),arrowColl)){
-
+			cout << "Globo encontrado " << endl;
 			points += 10;
 			dynamic_cast<Ballon*>(gameObjects.at(i))->ballonPunctured();
 		}
-
 	}
 }
 
@@ -180,6 +171,25 @@ void Game::loadTextures() {
 		exit = true;
 	}
 	aux = nullptr;
+}
+
+void Game::killObject() {
+
+	for (int i = 0; i < gameObjects.size(); i++ ) {
+		for (int j = 0; j < objectsToDelete.size(); j++) {
+			if (objectsToDelete.at(j) == gameObjects.at(i)) {
+				gameObjects.erase(gameObjects.begin() + i);
+				delete objectsToDelete.at(j);
+			}
+		}
+	}
+	objectsToDelete.clear();
+}
+
+void Game::shootArrow(Vector2D pos) {
+	ArrowGameObject* currArrow = new Arrow(textures.at(0),pos, this);
+	gameObjects.push_back(currArrow);
+	currArrow = nullptr;
 }
 
 
