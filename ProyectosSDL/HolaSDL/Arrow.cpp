@@ -1,5 +1,6 @@
 #include "Arrow.h"
-
+#include "Texture.h"
+#include "Game.h"
 
 using namespace std;
 

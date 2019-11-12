@@ -1,8 +1,9 @@
 #include "Ballon.h"
+#include "Texture.h"
+#include <iostream>
+#include "Game.h"
 
 using namespace std;
-
-
 
 Ballon::Ballon(Texture* ballonSprite, Game* _game)
 	:ArrowGameObject(_game)

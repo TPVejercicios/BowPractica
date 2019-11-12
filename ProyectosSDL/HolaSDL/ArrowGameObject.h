@@ -2,7 +2,7 @@
 
 #include "Vector2D.h"
 #include "GameObject.h"
-#include "Game.h"
+#include "SDL.h"
 
 class Game;
 

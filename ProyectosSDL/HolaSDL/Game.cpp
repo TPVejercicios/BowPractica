@@ -1,7 +1,11 @@
 #include "Game.h"
-
-
-
+#include "Bow.h"
+#include "Background.h"
+#include "Ballon.h"
+#include "ScoreBoard.h"
+#include "GameObject.h"
+#include "Texture.h"
+#include "ArrowGameObject.h"
 
 using namespace std;
 

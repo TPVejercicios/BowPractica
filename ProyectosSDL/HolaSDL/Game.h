@@ -3,17 +3,15 @@
 #include <string>
 #include "SDL.h"
 #include "SDL_image.h"
-#include "Texture.h"
 #include <iostream>
 
-#include "Bow.h"
-#include "Background.h"
-#include "Ballon.h"
-#include "ScoreBoard.h"
-#include "GameObject.h"
-
-
-
+class Bow;
+class Background;
+class Balloon;
+class ScoreBoard;
+class GameObject;
+class Texture;
+class ArrowGameObject;
 
 using namespace std;
 using uint = unsigned int;

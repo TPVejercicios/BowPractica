@@ -2,6 +2,7 @@
 #include "ArrowGameObject.h"
 
 class Game;
+class Texture;
 using Point2D = Vector2D;
 const int ARROW_SPEED = 20;				//Velocidad de movimiento de arrow
 

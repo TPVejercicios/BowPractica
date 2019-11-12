@@ -1,6 +1,8 @@
 #pragma once
 #include "ArrowGameObject.h"
+
 class Game;
+class Texture;
 
 const int SLIP_ARROW = 8;
 const int SLIP_POINTS = 10;

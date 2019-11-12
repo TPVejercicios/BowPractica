@@ -1,4 +1,7 @@
 #include "Bow.h"
+#include "Arrow.h"
+#include "Texture.h"
+#include "Game.h"
 #include <iostream>
 
 //Constructora de bow

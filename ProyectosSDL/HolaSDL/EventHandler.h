@@ -1,6 +1,6 @@
 #pragma once
 #include "GameObject.h"
-#include "Game.h"
+#include "SDL.h"
 
 class EventHandler : public GameObject
 {

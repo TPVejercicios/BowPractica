@@ -1,15 +1,17 @@
 #pragma once
 #include "ArrowGameObject.h"
 #include "EventHandler.h"
-#include "Arrow.h"
+#include <vector>
 
 class Game;
+class Arrow;
+class Texture;
 using namespace std;					
 const int START_ARROWS = 10;							//Cantidad de arrows con las que se inicia el juego
 const int BOW_SPEED = 20;								//Velocidad de movimiento del bow
 
 //La clase Bow es hija de ArrowGameObject y también de EventHandler
-class Bow : public ArrowGameObject, public EventHandler{
+class Bow : public ArrowGameObject, public EventHandler {
 private:
 	Texture* currBow = nullptr;
 	Texture* bowDischarged = nullptr;
@@ -18,7 +20,7 @@ private:
 	int	gap = 31;								//Desface gráfico que hay entre el bow cargado y el descargado
 	int	remainingShots = 0;						//Variable que lleva la cuenta de las arrows que quedan
 	bool charged = true;						//Variable que determina si el bow está cargado
-	vector <Arrow*> quiver;						//Vector de punteros de arrows
+	vector<Arrow*> quiver;						//Vector de punteros de arrows
 
 public:
 
