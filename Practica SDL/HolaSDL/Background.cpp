@@ -1,8 +1,19 @@
 #include "Background.h"
 
-Background::Background(Point2D _pos, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game) :
-	ArrowGameObject(_pos, _h, _w, _angle, _scale, _texture, _game) {}
+Background::Background(int _h, int _w, Texture* _texture){
+	h = _h;
+	w = _w;
+	texture = _texture;
+}
 
 Background::~Background() {
+	texture = nullptr;
+}
 
+void Background::render() const {
+	texture->render({0, 0, w, h}, SDL_FLIP_NONE);
+}
+
+void Background::changeBackground(Texture* _texture) {
+	texture = _texture;
 }

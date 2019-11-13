@@ -3,7 +3,6 @@
 #include "ArrowGameObject.h"
 #include "EventHandler.h"
 
-//class EventHandler;
 class Game;
 
 using namespace std;
@@ -15,14 +14,13 @@ const uint GAP = 31;						//Desfase gráfico que hay entre el arco cargado y el d
 //La clase Bow es hija de ArrowGameObject y también de EventHandler
 class Bow : public ArrowGameObject,public EventHandler{
 private:
-	int	remainingShots;				//Variable que lleva la cuenta de las arrows que quedan
-	Vector2D dir;
+	const static int index = 0;		//Indice del objeto Bow
 	bool charged = true;			//Variable que determina si el bow está cargado
-	//const static ID = BOW;
 public:
 	Bow() {};
-	Bow(Point2D _pos, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, Vector2D _dir, int _remainingShots);
+	Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game);
 	~Bow();
 	virtual void update();
 	virtual void handleEvents(const SDL_Event event);
+	void changeTexture();
 };

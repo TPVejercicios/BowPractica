@@ -5,8 +5,10 @@
 #include "SDL_image.h"
 #include "Texture.h"
 #include "GameObject.h"
+#include "EventHandler.h"
 #include "Vector2D.h"
 #include <list>
+#include "Background.h"
 
 using namespace std;
 using uint = unsigned int;
@@ -45,33 +47,39 @@ enum indexTexturas
 	ARROW_1 = 0, ARROW_2 = 1, BG_1 = 2, BG_2 = 3, BG_3 = 4, BG_4 = 5, BG_5 = 6, BG_6 = 7, BALLONS = 8, BOW_1 = 9, BOW_2 = 10, BUBBLE = 11, BUTTERFLY = 12, DIGITS = 13, REWARDS = 14
 };
 
+enum indexObjets {
+	OBJECT_BOW = 0, OBJECT_ARROW = 1, OBJECT_BALLON = 2, OBJECT_BUTTERFLY = 3, OBJECT_REWARD = 4
+};
+
 class Game
 {
 private:
 	int	points = 0;							//Puntos conseguidos
+	int remainingShots = NUM_ARROWS;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;						//Bool que determina el bucle del juego
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
+	Background* background;					//Puntero al background
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
-	//vector<EventHandler*> 
-	//list<Arrow*> arrows;
-	//list<GameObject*> objectsToErase;
-
+	vector<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
+	//vector<Arrow*> arrows;
+	//vector<GameObject*> objectsToErase;
 
 	void loadTextures();
-
 	void render();
 	void handleEvents();
 	void update();
 	void mostrarGameObjects();
 	void createBow();
-	void createBackground();
-	//void createBallons();	
+	//void createBallons();
 public:
 	Game();
 	~Game();
 	void run();
+	void createArrow() {}; //Esta funcion es la que se llamará cuando bow detecta el evento de disparar
+	int getRemainingShots() { return remainingShots; };
+	Texture* getTextureBow(bool charged);
 	//void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
 	//void killArrow(Arrow* _arrow) {arrowsToErase.push_back(_arrow);};
 };

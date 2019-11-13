@@ -15,7 +15,7 @@ Game::Game() {
 		//Carga texturas
 		loadTextures();
 		//Crea el background y el bow
-		createBackground();
+		background = new Background(WIN_HEIGHT, WIN_WIDTH, textures[BG_4]);
 		createBow();
 	}
 }
@@ -51,10 +51,8 @@ void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
-			for (int i = 0; i < gameObjects.size(); i++) {
-				if (dynamic_cast<EventHandler*>(gameObjects[i])) {
-					dynamic_cast<EventHandler*>(gameObjects[i])->handleEvents(event);
-				}
+			for (int i = 0; i < eventObjects.size(); i++) {
+				eventObjects.at(i)->handleEvents(event);
 			}
 		}
 		else exit = true;
@@ -64,6 +62,7 @@ void Game::handleEvents() {
 //Dibuja cada objeto en el SDL_Renderer
 void Game::render() {
 	SDL_RenderClear(renderer);
+	background->render();
 	for (int i = 0; i < gameObjects.size(); i++) {
 		gameObjects.at(i)->render();
 	}
@@ -98,17 +97,15 @@ void Game::createBow() {
 	pos.setY(BOW_POS_Y);
 	Vector2D dir;
 	int angle = 0, scale = 1;
-	Bow* bow = new Bow(pos, BOW_H, BOW_W, angle, scale, textures[BOW_1], this, dir, NUM_ARROWS);
+	Bow* bow = new Bow(pos, dir, BOW_H, BOW_W, angle, scale, textures[BOW_1], this);
 	gameObjects.push_back(bow);
+	eventObjects.push_back(bow);
 	bow = nullptr;
 }
 
-void Game::createBackground() {
-	Point2D pos;
-	int angle = 0, scale = 1;
-	Background* bg = new Background(pos, WIN_HEIGHT, WIN_WIDTH, angle, scale, textures[BG_4], this);
-	gameObjects.push_back(bg);
-	bg = nullptr;
+Texture* Game::getTextureBow(bool charged) {
+	if (charged) return textures[BOW_1];
+	else return textures[BOW_2];
 }
 
 void Game::mostrarGameObjects() {

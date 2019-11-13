@@ -1,17 +1,16 @@
 #pragma once
 #include <vector>
-#include "ArrowGameObject.h"
-
-class Game;
+#include "Texture.h"
 
 using namespace std;
-using Point2D = Vector2D;
 
-//La clase Background es hija de ArrowGameObject
-class Background : public ArrowGameObject {
+class Background {
 private:
+	int h = 0, w = 0;
+	Texture* texture;
 public:
-	Background() {};
-	Background(Point2D _pos, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game);
+	Background(int _h, int _w, Texture* _texture);
 	~Background();
+	void render() const;
+	void changeBackground(Texture* _texture);
 };

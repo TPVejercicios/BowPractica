@@ -11,12 +11,13 @@ class ArrowGameObject : public GameObject{
 private:
 protected:
 	Point2D pos;					//Posicion del objeto
-	int h = 0, w = 0;						//Tamaño del objeto
+	Vector2D dir;					//Direccion del objeto
+	int h = 0, w = 0;				//Tamaño del objeto
 	int angle = 0;					//Ángulo del objeto
 	int scale = 1;					//Escala del objeto
 	Game* game = nullptr;			//Puntero a juego
 	Texture* texture = nullptr;		//Puntero a la tectura del objeto
-	ArrowGameObject(Point2D _pos,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game);
+	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game);
 	ArrowGameObject() {};
 public:
 	//Métodos génericos
