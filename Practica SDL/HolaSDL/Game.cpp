@@ -36,7 +36,7 @@ void Game::run() {
 		if (frameTime >= FRAME_RATE) {
 			update();
 			render();	
-			//mostrarGameObjects(); //Auxiliar para debug
+			mostrarGameObjects(); //Auxiliar para debug
 			startTime = SDL_GetTicks();
 		}
 		if (createBallon >= FRAME_BALLON) {
@@ -52,7 +52,6 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			for (int i = 0; i < gameObjects.size(); i++) {
-
 				if (dynamic_cast<EventHandler*>(gameObjects[i])) {
 					dynamic_cast<EventHandler*>(gameObjects[i])->handleEvents(event);
 				}

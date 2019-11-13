@@ -16,10 +16,10 @@ ArrowGameObject::~ArrowGameObject() {
 }
 
 void ArrowGameObject::render() const {
-	texture->render({(int)pos.getX(),(int)pos.getY(),w,h}, SDL_FLIP_NONE);
+	texture->render(getRect(), SDL_FLIP_NONE);
 }
 
-SDL_Rect ArrowGameObject::getRect() {
+SDL_Rect ArrowGameObject::getRect() const {
 	SDL_Rect rect;
 	rect.h = h;
 	rect.w = w;

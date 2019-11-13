@@ -54,9 +54,9 @@ private:
 	bool exit = false;						//Bool que determina el bucle del juego
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
-	//list<Arrow*> arrows ;
+	//vector<EventHandler*> 
+	//list<Arrow*> arrows;
 	//list<GameObject*> objectsToErase;
-	//list<Arrow*> arrowsToErase;
 
 
 	void loadTextures();

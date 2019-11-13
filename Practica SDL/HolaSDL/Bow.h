@@ -18,7 +18,7 @@ private:
 	int	remainingShots;				//Variable que lleva la cuenta de las arrows que quedan
 	Vector2D dir;
 	bool charged = true;			//Variable que determina si el bow está cargado
-
+	//const static ID = BOW;
 public:
 	Bow() {};
 	Bow(Point2D _pos, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, Vector2D _dir, int _remainingShots);

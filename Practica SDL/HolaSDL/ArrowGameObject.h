@@ -25,5 +25,5 @@ public:
 	virtual void update() {};
 	void loadFromFile() {};
 	void saveToFile() {};
-	SDL_Rect getRect();
+	SDL_Rect getRect() const;
 };
