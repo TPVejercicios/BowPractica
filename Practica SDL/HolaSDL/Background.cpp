@@ -6,7 +6,3 @@ Background::Background(Point2D _pos, int _h, int _w, int _angle, int _scale, Tex
 Background::~Background() {
 
 }
-
-void Background::render() {
-	ArrowGameObject::render();
-}

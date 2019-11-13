@@ -11,11 +11,12 @@ ArrowGameObject::ArrowGameObject(Point2D _pos, int _h, int _w, int _angle, int _
 }
 
 ArrowGameObject::~ArrowGameObject() {
-
+	texture = nullptr;
+	game = nullptr;
 }
 
-void ArrowGameObject::render() {
-	texture->render(getRect(), SDL_FLIP_NONE);
+void ArrowGameObject::render() const {
+	texture->render({(int)pos.getX(),(int)pos.getY(),w,h}, SDL_FLIP_NONE);
 }
 
 SDL_Rect ArrowGameObject::getRect() {

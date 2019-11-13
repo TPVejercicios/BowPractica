@@ -36,7 +36,7 @@ void Game::run() {
 		if (frameTime >= FRAME_RATE) {
 			update();
 			render();	
-			mostrarGameObjects(); //Auxiliar para debug
+			//mostrarGameObjects(); //Auxiliar para debug
 			startTime = SDL_GetTicks();
 		}
 		if (createBallon >= FRAME_BALLON) {
@@ -51,7 +51,12 @@ void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
-			dynamic_cast<Bow*>(gameObjects.at(1))->handleEvents(event);
+			for (int i = 0; i < gameObjects.size(); i++) {
+
+				if (dynamic_cast<EventHandler*>(gameObjects[i])) {
+					dynamic_cast<EventHandler*>(gameObjects[i])->handleEvents(event);
+				}
+			}
 		}
 		else exit = true;
 	}
@@ -87,13 +92,12 @@ void Game::loadTextures() {
 	}
 }
 
+//Crea un arco y lo agrega a la lista de gameObjects
 void Game::createBow() {
 	Point2D pos;
-	pos.setX(BOW_POS_X);
+	pos.setX(START_BOW_POS_X);
 	pos.setY(BOW_POS_Y);
 	Vector2D dir;
-	dir.setX(0);
-	dir.setY(0);
 	int angle = 0, scale = 1;
 	Bow* bow = new Bow(pos, BOW_H, BOW_W, angle, scale, textures[BOW_1], this, dir, NUM_ARROWS);
 	gameObjects.push_back(bow);
@@ -102,8 +106,6 @@ void Game::createBow() {
 
 void Game::createBackground() {
 	Point2D pos;
-	pos.setX(0);
-	pos.setY(0);
 	int angle = 0, scale = 1;
 	Background* bg = new Background(pos, WIN_HEIGHT, WIN_WIDTH, angle, scale, textures[BG_4], this);
 	gameObjects.push_back(bg);

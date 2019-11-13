@@ -1,20 +1,8 @@
-﻿  ArrowGameObject.cpp
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\ArrowGameObject.cpp(25,19): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-  Background.cpp
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\ArrowGameObject.cpp(26,19): warning C4244:  '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  Bow.cpp
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-  Game.cpp
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Bow.cpp(14,22): warning C4244:  'argumento': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Game.cpp(63,20): warning C4018:  '<': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Game.cpp(71,20): warning C4018:  '<': no coinciden signed/unsigned
-  Generando código...
-C:\Users\Oskar\Desktop\Practica SDL\HolaSDL\Game.cpp(116,20): warning C4018:  '<': no coinciden signed/unsigned
-  HolaSDL.vcxproj -> C:\Users\Oskar\Desktop\Practica SDL\bin\HolaSDLDebug.exe
+﻿  Game.cpp
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Game.cpp(54,22): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Game.cpp(68,20): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Game.cpp(76,20): warning C4018: '<': no coinciden signed/unsigned
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Game.cpp(119,20): warning C4018: '<': no coinciden signed/unsigned
+  HolaSDL.vcxproj -> G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\bin\HolaSDLDebug.exe

@@ -6,6 +6,7 @@
 #include "Texture.h"
 #include "GameObject.h"
 #include "Vector2D.h"
+#include <list>
 
 using namespace std;
 using uint = unsigned int;
@@ -19,7 +20,7 @@ const uint NUM_ARROWS = 10;
 const int SCALE_DIV = 4;							//Escala para dividir sprites 
 
 //Constantes para la creación de bow
-const uint BOW_POS_X = 0;
+const uint START_BOW_POS_X = 0;
 const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
@@ -53,6 +54,10 @@ private:
 	bool exit = false;						//Bool que determina el bucle del juego
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
+	//list<Arrow*> arrows ;
+	//list<GameObject*> objectsToErase;
+	//list<Arrow*> arrowsToErase;
+
 
 	void loadTextures();
 
@@ -67,5 +72,7 @@ public:
 	Game();
 	~Game();
 	void run();
+	//void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
+	//void killArrow(Arrow* _arrow) {arrowsToErase.push_back(_arrow);};
 };
 

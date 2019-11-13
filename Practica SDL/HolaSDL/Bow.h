@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "ArrowGameObject.h"
+#include "EventHandler.h"
 
 //class EventHandler;
 class Game;
@@ -12,7 +13,7 @@ const int BOW_SPEED = 20;					//Velocidad de movimiento del bow
 const uint GAP = 31;						//Desfase gráfico que hay entre el arco cargado y el descargado
 
 //La clase Bow es hija de ArrowGameObject y también de EventHandler
-class Bow : public ArrowGameObject{
+class Bow : public ArrowGameObject,public EventHandler{
 private:
 	int	remainingShots;				//Variable que lleva la cuenta de las arrows que quedan
 	Vector2D dir;
@@ -24,5 +25,4 @@ public:
 	~Bow();
 	virtual void update();
 	virtual void handleEvents(const SDL_Event event);
-	virtual void render();
 };

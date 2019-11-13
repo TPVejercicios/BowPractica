@@ -38,6 +38,3 @@ void Bow::handleEvents(const SDL_Event event) {
 	}
 }
 
-void Bow::render() {
-	ArrowGameObject::render();
-}
