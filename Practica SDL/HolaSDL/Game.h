@@ -9,6 +9,7 @@
 #include "Vector2D.h"
 #include <list>
 #include "Background.h"
+#include "Arrow.h"
 
 using namespace std;
 using uint = unsigned int;
@@ -18,7 +19,6 @@ const uint WIN_HEIGHT = 600;						//Altura del juego
 const uint NUM_TEXTURES = 15;						//Num de texturas
 const uint FRAME_RATE = 30;							//Frames que determinan un ciclo de vida del juego
 const uint FRAME_BALLON = 500;						//Frames que determinan la generación de globos
-const uint NUM_ARROWS = 10;
 const int SCALE_DIV = 4;							//Escala para dividir sprites 
 
 //Constantes para la creación de bow
@@ -26,6 +26,12 @@ const uint START_BOW_POS_X = 0;
 const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
+
+//Constantes para la creación de arrow
+const uint ARROW_H = 20;
+const uint ARROW_W = 100;
+const uint NUM_ARROWS = 10;
+
 
 //Constantes para la creación de arrow
 //Constantes para la creación de ballon
@@ -63,8 +69,8 @@ private:
 	Background* background;					//Puntero al background
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
 	vector<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
-	//vector<Arrow*> arrows;
-	//vector<GameObject*> objectsToErase;
+	vector<Arrow*> arrows;
+	vector<GameObject*> objectsToErase;
 
 	void loadTextures();
 	void render();
@@ -72,15 +78,16 @@ private:
 	void update();
 	void mostrarGameObjects();
 	void createBow();
+	void deleteObjects();
 	//void createBallons();
 public:
 	Game();
 	~Game();
 	void run();
-	void createArrow() {}; //Esta funcion es la que se llamará cuando bow detecta el evento de disparar
+	void createArrow(Vector2D _pos);
 	int getRemainingShots() { return remainingShots; };
 	Texture* getTextureBow(bool charged);
-	//void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
-	//void killArrow(Arrow* _arrow) {arrowsToErase.push_back(_arrow);};
+	void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
+	//void killArrow(Arrow* _arrow) {objectsToErase.push_back(_arrow);};
 };
 

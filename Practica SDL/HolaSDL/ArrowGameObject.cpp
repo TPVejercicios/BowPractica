@@ -1,6 +1,6 @@
 #include "ArrowGameObject.h"
 
-ArrowGameObject::ArrowGameObject(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game){
+ArrowGameObject::ArrowGameObject(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game,int _id){
 	pos = _pos;
 	dir = _dir;
 	h = _h;
@@ -9,6 +9,7 @@ ArrowGameObject::ArrowGameObject(Point2D _pos, Vector2D _dir, int _h, int _w, in
 	scale = _scale;
 	texture = _texture;
 	game = _game;
+	idObject = _id;
 }
 
 ArrowGameObject::~ArrowGameObject() {

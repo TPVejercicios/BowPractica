@@ -15,7 +15,7 @@ public:
 	double getX() const { return X; };
 	double getY() const { return Y; };
 	void setX(int valor) { X = valor; };
-	void setY(int valor) { Y = valor; };
+	void setY(int valor) { Y = valor; };	
 	void subVectorInY(Vector2D vel) { Y -= vel.Y; };
 	void multiply(int n) { X* n; Y* n; };
 	void normalize();

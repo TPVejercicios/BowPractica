@@ -17,7 +17,8 @@ protected:
 	int scale = 1;					//Escala del objeto
 	Game* game = nullptr;			//Puntero a juego
 	Texture* texture = nullptr;		//Puntero a la tectura del objeto
-	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game);
+	int idObject = 0;
+	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game,int _ID);
 	ArrowGameObject() {};
 public:
 	//Métodos génericos

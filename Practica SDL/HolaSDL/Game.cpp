@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Bow.h"
-#include "Background.h"
+
 
 Game::Game() {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -38,6 +38,7 @@ void Game::run() {
 			render();	
 			mostrarGameObjects(); //Auxiliar para debug
 			startTime = SDL_GetTicks();
+			//deleteObjects();
 		}
 		if (createBallon >= FRAME_BALLON) {
 			//createBallons();
@@ -108,10 +109,32 @@ Texture* Game::getTextureBow(bool charged) {
 	else return textures[BOW_2];
 }
 
+void Game::createArrow(Vector2D _pos) {
+	Vector2D dir;
+	dir.setX(1);
+	int angle = 0, scale = 1;
+	Arrow* arrow = new Arrow(_pos, dir,ARROW_H,ARROW_W, angle, scale,textures[ARROW_1], this);
+	gameObjects.push_back(arrow);
+	arrows.push_back(arrow);
+	arrow = nullptr;
+	remainingShots--;
+}
+
 void Game::mostrarGameObjects() {
 	system("cls");
 	cout << "LISTA DE GAMEOBJECTS:" << endl;
 	for (int i = 0; i < gameObjects.size(); i++) {
 		cout << "gameObjects.at(" << i << ") = " << gameObjects.at(i) << endl;
+	}
+	for (int i = 0; i < objectsToErase.size(); i++) {
+		cout << "gameToErase.at(" << i << ") = " << objectsToErase.at(i) << endl;
+	}
+}
+
+//Falta borrarlo de gameObjects y arrowGameobjects
+void Game::deleteObjects() {
+	int aux = objectsToErase.size();
+	for (int i = 0; i < aux; i++) {
+		delete objectsToErase.at(i);
 	}
 }
