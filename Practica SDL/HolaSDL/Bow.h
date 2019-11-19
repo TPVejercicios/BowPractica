@@ -8,7 +8,6 @@ class Game;
 
 using namespace std;
 using Point2D = Vector2D;
-const int START_ARROWS = 10;				//Cantidad de arrows con las que se inicia el juego
 const int BOW_SPEED = 20;					//Velocidad de movimiento del bow
 const uint GAP = 31;						//Desfase gráfico que hay entre el arco cargado y el descargado
 

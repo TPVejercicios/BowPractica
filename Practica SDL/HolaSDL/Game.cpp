@@ -1,6 +1,8 @@
 #include "Game.h"
 #include <iostream>
 #include "Bow.h"
+#include <time.h>
+
 
 
 Game::Game() {
@@ -41,7 +43,7 @@ void Game::run() {
 			//deleteObjects();
 		}
 		if (createBallon >= FRAME_BALLON) {
-			//createBallons();
+			createBallons();
 			ballonCreated = SDL_GetTicks();
 		}
 	}
@@ -91,7 +93,7 @@ void Game::loadTextures() {
 	}
 }
 
-//Crea un arco y lo agrega a la lista de gameObjects
+//Crea un arco y lo agrega a la lista de gameObjects y de eventsObjects
 void Game::createBow() {
 	Point2D pos;
 	pos.setX(START_BOW_POS_X);
@@ -104,20 +106,20 @@ void Game::createBow() {
 	bow = nullptr;
 }
 
+//Devuelve la textura del arco descargado
 Texture* Game::getTextureBow(bool charged) {
 	if (charged) return textures[BOW_1];
 	else return textures[BOW_2];
 }
 
+//Crea una arrow y la agrega a gameObjects y arrows
 void Game::createArrow(Vector2D _pos) {
-	Vector2D dir;
-	dir.setX(1);
+	remainingShots--;
 	int angle = 0, scale = 1;
-	Arrow* arrow = new Arrow(_pos, dir,ARROW_H,ARROW_W, angle, scale,textures[ARROW_1], this);
+	Arrow* arrow = new Arrow(_pos, {0,1}, ARROW_H, ARROW_W, angle, scale, textures[ARROW_1], this);
 	gameObjects.push_back(arrow);
 	arrows.push_back(arrow);
 	arrow = nullptr;
-	remainingShots--;
 }
 
 void Game::mostrarGameObjects() {
@@ -125,9 +127,6 @@ void Game::mostrarGameObjects() {
 	cout << "LISTA DE GAMEOBJECTS:" << endl;
 	for (int i = 0; i < gameObjects.size(); i++) {
 		cout << "gameObjects.at(" << i << ") = " << gameObjects.at(i) << endl;
-	}
-	for (int i = 0; i < objectsToErase.size(); i++) {
-		cout << "gameToErase.at(" << i << ") = " << objectsToErase.at(i) << endl;
 	}
 }
 
@@ -137,4 +136,20 @@ void Game::deleteObjects() {
 	for (int i = 0; i < aux; i++) {
 		delete objectsToErase.at(i);
 	}
+}
+
+void Game::createBallons() {
+	//srand(1);
+	Point2D _pos;
+	//pos.setX((rand()% (WIN_WIDTH/2)) + (WIN_WIDTH / 2) - 50);
+	_pos.setX(rand()% BALLON_MAX_POS_X + BALLON_MIN_POS_X - 50);
+	_pos.setY(BALLON_MIN_POS_Y);
+	//_pos.setX(300);//valor temporal
+	Vector2D _dir;
+	_dir.setY(1);
+	int _speed = rand() % BALLON_MAX_SPEED + BALLON_MIN_SPEED;
+	Ballon* currBallon = new Ballon(_pos, _dir, BALLON_H, BALLON_W
+		,0, 1, textures[BALLONS], this,_speed);
+	gameObjects.push_back(currBallon);
+	currBallon = nullptr;
 }

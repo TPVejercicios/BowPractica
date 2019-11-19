@@ -10,6 +10,7 @@
 #include <list>
 #include "Background.h"
 #include "Arrow.h"
+#include "Ballon.h"
 
 using namespace std;
 using uint = unsigned int;
@@ -35,6 +36,14 @@ const uint NUM_ARROWS = 10;
 
 //Constantes para la creación de arrow
 //Constantes para la creación de ballon
+const uint BALLON_MIN_POS_X = 250;
+const uint BALLON_MAX_POS_X = 700;
+const uint BALLON_MIN_POS_Y = 700;
+const uint BALLON_H = 100;
+const uint BALLON_W = 100;
+const uint BALLON_MAX_SPEED = 25;
+const uint BALLON_MIN_SPEED = 2;
+
 
 struct image	//Estructura que ayuda a organizar la carga de texturas
 {
@@ -79,7 +88,7 @@ private:
 	void mostrarGameObjects();
 	void createBow();
 	void deleteObjects();
-	//void createBallons();
+	void createBallons();
 public:
 	Game();
 	~Game();

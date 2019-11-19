@@ -23,9 +23,9 @@ protected:
 public:
 	//Métodos génericos
 	virtual ~ArrowGameObject();
-	virtual void render() const;			//La función render es la misma para todos, creo que no debería ser virtual aqui (pero dentro de gameObject debería seguir siendo virtual)
+	virtual void render() const { texture->render(getRect(), SDL_FLIP_NONE); };		
 	virtual void update() {};
 	void loadFromFile() {};
 	void saveToFile() {};
-	SDL_Rect getRect() const;
+	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w,h }; };
 };
