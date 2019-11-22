@@ -1,11 +1,7 @@
 #include "Bow.h"
 
-Bow::Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game) :
-	ArrowGameObject(_pos, _dir, _h, _w, _angle, _scale, _texture, _game,ID) {
-}
-
-Bow::~Bow() {
-
+Bow::Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id) :
+	ArrowGameObject(_pos, _dir, _h, _w, _angle, _scale, _texture, _game,_id) {
 }
 
 void Bow::update() {
@@ -21,18 +17,18 @@ void Bow::handleEvents(const SDL_Event event) {
 		//Tecla ariba
 		else if (event.key.keysym.sym == SDLK_UP) dir.setY(-1);
 		//Tecla disparo
-		else if (event.key.keysym.sym == SDLK_RIGHT && charged && game->getRemainingShots() > 0) {
-			changeTexture();
+		else if (event.key.keysym.sym == SDLK_RIGHT && charged) {
 			charged = false;
-			Vector2D arrowPos;
-			arrowPos.setY(pos.getY() + h / 2);
-			arrowPos.setX(pos.getX());
-			game->createArrow(arrowPos);
+			changeTexture();
+			game->createArrow({ pos.getX(),pos.getY() + h / 2 });
 		}
 		//Tecla recarga
-		else if (event.key.keysym.sym == SDLK_LEFT && !charged) {
-			changeTexture();
+		else if (event.key.keysym.sym == SDLK_LEFT && !charged && game->getRemainingShots() > 0) {
 			charged = true;
+			changeTexture();
+		}
+		else if (event.key.keysym.sym == SDLK_p) {
+			game->gime100Arrows();
 		}
 	}
 	else {
@@ -42,5 +38,10 @@ void Bow::handleEvents(const SDL_Event event) {
 
 void Bow::changeTexture() {
 	texture = game->getTextureBow(charged);
+	w = texture->getW() / scale;
+	if (!charged) {
+		pos.setX(GAP);
+	}
+	else pos.setX(0);
 }
 

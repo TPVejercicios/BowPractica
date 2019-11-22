@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HolaSDL"
+    "\\HolaSDL",
+    "\\images"
   ],
-  "SelectedNode": "\\HolaSDL\\Vector2D.h",
   "PreviewInSolutionExplorer": false
 }

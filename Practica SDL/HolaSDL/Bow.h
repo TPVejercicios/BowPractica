@@ -16,11 +16,9 @@ class Bow : public ArrowGameObject,public EventHandler{
 private:
 	const static int index = 0;		//Indice del objeto Bow
 	bool charged = true;			//Variable que determina si el bow está cargado
-	const int ID = 001;
 public:
 	Bow() {};
-	Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game);
-	~Bow();
+	Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id);
 	virtual void update();
 	virtual void handleEvents(const SDL_Event event);
 	void changeTexture();

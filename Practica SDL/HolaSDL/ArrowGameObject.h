@@ -17,8 +17,8 @@ protected:
 	int scale = 1;					//Escala del objeto
 	Game* game = nullptr;			//Puntero a juego
 	Texture* texture = nullptr;		//Puntero a la tectura del objeto
-	int idObject = 0;
-	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game,int _ID);
+	int objectID = 0;
+	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game,int _id);
 	ArrowGameObject() {};
 public:
 	//Métodos génericos
@@ -28,4 +28,5 @@ public:
 	void loadFromFile() {};
 	void saveToFile() {};
 	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w,h }; };
+	virtual int& getID() { return objectID; };
 };

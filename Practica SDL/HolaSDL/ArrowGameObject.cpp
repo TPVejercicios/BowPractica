@@ -9,7 +9,7 @@ ArrowGameObject::ArrowGameObject(Point2D _pos, Vector2D _dir, int _h, int _w, in
 	scale = _scale;
 	texture = _texture;
 	game = _game;
-	idObject = _id;
+	objectID = _id;
 }
 
 ArrowGameObject::~ArrowGameObject() {

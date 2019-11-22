@@ -11,6 +11,8 @@
 #include "Background.h"
 #include "Arrow.h"
 #include "Ballon.h"
+#include "ScoreBoard.h"
+#include "Butterfly.h"
 
 using namespace std;
 using uint = unsigned int;
@@ -27,28 +29,46 @@ const uint START_BOW_POS_X = 0;
 const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
+const uint BOW_SCALE = 4;
+const int BOW_ID = 1;
 
 //Constantes para la creación de arrow
 const uint ARROW_H = 20;
 const uint ARROW_W = 100;
 const uint NUM_ARROWS = 10;
+const int ARROW_ID = 2;
+
+//Constantes para la creación de una butterfly
+const uint BUTTERFLY_H = 50;
+const uint BUTTERFLY_W = 25;
+const int BUTTERFLY_ID = 7;
+const uint BUTT_MIN_X = 300;
+const uint BUTT_MAX_X = 750;
+const uint BUTT_MAX_Y = 550;
 
 
-//Constantes para la creación de arrow
+//Constantes para los puntos
+const int POINTS_TO_ADD = 10;
 //Constantes para la creación de ballon
-const uint BALLON_MIN_POS_X = 250;
-const uint BALLON_MAX_POS_X = 700;
-const uint BALLON_MIN_POS_Y = 700;
 const uint BALLON_H = 100;
 const uint BALLON_W = 100;
-const uint BALLON_MAX_SPEED = 25;
-const uint BALLON_MIN_SPEED = 2;
+const uint BALLON_MIN_POS_X = 300;
+const uint BALLON_MAX_POS_X = 800 - BALLON_W;
+const uint BALLON_MIN_POS_Y = 700;
+const uint BALLON_MAX_SPEED = 18;
+const uint BALLON_MIN_SPEED = 5;
+const int BALLON_ID = 3;
 
 
 struct image	//Estructura que ayuda a organizar la carga de texturas
 {
 	string filename;
 	uint colls, rows;
+};
+
+struct level {
+	int butterflyNum;
+	int arrows;
 };
 
 //Array con las texturas y su número de columnas y filas para facilitar la carga
@@ -75,11 +95,12 @@ private:
 	SDL_Renderer* renderer = nullptr;
 	bool exit = false;						//Bool que determina el bucle del juego
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
-	Background* background;					//Puntero al background
+	Background* background = nullptr;				//Puntero al background
 	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
 	vector<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
 	vector<Arrow*> arrows;
 	vector<GameObject*> objectsToErase;
+	ScoreBoard* SCB = nullptr;
 
 	void loadTextures();
 	void render();
@@ -89,14 +110,20 @@ private:
 	void createBow();
 	void deleteObjects();
 	void createBallons();
+	void createScoreBoard();
+	void checkCollisions();
+	void createButterfly();
 public:
 	Game();
 	~Game();
 	void run();
 	void createArrow(Vector2D _pos);
 	int getRemainingShots() { return remainingShots; };
-	Texture* getTextureBow(bool charged);
+	int getPoints() { return points; };
+	Texture* getTextureBow(bool charged) { return charged ? textures[BOW_1] : textures[BOW_2]; };
 	void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
+	void gime100Arrows() { remainingShots += 100; };
+
 	//void killArrow(Arrow* _arrow) {objectsToErase.push_back(_arrow);};
 };
 
