@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
 #include "SDL.h"
 #include "SDL_image.h"
 #include "Texture.h"
@@ -13,15 +14,16 @@
 #include "Ballon.h"
 #include "ScoreBoard.h"
 #include "Butterfly.h"
+#include "Bow.h"
 
 using namespace std;
 using uint = unsigned int;
 
+//Constantes para game
 const uint WIN_WIDTH = 800;							//Anchura del juego
 const uint WIN_HEIGHT = 600;						//Altura del juego
 const uint NUM_TEXTURES = 15;						//Num de texturas
 const uint FRAME_RATE = 30;							//Frames que determinan un ciclo de vida del juego
-const uint FRAME_BALLON = 500;						//Frames que determinan la generación de globos
 const int SCALE_DIV = 4;							//Escala para dividir sprites 
 
 //Constantes para la creación de bow
@@ -39,17 +41,24 @@ const uint NUM_ARROWS = 10;
 const int ARROW_ID = 2;
 
 //Constantes para la creación de una butterfly
-const uint BUTTERFLY_H = 50;
-const uint BUTTERFLY_W = 25;
+const uint BUTTERFLY_H = 96;
+const uint BUTTERFLY_W = 93;
 const int BUTTERFLY_ID = 7;
-const uint BUTT_MIN_X = 300;
+const uint BUTT_MIN_X = 150;
 const uint BUTT_MAX_X = 750;
 const uint BUTT_MAX_Y = 550;
 
+//Constantes para rewards 
+const uint REWARD_H = 100;
+const uint REWARD_W = 100;
+const uint REWARD_SPEED = 5;
 
 //Constantes para los puntos
 const int POINTS_TO_ADD = 10;
+const uint POINTS_TO_SUB = 20;
+
 //Constantes para la creación de ballon
+const uint FRAME_BALLON = 250;						//Frames que determinan la generación de globos
 const uint BALLON_H = 100;
 const uint BALLON_W = 100;
 const uint BALLON_MIN_POS_X = 300;
@@ -96,10 +105,11 @@ private:
 	bool exit = false;						//Bool que determina el bucle del juego
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
 	Background* background = nullptr;				//Puntero al background
-	vector<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
-	vector<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
-	vector<Arrow*> arrows;
-	vector<GameObject*> objectsToErase;
+
+	list<GameObject*> gameObjects;		//Vector con TODOS los objetos del juego
+	list<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
+	list<Arrow*> arrows;
+	list<GameObject*> objectsToErase;
 	ScoreBoard* SCB = nullptr;
 
 	void loadTextures();
@@ -123,7 +133,7 @@ public:
 	Texture* getTextureBow(bool charged) { return charged ? textures[BOW_1] : textures[BOW_2]; };
 	void killObject(ArrowGameObject* _object) {objectsToErase.push_back(_object);};
 	void gime100Arrows() { remainingShots += 100; };
-
+	void arrowStacks(int _stacks) { SCB->updatePoints(points += _stacks * POINTS_TO_ADD); };
 	//void killArrow(Arrow* _arrow) {objectsToErase.push_back(_arrow);};
 };
 

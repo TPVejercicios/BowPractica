@@ -10,7 +10,7 @@ void Bow::update() {
 	if (pos.getY() > WIN_HEIGHT - h) pos.setY(WIN_HEIGHT - h);
 }
 
-void Bow::handleEvents(const SDL_Event event) {
+void Bow::handleEvent(const SDL_Event event) {
 	if (event.type == SDL_KEYDOWN) {
 		//Tecla abajo
 		if (event.key.keysym.sym == SDLK_DOWN) dir.setY(1);

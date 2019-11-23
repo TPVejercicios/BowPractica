@@ -5,7 +5,7 @@
 Ballon::Ballon(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game,int _speed, int _id) :
 	ArrowGameObject(_pos, _dir, _h, _w, _angle, _scale, _texture, _game,_id) {
 	ballonSpeed = _speed;
-	currCol = rand() % ROWS;
+	currRow = rand() % ROWS;
 }
 
 
@@ -14,9 +14,24 @@ Ballon::~Ballon() {
 }
 
 void Ballon::update() {
-	pos.setY(pos.getY() - (dir.getY() * ballonSpeed));
-	if (pos.getY() < TOP_LIMIT) {
-		game->killObject(this);
+
+	if (currStatus == SWOLLEN) {
+		pos.setY(pos.getY() - (dir.getY() * ballonSpeed));
+		if (pos.getY() < TOP_LIMIT) {
+			currStatus = PUNCTURED;
+		}
 	}
+	else
+	{
+		currColl++;
+		if (currColl > texture->getNumCols()) {
+			game->killObject(this);
+		}
+	}
+}
+
+void Ballon::startDestruction() {
+	dir.setY(0);
+	currStatus = PUNCTURED;
 }
 

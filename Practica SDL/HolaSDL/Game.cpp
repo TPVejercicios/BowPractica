@@ -1,7 +1,4 @@
 #include "Game.h"
-#include <iostream>
-#include "Bow.h"
-#include <time.h>
 
 
 
@@ -41,14 +38,15 @@ void Game::run() {
 			update();
 			render();	
 			checkCollisions();
+			deleteObjects();
 			//mostrarGameObjects(); //Auxiliar para debug
 			startTime = SDL_GetTicks();
-			//deleteObjects();
 		}
 		if (createBallon >= FRAME_BALLON) {
 			createBallons();
 			ballonCreated = SDL_GetTicks();
 		}
+
 	}
 	cout << "Fin del juego" << endl;
 }
@@ -58,8 +56,8 @@ void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
-			for (int i = 0; i < eventObjects.size(); i++) {
-				eventObjects.at(i)->handleEvents(event);
+			for (auto eventIT = eventObjects.begin(); eventIT != eventObjects.end(); ++eventIT) {
+				(*eventIT)->handleEvent(event);
 			}
 		}
 		else exit = true;
@@ -70,16 +68,16 @@ void Game::handleEvents() {
 void Game::render() {
 	SDL_RenderClear(renderer);
 	background->render();
-	for (int i = 0; i < gameObjects.size(); i++) {
-		gameObjects.at(i)->render();
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(*it)->render();
 	}
 	SDL_RenderPresent(renderer);
 }
 
 //Hace las llamadas a los updates de todos los objetos del juego
 void Game::update() {
-	for (int i = 0; i < gameObjects.size(); i++) {
-		gameObjects.at(i)->update();
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(*it)->update();
 	}
 }
 
@@ -123,24 +121,34 @@ void Game::createArrow(Vector2D _pos) {
 
 void Game::mostrarGameObjects() {
 	system("cls");
-	cout << "LISTA DE GAMEOBJECTS:" << endl;
-	for (int i = 0; i < gameObjects.size(); i++) {
-		cout << "gameObjects.at(" << i << ") = " << gameObjects.at(i) << endl;
-	}
+	cout << "elementos en gameObject: " << gameObjects.size() << endl;
+	cout << "Elementos en objectToErase: " << objectsToErase.size() << endl;
 }
 
 //Falta borrarlo de gameObjects y arrowGameobjects
 void Game::deleteObjects() {
-	int aux = objectsToErase.size();
-	for (int i = 0; i < aux; i++) {
-		int currentID = 0;// objectsToErase[i]->getID();
-		if (currentID == ARROW_ID) {
-			//Borrar de arrows y de gameObjects
+	auto it = objectsToErase.begin();
+	while (it != objectsToErase.end())
+	{
+		auto gIT = gameObjects.begin();
+		bool found = false;
+		while (!found && gIT != gameObjects.end())
+		{
+			if ((*it) == (*gIT)) {
+				auto auxIT = gIT;
+				auto auxEIT = it;
+				GameObject* gm = *gIT;
+				it++;
+				objectsToErase.erase(auxEIT);
+				gameObjects.erase(auxIT);
+				delete (gm);
+				found = true;
+			}
+			else
+			{
+				gIT++;
+			}
 		}
-		else if (currentID == BALLON_ID) {
-			//Borrar de gameobjects
-		}
-		delete objectsToErase.at(i);
 	}
 }
 
@@ -167,13 +175,26 @@ void Game::createScoreBoard() {
 
 //Comprueba las collisiones entre las arrows y los gameObjects(Luego cambiar a preguntar si tiene un handleEvent)
 void Game::checkCollisions() {
-	for (int i = 0; i < arrows.size(); i++) {
-		for (int j = 0; j < gameObjects.size(); j++) {
-			ArrowGameObject* aux = dynamic_cast<ArrowGameObject*>(gameObjects.at(j));
-			if (aux != nullptr && aux->getID() == BALLON_ID && SDL_HasIntersection(&aux->getRect(),&arrows.at(i)->getRect())) {
-				points += POINTS_TO_ADD;
-				SCB->updatePoints();
-				killObject(aux);
+	for (auto arrowIT = arrows.begin(); arrowIT != arrows.end(); ++arrowIT) {
+		for (auto gameObIT = gameObjects.begin(); gameObIT != gameObjects.end(); ++gameObIT) {
+			ArrowGameObject* aux = dynamic_cast<ArrowGameObject*>(*gameObIT);
+			SDL_Rect rc = (*arrowIT)->getRectForCollision();		//Esto está mal lo sé, es un apaño :D
+			if (aux != nullptr && SDL_HasIntersection(&aux->getRect(),&rc ))
+			{
+				switch (aux->getID())
+				{
+				case BALLON_ID:
+					points += POINTS_TO_ADD;
+					aux->startDestruction();
+					(*arrowIT)->AddStack();
+					break;
+				case BUTTERFLY_ID:
+					points -= POINTS_TO_SUB;
+					aux->startDestruction();
+					break;
+				default:
+					break;
+				}
 			}
 		}
 	}
@@ -181,7 +202,6 @@ void Game::checkCollisions() {
 
 void Game::createButterfly() {
 	for (int i = 0; i < 15; i++) {
-		//Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id)
 		Point2D _pos;
 		_pos.setX(rand() % (BUTT_MAX_X - BUTT_MIN_X) + BUTT_MIN_X);
 		_pos.setY(rand() % WIN_HEIGHT);

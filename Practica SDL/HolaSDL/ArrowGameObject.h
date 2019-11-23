@@ -25,8 +25,11 @@ public:
 	virtual ~ArrowGameObject();
 	virtual void render() const { texture->render(getRect(), SDL_FLIP_NONE); };		
 	virtual void update() {};
+	virtual int& getID() { return objectID; };
+	virtual void startDestruction() {};
+
 	void loadFromFile() {};
 	void saveToFile() {};
 	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w,h }; };
-	virtual int& getID() { return objectID; };
+
 };

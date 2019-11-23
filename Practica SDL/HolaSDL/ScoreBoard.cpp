@@ -6,6 +6,8 @@ ScoreBoard::ScoreBoard(Texture* _score, Texture* _arrow,Game* _game) {
 	game = _game;
 	scoreTexture = _score;
 	arrowTexture = _arrow;
+	updateArrowHUD();
+	render();
 }
 
 //Destructora de scoreBoard
@@ -13,7 +15,6 @@ ScoreBoard::~ScoreBoard() {
 	scoreTexture = nullptr;
 	arrowTexture = nullptr;
 }
-
 
 
 //Renderiza puntos y flechas restantes
@@ -29,9 +30,9 @@ void ScoreBoard::renderPoint()const {
 }
 
 //Esto está mal...
-void ScoreBoard::updatePoints() {
+void ScoreBoard::updatePoints(int _points) {
 	marcador.clear();
-	currentPoints = game->getPoints();
+	currentPoints = _points;
 	int x = START_SCORE_POS;
 	int aux = (char)to_string(currentPoints).size();
 	score currScore;

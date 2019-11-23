@@ -20,6 +20,6 @@ public:
 	Bow() {};
 	Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id);
 	virtual void update();
-	virtual void handleEvents(const SDL_Event event);
+	virtual void handleEvent(const SDL_Event event);
 	void changeTexture();
 };

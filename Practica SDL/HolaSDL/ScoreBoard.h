@@ -41,6 +41,6 @@ public:
 	~ScoreBoard();
 	virtual void render() const;
 	virtual void update() {};
-	void updatePoints();
+	void updatePoints(int _stacks);
 	void updateArrowHUD();
 };
