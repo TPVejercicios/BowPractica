@@ -1,7 +1,5 @@
 #include "Game.h"
 
-
-
 Game::Game() {
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow("Practica2", SDL_WINDOWPOS_CENTERED,
@@ -11,26 +9,33 @@ Game::Game() {
 		cout << "Error cargando SDL" << endl;
 	else
 	{
-		//Carga texturas
 		loadTextures();
-		//Crea el background
-		background = new Background(WIN_HEIGHT, WIN_WIDTH, textures[BG_4]);
+		loadLevel();
 		createBow();
-		createScoreBoard();
-		createButterfly();
+		//createScoreBoard();
 	}
 }
 
-//Destructora, llama a todos los destructores de la clase game
+//Destructora, llama a todos los destructores de la clase game 
 Game::~Game() {
-
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) delete* it;
+	for (int i = 0; i < NUM_TEXTURES; i++) delete textures[i];
+	gameObjects.clear();
+	eventObjects.clear();
+	arrows.clear();
+	delete background;
+	background = nullptr;
+	SCB = nullptr;
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
 }
 
 //Bucle principal del juego
 void Game::run() {
 	uint32_t startTime, frameTime, createBallon, ballonCreated;
 	startTime = ballonCreated = SDL_GetTicks();
-	while (!exit) {
+	while (!exit && !endGame()) {
 		handleEvents();
 		createBallon = SDL_GetTicks() - ballonCreated;
 		frameTime = SDL_GetTicks() - startTime;
@@ -39,14 +44,15 @@ void Game::run() {
 			render();	
 			checkCollisions();
 			deleteObjects();
+			//info();
 			//mostrarGameObjects(); //Auxiliar para debug
 			startTime = SDL_GetTicks();
 		}
-		if (createBallon >= FRAME_BALLON) {
+		if (createBallon >= LEVELS[currLevel].frame_ballon) {
 			createBallons();
 			ballonCreated = SDL_GetTicks();
 		}
-
+		//exit = endGame();
 	}
 	cout << "Fin del juego" << endl;
 }
@@ -110,43 +116,62 @@ void Game::createBow() {
 
 //Crea una arrow y la agrega a gameObjects y arrows
 void Game::createArrow(Vector2D _pos) {
-	remainingShots--;
 	int angle = 0, scale = 1;
 	Arrow* arrow = new Arrow(_pos, {1,0}, ARROW_H, ARROW_W, angle, scale, textures[ARROW_1], this,ARROW_ID);
 	gameObjects.push_back(arrow);
 	arrows.push_back(arrow);
 	arrow = nullptr;
-	SCB->updateArrowHUD();
 }
 
 void Game::mostrarGameObjects() {
 	system("cls");
-	cout << "elementos en gameObject: " << gameObjects.size() << endl;
-	cout << "Elementos en objectToErase: " << objectsToErase.size() << endl;
+	cout << "Elementos en gameObject	: " << gameObjects.size() << endl;
+	cout << "Elementos en objectToErase	: " << objectsToErase.size() << endl;
+	cout << "Elementos en arrows		: " << arrows.size() << endl;
 }
 
-//Falta borrarlo de gameObjects y arrowGameobjects
+//Borra un elemento en las distintas listas en la que puede estar, se distinguen dos casos
+//		*Para borrar una mariposa o un globo se debe eliminar en gameObjects y objectsToErase
+//		*Para borrar una flecha se debe eliminar de gameObjects, objectsToErase y de arrows
 void Game::deleteObjects() {
-	auto it = objectsToErase.begin();
-	while (it != objectsToErase.end())
-	{
-		auto gIT = gameObjects.begin();
+
+	auto OTEIT = objectsToErase.begin();
+	while (OTEIT != objectsToErase.end()) {
+		auto GOIT = gameObjects.begin();
 		bool found = false;
-		while (!found && gIT != gameObjects.end())
+		while (!found && GOIT != gameObjects.end())
 		{
-			if ((*it) == (*gIT)) {
-				auto auxIT = gIT;
-				auto auxEIT = it;
-				GameObject* gm = *gIT;
-				it++;
+			if ((*OTEIT) == (*GOIT)) {								//Coincidencia entre objectToErase y gameObject
+				//cout << "Se encontro coincidencia GO:" << gameObjects.size() << " OTE: " << objectsToErase.size() << endl;
+				auto* aux = dynamic_cast<Arrow*>(*OTEIT);			//Eres una flecha?
+				if (aux != nullptr) {							//También debe eliminarse de arrows
+					//cout << "Se detecto una flecha " << arrows.size() <<  endl;
+					auto ARWIT = arrows.begin();
+					bool arrowFounded = false;
+					while (!arrowFounded && ARWIT != arrows.end())
+					{
+						if ((*OTEIT) == (*ARWIT)) {
+							arrows.erase(ARWIT);
+							arrowFounded = true;
+							//cout << "Se elimino flecha " <<arrows.size()  <<  endl;
+						}
+					}
+				}
+				auto auxIT = GOIT;
+				auto auxEIT = OTEIT;
+				GameObject* gm = *GOIT;
+				OTEIT++;
+				GOIT++;
 				objectsToErase.erase(auxEIT);
 				gameObjects.erase(auxIT);
 				delete (gm);
 				found = true;
+				//cout << "Se borro el elemento GO:" << gameObjects.size() << " OTE: " << objectsToErase.size() << endl;
+
 			}
 			else
 			{
-				gIT++;
+				GOIT++;
 			}
 		}
 	}
@@ -165,43 +190,46 @@ void Game::createBallons() {
 	currBallon = nullptr;
 }
 
-//Crea un scoreBoard y lo agrega a gameObjects
+//Crea un scoreBoard y lo agrega a gameObjects 
 void Game::createScoreBoard() {
-	ScoreBoard* scb = new ScoreBoard(textures[DIGITS],textures[ARROW_2], this);
-	gameObjects.push_back(scb);
-	SCB = scb;
-	scb = nullptr;
+	SCB = new ScoreBoard(textures[DIGITS], textures[ARROW_2], currPoints, currArrows);
+	gameObjects.push_back(SCB);
 }
 
 //Comprueba las collisiones entre las arrows y los gameObjects(Luego cambiar a preguntar si tiene un handleEvent)
 void Game::checkCollisions() {
 	for (auto arrowIT = arrows.begin(); arrowIT != arrows.end(); ++arrowIT) {
 		for (auto gameObIT = gameObjects.begin(); gameObIT != gameObjects.end(); ++gameObIT) {
-			ArrowGameObject* aux = dynamic_cast<ArrowGameObject*>(*gameObIT);
-			SDL_Rect rc = (*arrowIT)->getRectForCollision();		//Esto está mal lo sé, es un apaño :D
-			if (aux != nullptr && SDL_HasIntersection(&aux->getRect(),&rc ))
+			auto* currGO = dynamic_cast<ArrowGameObject*>(*gameObIT);
+			SDL_Rect rc = (*arrowIT)->getRectForCollision();		//Esto no me funciona en el hasInterrsection
+			if (currGO != nullptr && currGO->isCollisionable() && SDL_HasIntersection(&currGO->getRect(),&rc ))
 			{
-				switch (aux->getID())
+				switch (currGO->getID())
 				{
 				case BALLON_ID:
-					points += POINTS_TO_ADD;
-					aux->startDestruction();
 					(*arrowIT)->AddStack();
 					break;
 				case BUTTERFLY_ID:
-					points -= POINTS_TO_SUB;
-					aux->startDestruction();
+					if (currPoints - POINTS_TO_SUB < 0) currPoints = 0;			//Nunca se obtiene una puntuación negativa
+					else currPoints -= POINTS_TO_SUB;
+					cout << "Se restan = " << POINTS_TO_SUB << " total = " << currPoints << endl;
+					currButterflies--;
+					cout << "Mariposa eliminada quedan : " << currButterflies << endl;
+					SCB->updatePoints(currPoints);
 					break;
 				default:
 					break;
 				}
+				nextLevel();
+				currGO->startDestruction();
 			}
 		}
 	}
 }
 
+//Crea butterflies y las agrega al la lista de mariposas
 void Game::createButterfly() {
-	for (int i = 0; i < 15; i++) {
+	for (int i = 0; i < LEVELS[currLevel].butterflyNum; i++) {
 		Point2D _pos;
 		_pos.setX(rand() % (BUTT_MAX_X - BUTT_MIN_X) + BUTT_MIN_X);
 		_pos.setY(rand() % WIN_HEIGHT);
@@ -213,3 +241,104 @@ void Game::createButterfly() {
 		currButterfly = nullptr;
 	}
 }
+
+//Carga el nivel(fondo,mariposas y flechas)
+void Game::loadLevel() {
+	cout << "Cargado el nivel : " << currLevel << endl;
+	background = new Background(WIN_HEIGHT, WIN_WIDTH, textures[LEVELS[currLevel].currTex]);
+	currButterflies = LEVELS[currLevel].butterflyNum;
+	cout << "Entran " << currButterflies << " mariposas." << endl;
+	currArrows += LEVELS[currLevel].arrows; 
+	cout << "Se recargan " << LEVELS[currLevel].arrows << " de flechas, total " << currArrows << endl;
+	createButterfly();
+	createScoreBoard();
+}
+
+//Comprueba si se han superado los puntos necesarios para cargar el siguiente nivel y los carga si es efectivo
+void Game::nextLevel() {
+	if (currLevel < MAX_LEVELS && currPoints >= LEVELS[currLevel].pointsToReach) {
+		currLevel++;
+		killObject(SCB);
+		deleteAllbutterflies();
+		deleteAllBallons();
+		deleteAllArrows();
+		loadLevel();
+	}
+}
+
+//Manda a destruir todas las butterflies que estan en escena
+void Game::deleteAllbutterflies() {
+	if (currButterflies > 0) {
+		cout << "Se borran todas las mariposas que quedaron en la escena" << endl;
+		for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+			auto aux = dynamic_cast<Butterfly*>(*it);
+			if (aux != nullptr && !aux->isDeleting()) {
+				killObject(aux);
+			}
+			aux = nullptr;
+		}
+	}
+}
+
+//Manda a eleminar todas las flechas que pudieron quedarse en la escena
+void Game::deleteAllArrows() {
+	cout << "Se borran todas las flechas que quedaron en la escena" << endl;
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		auto aux = dynamic_cast<Arrow*>(*it);
+		if (aux != nullptr && !aux->isDeleting()) {
+			killObject(aux);
+		}
+	}
+}
+
+//Manda a destruir todas los ballons que estan en escena
+void Game::deleteAllBallons() {
+	cout << "Se borran todos los globos que quedaron en la escena" << endl;
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		auto aux = dynamic_cast<Ballon*>(*it);
+		if (aux != nullptr && !aux->isDeleting()) {
+			killObject(aux);
+		}
+	}
+}
+
+void Game::info() {
+	system("cls");
+	cout << "BUT	: " << currButterflies << endl;
+	cout << "POINTS : " << currPoints << endl;
+}
+
+//Multiplica los puntos por cada globo que una flecha haya destruido
+void Game::arrowStacks(int _stacks) {
+	currPoints += _stacks * POINTS_TO_ADD;
+	cout << "stacks! : " << _stacks << " // puntos = " << currPoints << " // Puntos agregados : " << _stacks * POINTS_TO_ADD << endl;
+	SCB->updatePoints(currPoints);
+}
+
+//Comprueba el jugador a perdido el juego
+bool Game::endGame() {
+	bool gameOver = false;
+	if (currButterflies == 0) {
+		gameOver = true;
+		cout << "Has matado todas las mariposas " << endl;
+	}
+	else if (arrows.empty() && currArrows == 0 && !bowCharged) {
+		gameOver = true;
+		cout << "Te has quedado sin flechas" << endl;
+	}
+	return gameOver;
+}
+
+//Devuelve la textura de cargado o descargado al bow
+Texture* Game::getTextureBow(bool _charged) {
+
+	if (_charged) {
+		bowCharged = true;
+		currArrows--;
+		SCB->updateArrows();
+	}
+	else bowCharged = false;
+	return _charged ? textures[BOW_1] : textures[BOW_2];
+}
+
+

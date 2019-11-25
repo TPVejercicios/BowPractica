@@ -1,4 +1,5 @@
 #include "Butterfly.h"
+#include "Game.h"
 
 void Butterfly::update() {
 
@@ -6,7 +7,7 @@ void Butterfly::update() {
 		pos.setY(pos.getY() + dir.getY() * MAX_SPEED);
 		pos.setX(pos.getX() + dir.getX() * MAX_SPEED);
 
-		if (currCol >= texture->getNumCols()) {
+		if (currCol >= 5) {
 			currCol = 0;
 		}
 		else
@@ -17,6 +18,10 @@ void Butterfly::update() {
 	else
 	{
 		pos.setY(pos.getY() + DEAD_DIR * DEAD_SPEED);
+		if (pos.getY() > MAX_Y && !deleting) {
+			deleting = true;
+			game->killObject(this);
+		}
 
 	}
 
@@ -24,10 +29,13 @@ void Butterfly::update() {
 	if (pos.getX() > MAX_X || pos.getX() < MIN_X ) {
 		dir.setX(-dir.getX());
 		dir.setY(dir.getY());
+		flip = SDL_FLIP_VERTICAL;
 	}
 	else if (pos.getY() > MAX_Y || pos.getY() < 0) {
 		dir.setX(dir.getX());
 		dir.setY(-dir.getY());
+		flip = SDL_FLIP_HORIZONTAL;
+
 	}
 }
 
@@ -37,5 +45,6 @@ void Butterfly::render()const {
 }
 
 void Butterfly::startDestruction() {
+	collisionable = false;
 	currState = DEAD;
 }

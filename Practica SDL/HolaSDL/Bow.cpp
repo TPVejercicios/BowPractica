@@ -2,6 +2,7 @@
 
 Bow::Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id) :
 	ArrowGameObject(_pos, _dir, _h, _w, _angle, _scale, _texture, _game,_id) {
+	collisionable = false;
 }
 
 void Bow::update() {

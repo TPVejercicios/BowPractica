@@ -1,6 +1,7 @@
 #pragma once
 #include "ArrowGameObject.h"
 
+
 const uint MIN_X = 150;
 const uint MAX_X = 750;
 const uint MAX_Y = 550;

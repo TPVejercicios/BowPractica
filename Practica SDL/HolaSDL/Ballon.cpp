@@ -8,11 +8,6 @@ Ballon::Ballon(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _sca
 	currRow = rand() % ROWS;
 }
 
-
-Ballon::~Ballon() {
-
-}
-
 void Ballon::update() {
 
 	if (currStatus == SWOLLEN) {
@@ -24,13 +19,15 @@ void Ballon::update() {
 	else
 	{
 		currColl++;
-		if (currColl > texture->getNumCols()) {
+		if (currColl > texture->getNumCols() && !deleting) {
+			deleting = true;
 			game->killObject(this);
 		}
 	}
 }
 
 void Ballon::startDestruction() {
+	collisionable = false;
 	dir.setY(0);
 	currStatus = PUNCTURED;
 }

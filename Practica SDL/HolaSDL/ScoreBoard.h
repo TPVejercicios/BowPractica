@@ -6,7 +6,7 @@ class Game;
 const int SLIP_ARROW = 8;
 const int SLIP_POINTS = 10;
 const int SCALE_POINTS = 50;
-const int START_ARROW_POS = 200;
+const int START_ARROW_POS = 300;
 const int ARROW_GAP = 10;
 
 //Constantes para renderizar arrows
@@ -27,20 +27,18 @@ struct score
 
 class ScoreBoard : public GameObject {
 private:
-	int currentPoints = 0, arrowLeft = 0, iter = 0;
+	int currentPoints = 0, arrowsToRender = 0;
 	Texture* arrowTexture = nullptr;
 	Texture* scoreTexture = nullptr;
-	vector<int> arrowsPosX;
 	vector<score> marcador;
-	Game* game = nullptr;
-
 	void renderPoint() const;
 	void renderArrowHUD() const;
 public:
-	ScoreBoard(Texture* _score, Texture* _arrow,Game* _game);
+	ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrows);
 	~ScoreBoard();
 	virtual void render() const;
 	virtual void update() {};
-	void updatePoints(int _stacks);
-	void updateArrowHUD();
+	void updatePoints(int _points);
+	void updateArrows() { arrowsToRender--; };
+	void arrowsCheat(int _nums) { arrowsToRender += _nums; cout << "Se han cheteado " << _nums << " flechas." << endl; };
 };

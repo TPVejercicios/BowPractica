@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HolaSDL"
+    "\\HolaSDL",
+    "\\images"
   ],
-  "SelectedNode": "\\HolaSDL\\ScoreBoard.cpp",
+  "SelectedNode": "\\HolaSDL\\Game.cpp",
   "PreviewInSolutionExplorer": false
 }

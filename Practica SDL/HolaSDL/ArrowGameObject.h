@@ -17,7 +17,9 @@ protected:
 	int scale = 1;					//Escala del objeto
 	Game* game = nullptr;			//Puntero a juego
 	Texture* texture = nullptr;		//Puntero a la tectura del objeto
-	int objectID = 0;
+	int objectID = 0;				//ID único del objeto
+	bool collisionable = true;		//Para determinar si se puede collisionar contra él
+	bool deleting = false;			//Para determinar si está en proceso de eliminación 
 	ArrowGameObject(Point2D _pos, Vector2D _dir,int _h, int _w,int _angle, int _scale, Texture* _texture, Game* _game,int _id);
 	ArrowGameObject() {};
 public:
@@ -31,5 +33,6 @@ public:
 	void loadFromFile() {};
 	void saveToFile() {};
 	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w,h }; };
-
+	bool isCollisionable() { return collisionable; };
+	bool isDeleting() { return deleting; };
 };

@@ -14,7 +14,6 @@ const uint GAP = 31;						//Desfase gráfico que hay entre el arco cargado y el d
 //La clase Bow es hija de ArrowGameObject y también de EventHandler
 class Bow : public ArrowGameObject,public EventHandler{
 private:
-	const static int index = 0;		//Indice del objeto Bow
 	bool charged = true;			//Variable que determina si el bow está cargado
 public:
 	Bow() {};
