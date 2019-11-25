@@ -30,15 +30,16 @@ private:
 	int currentPoints = 0, arrowsToRender = 0;
 	Texture* arrowTexture = nullptr;
 	Texture* scoreTexture = nullptr;
+	Game* game = nullptr;
 	vector<score> marcador;
 	void renderPoint() const;
 	void renderArrowHUD() const;
 public:
-	ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrows);
+	ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrows, Game* _game);
 	~ScoreBoard();
 	virtual void render() const;
 	virtual void update() {};
 	void updatePoints(int _points);
-	void updateArrows() { arrowsToRender--; };
+	void updateArrows(int _numArrows) { arrowsToRender = _numArrows; };
 	void arrowsCheat(int _nums) { arrowsToRender += _nums; cout << "Se han cheteado " << _nums << " flechas." << endl; };
 };

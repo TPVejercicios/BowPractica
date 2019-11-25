@@ -1,4 +1,11 @@
-﻿  Butterfly.cpp
+﻿  Game.cpp
 G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
+  main.cpp
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
+  Reward.cpp
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
+G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552: "*": el resultado de la expresión no se usa
+  Generando código...
 G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552: "*": el resultado de la expresión no se usa
   HolaSDL.vcxproj -> G:\2do\TPV1\DEOscar\BowPractica\Practica SDL\bin\HolaSDLDebug.exe

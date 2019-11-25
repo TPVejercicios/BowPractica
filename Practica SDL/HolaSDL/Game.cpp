@@ -63,7 +63,8 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			for (auto eventIT = eventObjects.begin(); eventIT != eventObjects.end(); ++eventIT) {
-				(*eventIT)->handleEvent(event);
+				auto* aux = dynamic_cast<EventHandler*>(*eventIT);
+				(aux)->handleEvent(event);
 			}
 		}
 		else exit = true;
@@ -133,18 +134,18 @@ void Game::mostrarGameObjects() {
 //Borra un elemento en las distintas listas en la que puede estar, se distinguen dos casos
 //		*Para borrar una mariposa o un globo se debe eliminar en gameObjects y objectsToErase
 //		*Para borrar una flecha se debe eliminar de gameObjects, objectsToErase y de arrows
-void Game::deleteObjects() {
 
+void Game::deleteObjects() {
 	auto OTEIT = objectsToErase.begin();
 	while (OTEIT != objectsToErase.end()) {
 		auto GOIT = gameObjects.begin();
 		bool found = false;
-		while (!found && GOIT != gameObjects.end())
-		{
+		while (!found && GOIT != gameObjects.end()){
 			if ((*OTEIT) == (*GOIT)) {								//Coincidencia entre objectToErase y gameObject
 				//cout << "Se encontro coincidencia GO:" << gameObjects.size() << " OTE: " << objectsToErase.size() << endl;
-				auto* aux = dynamic_cast<Arrow*>(*OTEIT);			//Eres una flecha?
-				if (aux != nullptr) {							//También debe eliminarse de arrows
+				auto* aux_is_arrow = dynamic_cast<Arrow*>(*OTEIT);			//Eres una flecha?
+				auto* aux_is_event = dynamic_cast<EventHandler*>(*OTEIT);
+				if (aux_is_arrow != nullptr) {							//También debe eliminarse de arrows
 					//cout << "Se detecto una flecha " << arrows.size() <<  endl;
 					auto ARWIT = arrows.begin();
 					bool arrowFounded = false;
@@ -154,6 +155,25 @@ void Game::deleteObjects() {
 							arrows.erase(ARWIT);
 							arrowFounded = true;
 							//cout << "Se elimino flecha " <<arrows.size()  <<  endl;
+						}
+						else {
+							ARWIT++;
+						}
+					}
+				}
+				else if (aux_is_event != nullptr) {							//También debe eliminarse de arrows
+					//cout << "Se detecto un evento " << arrows.size() <<  endl;
+					auto EHIT = eventObjects.begin();
+					bool eventFounded = false;
+					while (!eventFounded && EHIT != eventObjects.end())
+					{
+						if ((*OTEIT) == (*EHIT)) {
+							eventObjects.erase(EHIT);
+							eventFounded = true;
+							cout << "Se elimino evento " <<arrows.size()  <<  endl;
+						}
+						else {
+							EHIT++;
 						}
 					}
 				}
@@ -192,8 +212,34 @@ void Game::createBallons() {
 
 //Crea un scoreBoard y lo agrega a gameObjects 
 void Game::createScoreBoard() {
-	SCB = new ScoreBoard(textures[DIGITS], textures[ARROW_2], currPoints, currArrows);
+	SCB = new ScoreBoard(textures[DIGITS], textures[ARROW_2], currPoints, currArrows, this);
 	gameObjects.push_back(SCB);
+}
+
+void Game::createReward(Point2D _pos) {
+	//Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _bubleTex,Texture* reward_tex, Game* _game,int _id
+	int rnd = rand() % MAX_REWARDS;
+	Reward* currReward = nullptr;
+	switch (rnd)
+	{
+	case 0:
+		currReward = new AddArrows(_pos, {0,1},REWARD_H,REWARD_W,0,1,textures[BUBBLE],this,textures[REWARDS],OBJECT_REWARD);
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	default:
+		break;
+	}
+	currReward = new AddArrows(_pos, { 0,1 }, REWARD_H, REWARD_W, 0, 1, textures[BUBBLE], this, textures[REWARDS], OBJECT_REWARD);
+	if (currReward != nullptr) {
+		gameObjects.push_back(currReward);
+		eventObjects.push_back(currReward);
+		currReward = nullptr;
+	}
 }
 
 //Comprueba las collisiones entre las arrows y los gameObjects(Luego cambiar a preguntar si tiene un handleEvent)
@@ -217,6 +263,9 @@ void Game::checkCollisions() {
 					cout << "Mariposa eliminada quedan : " << currButterflies << endl;
 					SCB->updatePoints(currPoints);
 					break;
+				case OBJECT_REWARD:
+					
+
 				default:
 					break;
 				}
@@ -262,6 +311,7 @@ void Game::nextLevel() {
 		deleteAllbutterflies();
 		deleteAllBallons();
 		deleteAllArrows();
+		//deleteAllEvents();
 		loadLevel();
 	}
 }
@@ -279,6 +329,8 @@ void Game::deleteAllbutterflies() {
 		}
 	}
 }
+
+//Manda a destruir todos los eventos que se hayan quedado en la escena
 
 //Manda a eleminar todas las flechas que pudieron quedarse en la escena
 void Game::deleteAllArrows() {
@@ -335,7 +387,7 @@ Texture* Game::getTextureBow(bool _charged) {
 	if (_charged) {
 		bowCharged = true;
 		currArrows--;
-		SCB->updateArrows();
+		SCB->updateArrows(currArrows);
 	}
 	else bowCharged = false;
 	return _charged ? textures[BOW_1] : textures[BOW_2];

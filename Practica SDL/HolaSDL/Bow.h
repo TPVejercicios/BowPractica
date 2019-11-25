@@ -4,8 +4,6 @@
 #include "EventHandler.h"
 #include "Game.h"
 
-class Game;
-
 using namespace std;
 using Point2D = Vector2D;
 const int BOW_SPEED = 20;					//Velocidad de movimiento del bow

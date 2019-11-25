@@ -15,6 +15,7 @@
 #include "ScoreBoard.h"
 #include "Butterfly.h"
 #include "Bow.h"
+#include "Reward.h"
 
 using namespace std;
 using uint = unsigned int;
@@ -33,12 +34,12 @@ const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
 const uint BOW_SCALE = 4;
-const int BOW_ID = 1;
+const int BOW_ID = 0;
 
 //Constantes para la creación de arrow
 const uint ARROW_H = 20;
 const uint ARROW_W = 100;
-const int ARROW_ID = 2;
+const int ARROW_ID = 1;
 
 //Constantes para la creación de una butterfly
 const uint BUTTERFLY_H = 96;
@@ -46,16 +47,19 @@ const uint BUTTERFLY_W = 93;
 const uint BUTT_MIN_X = 150;
 const uint BUTT_MAX_X = 750;
 const uint BUTT_MAX_Y = 550;
-const int BUTTERFLY_ID = 7;
+const int BUTTERFLY_ID = 3;
 
 //Constantes para rewards 
-const uint REWARD_H = 100;
-const uint REWARD_W = 100;
+const uint REWARD_H = 30;
+const uint REWARD_W = 50;
 const uint REWARD_SPEED = 5;
+const int REWARD_ID = 4;
+const int MAX_REWARDS = 4;
 
 //Constantes para los puntos
 const int POINTS_TO_ADD = 10;
 const int POINTS_TO_SUB = 15;
+
 
 //Constantes para la creación de ballon
 const uint BALLON_H = 100;
@@ -65,7 +69,7 @@ const uint BALLON_MAX_POS_X = 800 - BALLON_W;
 const uint BALLON_MIN_POS_Y = 700;
 const uint BALLON_MAX_SPEED = 18;
 const uint BALLON_MIN_SPEED = 5;
-const int BALLON_ID = 3;
+const int BALLON_ID = 2;
 
 //Estructura que ayuda a organizar la carga de texturas
 struct image	
@@ -99,7 +103,7 @@ struct level {
 };
 //Array constante para determinar los valores de cada nivel
 const level LEVELS[] = {
-	{BG_1,5,10,50,500},	//nivel 1
+	{BG_1,5,10,50,500},		//nivel 1
 	{BG_2,10,12,250,450},	//nivel 2
 	{BG_3,12,15,550,400},	//nivel 3
 	{BG_4,15,18,800,350},	//nivel 4
@@ -121,7 +125,7 @@ private:
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
 	Background* background = nullptr;		//Puntero al background
 	list<GameObject*> gameObjects;			//Vector con TODOS los objetos del juego
-	list<EventHandler*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
+	list<GameObject*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
 	list<Arrow*> arrows;					//Lista de las flechas del juego
 	list<GameObject*> objectsToErase;		//Lista de los objetos a borrar
 	ScoreBoard* SCB = nullptr;				//Puntero a la scoreBoard
@@ -132,6 +136,7 @@ private:
 	void createBallons();
 	void createScoreBoard();
 	void createButterfly();
+
 	//Métodos virtuales
 	void render();
 	void handleEvents();
@@ -159,5 +164,9 @@ public:
 	void gime100Arrows() { currArrows += 100; SCB->arrowsCheat(100); };
 	void arrowStacks(int _stacks);
 	void info();
+	void addArrows(int _arrowsToAdd) { currArrows += _arrowsToAdd; };
+	void createReward(Point2D _pos);
+	int getNumArrows() { return currArrows; };
+	int getNumPoints() { return currPoints; };
 };
 

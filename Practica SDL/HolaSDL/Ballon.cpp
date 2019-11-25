@@ -30,5 +30,9 @@ void Ballon::startDestruction() {
 	collisionable = false;
 	dir.setY(0);
 	currStatus = PUNCTURED;
+	int rnd = rand() % 10;
+	if (rnd < 3) {
+		game->createReward(pos);
+	}
 }
 

@@ -4,8 +4,8 @@
 void Butterfly::update() {
 
 	if (currState == ALIVE) {
-		pos.setY(pos.getY() + dir.getY() * MAX_SPEED);
-		pos.setX(pos.getX() + dir.getX() * MAX_SPEED);
+		pos.setY(pos.getY() + dir.getY() * MAX_SPEED_BUT);
+		pos.setX(pos.getX() + dir.getX() * MAX_SPEED_BUT);
 
 		if (currCol >= 5) {
 			currCol = 0;

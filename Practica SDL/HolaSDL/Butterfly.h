@@ -5,18 +5,19 @@
 const uint MIN_X = 150;
 const uint MAX_X = 750;
 const uint MAX_Y = 550;
-const int MAX_SPEED = 2;
+const int MAX_SPEED_BUT = 2;
 const int DEAD_DIR = 1;
 const int DEAD_SPEED = 10;
 
 typedef enum 
 {
 	ALIVE = 0, DEAD = 1
-}state;
+}state_butterfly;
+
 class Butterfly : public ArrowGameObject
 {
 private:
-	state currState = ALIVE;
+	state_butterfly currState = ALIVE;
 	SDL_RendererFlip flip = SDL_FLIP_NONE;
 	int currRow = 0;
 	int currCol = 0;

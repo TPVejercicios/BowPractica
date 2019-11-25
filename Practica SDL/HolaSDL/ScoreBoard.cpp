@@ -2,10 +2,11 @@
 #include "ScoreBoard.h"
 
 //Constructor de scoreBoard
-ScoreBoard::ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrows) {
+ScoreBoard::ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrows, Game* _game) {
 	scoreTexture = _score;
 	arrowTexture = _arrow;
 	arrowsToRender = _arrows;
+	game = _game;
 	cout << "Creado SCB" << endl;
 	updatePoints(_points);
 	render();
@@ -26,6 +27,7 @@ void ScoreBoard::renderPoint()const {
 
 //Renderiza las flechas //POS_CAMINO_X + CAMINO_SIZE_X * i
 void ScoreBoard::renderArrowHUD() const {
+	int arrowsToRender = game->getNumArrows();
 	for (int i = 0; i < arrowsToRender; ++i) {
 		arrowTexture->render({(START_ARROW_POS + ARROW_GAP * i) + ARROW_GAP,10,ARROW_RECT_W,ARROW_RECT_H }, SDL_FLIP_NONE);
 	}
