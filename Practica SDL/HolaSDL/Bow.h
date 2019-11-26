@@ -19,5 +19,6 @@ public:
 	Bow(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game, int _id);
 	virtual void update();
 	virtual void handleEvent(const SDL_Event event);
+	virtual void saveToFile(string &data);
 	void changeTexture();
 };

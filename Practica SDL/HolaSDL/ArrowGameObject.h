@@ -16,7 +16,7 @@ protected:
 	int angle = 0;					//Ángulo del objeto
 	int scale = 1;					//Escala del objeto
 	Game* game = nullptr;			//Puntero a juego
-	Texture* texture = nullptr;		//Puntero a la tectura del objeto
+	Texture* texture = nullptr;		//Puntero a la textura del objeto
 	int objectID = 0;				//ID único del objeto
 	bool collisionable = true;		//Para determinar si se puede collisionar contra él
 	bool deleting = false;			//Para determinar si está en proceso de eliminación 
@@ -29,9 +29,9 @@ public:
 	virtual void update() {};
 	virtual int& getID() { return objectID; };
 	virtual void startDestruction() {};
+	virtual void loadFromFile();
+	virtual void saveToFile(string &data);
 
-	void loadFromFile() {};
-	void saveToFile() {};
 	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w * scale,h * scale }; };
 	bool isCollisionable() { return collisionable; };
 	bool isDeleting() { return deleting; };

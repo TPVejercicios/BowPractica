@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() {
+Game::Game(int partida) {
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow("Practica2", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
@@ -10,9 +10,26 @@ Game::Game() {
 	else
 	{
 		srand(time(NULL));
-		loadTextures();
-		loadLevel();
-		createBow();
+		if (partida == 1) {
+			loadTextures();
+			loadLevel();
+			createBow();
+		}
+		else {
+			try {
+				cout << "Buscando " << partida << "savegame.txt" << endl;
+				ofstream sal(partida + "savegame.txt");
+				sal.close();
+				ifstream ent(partida + "savegame.txt");
+				if (ent.is_open()) {
+					cout << "Partida encontrada";
+					createBow();
+				}
+			}
+			catch(exception e){
+				cout << "Partida no encontrada";
+			}
+		}
 		//createScoreBoard();
 	}
 }
@@ -63,9 +80,14 @@ void Game::handleEvents() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
-			for (auto eventIT = eventObjects.begin(); eventIT != eventObjects.end(); ++eventIT) {
-				auto* aux = dynamic_cast<EventHandler*>(*eventIT);
-				(aux)->handleEvent(event);
+			if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_s) {
+				saveGame(99);
+			}
+			else {
+				for (auto eventIT = eventObjects.begin(); eventIT != eventObjects.end(); ++eventIT) {
+					auto* aux = dynamic_cast<EventHandler*>(*eventIT);
+					(aux)->handleEvent(event);
+				}
 			}
 		}
 		else exit = true;
@@ -374,13 +396,9 @@ void Game::info() {
 	cout << "Arrows : " << currArrows << endl;
 }
 
-//Multiplica los puntos por cada globo que una flecha haya destruido y añade puntos extra de la siguiente forma: 10 + 12 + 14 + 16 + 18...
+//Multiplica los puntos por cada globo que una flecha haya destruido y añade puntos extra
 void Game::arrowStacks(int _stacks) {
-	int bonus = 0;
-	for (int i = 0; i < _stacks; i++) {
-		bonus += i * BONUS_POINTS;
-	}
-	currPoints += _stacks * POINTS_TO_ADD + bonus;
+	currPoints += pow(_stacks - 1, BONUS_POINTS) + POINTS_TO_ADD * _stacks;
 	cout << "stacks! : " << _stacks << " // puntos = " << currPoints << " // Puntos agregados : " << _stacks * POINTS_TO_ADD << endl;
 	SCB->updatePoints(currPoints);
 }
@@ -416,4 +434,19 @@ void Game::addButterflies(int _butterfliesToAdd) {
 	for (int i = 0; i < _butterfliesToAdd; i++) {
 		createButterfly();
 	}
+}
+
+void Game::saveGame(int partida){
+	string filename = "savegame.txt";
+	ofstream sal (filename);
+	string aux;
+	//Primera línea para guardar todos los datos de game
+	sal << "nivel " << currLevel << " points " << currPoints << " arrows " << currArrows << " butterflies " << currButterflies << " bScale " << ballonScale << " bowCharged " << bowCharged << endl;
+	sal << gameObjects.size() << endl; //Segunda linea para saber el numero de objetos que hay
+	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
+		(*it)->saveToFile(aux);
+		sal << aux << endl;				//Cada objeto en una linea con TODOS sus datos 
+	}
+	sal.close();
+	cout << "save game " << partida;
 }

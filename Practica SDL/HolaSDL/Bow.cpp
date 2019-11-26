@@ -46,3 +46,9 @@ void Bow::changeTexture() {
 	else pos.setX(0);
 }
 
+void Bow::saveToFile(string &data) {
+	ArrowGameObject::saveToFile(data);
+	data += " charged " + charged;
+	//string data = ArrowGameObject::saveToFile() + " charged " + charged;
+}
+

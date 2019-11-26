@@ -27,7 +27,7 @@ void ScoreBoard::renderPoint()const {
 
 //Renderiza las flechas //POS_CAMINO_X + CAMINO_SIZE_X * i
 void ScoreBoard::renderArrowHUD() const {
-	int arrowsToRender = game->getNumArrows();
+	int arrowsToRender = game->getRemainingShots();
 	for (int i = 0; i < arrowsToRender; ++i) {
 		arrowTexture->render({(START_ARROW_POS + ARROW_GAP * i) + ARROW_GAP,10,ARROW_RECT_W,ARROW_RECT_H }, SDL_FLIP_NONE);
 	}

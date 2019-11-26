@@ -5,6 +5,8 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include <time.h>
+#include <math.h>
+#include <fstream>
 #include "Texture.h"
 #include "GameObject.h"
 #include "EventHandler.h"
@@ -109,7 +111,7 @@ const level LEVELS[] = {
 	{BG_2,10,12,250,450},	//nivel 2
 	{BG_3,12,15,550,400},	//nivel 3
 	{BG_4,15,18,800,350},	//nivel 4
-	{BG_5,16,20,100,250},	//nivel 5
+	{BG_5,16,20,1000,250},	//nivel 5
 	{BG_6,20,25,1250,175}	//nivel 6
 };
 
@@ -128,7 +130,7 @@ private:
 	Texture* textures[NUM_TEXTURES];		//Array de texturas
 	Background* background = nullptr;		//Puntero al background
 	list<GameObject*> gameObjects;			//Vector con TODOS los objetos del juego
-	list<GameObject*> eventObjects;		//Vector con los objetos que tienen que comprobar eventos
+	list<GameObject*> eventObjects;			//Vector con los objetos que tienen que comprobar eventos
 	list<Arrow*> arrows;					//Lista de las flechas del juego
 	list<GameObject*> objectsToErase;		//Lista de los objetos a borrar
 	ScoreBoard* SCB = nullptr;				//Puntero a la scoreBoard
@@ -158,7 +160,7 @@ private:
 	void checkCollisions();
 	bool endGame();
 public:
-	Game();
+	Game(int partida);
 	~Game();
 	void run();
 	void createArrow(Vector2D _pos);	
@@ -172,7 +174,7 @@ public:
 	void addButterflies(int _butterfliesToAdd);
 	void setBallonScale(int _newScale) { ballonScale = _newScale; };
 	void createReward(Point2D _pos);
-	int getNumArrows() { return currArrows; };
 	int getNumPoints() { return currPoints; };
+	void saveGame(int partida);
 };
 
