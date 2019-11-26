@@ -32,7 +32,7 @@ public:
 
 	void loadFromFile() {};
 	void saveToFile() {};
-	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w,h }; };
+	SDL_Rect getRect() const { return { pos.getX(),pos.getY(),w * scale,h * scale }; };
 	bool isCollisionable() { return collisionable; };
 	bool isDeleting() { return deleting; };
 };

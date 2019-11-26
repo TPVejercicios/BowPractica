@@ -11,16 +11,34 @@ Reward::Reward(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _sca
 }
 
 Reward::~Reward() {
-
+	bubleTex = nullptr;
+	rewardsTex = nullptr;
 }
 
 void Reward::handleEvent(const SDL_Event event) {
-	if (currState == INSIDE && event.type == SDL_MOUSEBUTTONDOWN) {
-		currState = OUTSIDE;
-	}
-	else if (currState == OUTSIDE && event.type == SDL_MOUSEBUTTONDOWN) {
-		action();
-		currState = PICKED;
+	if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) {
+		SDL_Point p = { event.button.x, event.button.y };
+		SDL_Rect* r = new SDL_Rect();
+		if (currState == INSIDE) {
+			r->x = this->pos.getX();
+			r->y = this->pos.getY();
+			r->h = BUBBLE_Y_SIZE;
+			r->w = BUBBLE_X_SIZE;
+		}
+		else if (currState == OUTSIDE) {
+			r->x = REWARD_GAP_X + this->pos.getX();
+			r->y = REWARD_GAP_Y + this->pos.getY();
+			r->h = this->h;
+			r->w = this->w;
+		}
+		if (SDL_PointInRect(&p, r) == SDL_TRUE) {
+			if (currState == INSIDE) currState = OUTSIDE;
+			else if (currState == OUTSIDE) {
+				action();
+				currState = PICKED;
+			}
+		}
+		r = nullptr;
 	}
 }
 
@@ -43,4 +61,17 @@ void Reward::render() const {
 void AddArrows::action() {
 	game->addArrows(ARROWS_TO_ADD); 
 };
+
+void RemoveArrows::action() {
+	game->addArrows(ARROWS_TO_REMOVE);
+};
+
+void ReviveButterflies::action() {
+	game->addButterflies(BUTTERFLIES_TO_ADD);
+};
+
+void BigBallons::action() {
+	game->setBallonScale(BALLON_BIG_SCALE);
+};
+
 

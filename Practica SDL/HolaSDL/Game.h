@@ -4,6 +4,7 @@
 #include <iostream>
 #include "SDL.h"
 #include "SDL_image.h"
+#include <time.h>
 #include "Texture.h"
 #include "GameObject.h"
 #include "EventHandler.h"
@@ -33,7 +34,7 @@ const uint START_BOW_POS_X = 0;
 const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
-const uint BOW_SCALE = 4;
+const uint BOW_SCALE = 1;
 const int BOW_ID = 0;
 
 //Constantes para la creación de arrow
@@ -52,12 +53,13 @@ const int BUTTERFLY_ID = 3;
 //Constantes para rewards 
 const uint REWARD_H = 30;
 const uint REWARD_W = 50;
-const uint REWARD_SPEED = 5;
+const uint REWARD_SPEED = 2; //Cambiar a 5 he puesto 2 porque se me escapaban
 const int REWARD_ID = 4;
 const int MAX_REWARDS = 4;
 
 //Constantes para los puntos
 const int POINTS_TO_ADD = 10;
+const int BONUS_POINTS = 2;
 const int POINTS_TO_SUB = 15;
 
 
@@ -118,6 +120,7 @@ private:
 	int currArrows = 0;						//El número de flechas restantes
 	int currLevel = 0;						//El acutal nivel
 	int currButterflies = 0;				//El actual número de mariposas restantes en la escena
+	int ballonScale = 1;					//Para implementa un reward que aumenta su tamaño 
 	bool bowCharged = true;
 	SDL_Window* window = nullptr;
 	SDL_Renderer* renderer = nullptr;
@@ -143,6 +146,7 @@ private:
 	void update();
 	//Métodos destructores
 	void deleteAllbutterflies();
+	void deleteAllRewards();
 	void deleteAllBallons();
 	void deleteAllArrows();
 	void deleteObjects();
@@ -165,6 +169,8 @@ public:
 	void arrowStacks(int _stacks);
 	void info();
 	void addArrows(int _arrowsToAdd) { currArrows += _arrowsToAdd; };
+	void addButterflies(int _butterfliesToAdd);
+	void setBallonScale(int _newScale) { ballonScale = _newScale; };
 	void createReward(Point2D _pos);
 	int getNumArrows() { return currArrows; };
 	int getNumPoints() { return currPoints; };

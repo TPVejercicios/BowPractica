@@ -1,7 +1,7 @@
 #pragma once
 #include "ArrowGameObject.h"
 
-int const TOP_LIMIT = -100;
+int const TOP_LIMIT = -200;
 
 int const ROWS = 7;
 enum status

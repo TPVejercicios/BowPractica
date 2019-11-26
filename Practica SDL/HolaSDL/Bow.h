@@ -8,6 +8,7 @@ using namespace std;
 using Point2D = Vector2D;
 const int BOW_SPEED = 20;					//Velocidad de movimiento del bow
 const uint GAP = 31;						//Desfase gráfico que hay entre el arco cargado y el descargado
+const uint PROPOR = 4;
 
 //La clase Bow es hija de ArrowGameObject y también de EventHandler
 class Bow : public ArrowGameObject,public EventHandler{

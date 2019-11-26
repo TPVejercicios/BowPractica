@@ -39,7 +39,7 @@ void Bow::handleEvent(const SDL_Event event) {
 
 void Bow::changeTexture() {
 	texture = game->getTextureBow(charged);
-	w = texture->getW() / scale;
+	w = texture->getW() / PROPOR;
 	if (!charged) {
 		pos.setX(GAP);
 	}
