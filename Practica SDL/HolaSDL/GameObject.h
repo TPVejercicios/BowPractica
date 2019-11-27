@@ -8,7 +8,5 @@ public:
 	//Métodos genericos
 	virtual void render() const = 0;
 	virtual void update() = 0;
-	virtual void saveToFile(string &data) {};
-	virtual void loadFromFile() {};
 };
 

@@ -444,8 +444,14 @@ void Game::saveGame(int partida){
 	sal << "nivel " << currLevel << " points " << currPoints << " arrows " << currArrows << " butterflies " << currButterflies << " bScale " << ballonScale << " bowCharged " << bowCharged << endl;
 	sal << gameObjects.size() << endl; //Segunda linea para saber el numero de objetos que hay
 	for (auto it = gameObjects.begin(); it != gameObjects.end(); ++it) {
-		(*it)->saveToFile(aux);
-		sal << aux << endl;				//Cada objeto en una linea con TODOS sus datos 
+		if (dynamic_cast<ArrowGameObject*>(*it) != nullptr) {
+			dynamic_cast<ArrowGameObject*>(*it)->saveToFile(aux);
+			sal << aux << endl;				//Cada objeto en una linea con TODOS sus datos
+			aux = "";
+		}
+		else {
+			sal << "ONG" << endl; //Objeto No Guardable
+		}
 	}
 	sal.close();
 	cout << "save game " << partida;

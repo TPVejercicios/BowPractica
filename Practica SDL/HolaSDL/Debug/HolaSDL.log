@@ -1,41 +1,4 @@
-﻿  Arrow.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  ArrowGameObject.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  Ballon.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
+﻿  ArrowGameObject.cpp
 C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-  Bow.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Ballon.cpp(22,16): warning C4018:  '>': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-  Butterfly.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Bow.cpp(11,17): warning C4018:  '>': no coinciden signed/unsigned
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  Game.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Game.cpp(12,13): warning C4244:  'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  GameObject.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Game.cpp(401,72): warning C4244:  '+=': conversión de 'double' a 'int'; posible pérdida de datos
-  main.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  Reward.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\GameObject.h(11,33): error C2061:  error de sintaxis: identificador 'string'
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-  ScoreBoard.cpp
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
-  Generando código...
-C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\ScoreBoard.cpp(23,19): warning C4018:  '<': no coinciden signed/unsigned
+  HolaSDL.vcxproj -> C:\Users\Oskar\Desktop\BowPractica\Practica SDL\bin\HolaSDLDebug.exe

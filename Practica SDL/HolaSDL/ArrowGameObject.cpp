@@ -24,7 +24,9 @@ void ArrowGameObject::loadFromFile() {
 
 }
 
-void ArrowGameObject::saveToFile(string &data) {
-	data = "ObjetoArrowGameObject guardado";
-	//data = "posx " + pos.getX() + " posy " + pos.getY() + " dirx " + dir.getX() + " diry " + dir.getY() + " h " + h;	//Aqui todos los datos que ya poseé ArrowGameObject
+void ArrowGameObject::saveToFile(string& data) {
+	//data = "ObjetoArrowGameObject guardado";
+	data = "posx " + pos.getX();
+	data += " posy " + pos.getY();
+	//" dirx " + dir.getX() + " diry " + dir.getY() + " h " + h;	//Aqui todos los datos que ya poseé ArrowGameObject
 }
