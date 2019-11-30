@@ -11,3 +11,10 @@ void Arrow::update() {
 	}
 }
 
+void Arrow::saveToFile(string& data) {
+	ArrowGameObject::saveToFile(data);
+	data += " bpun " + to_string(ballonsPunctured);
+}
+
+
+

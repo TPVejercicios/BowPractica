@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(int partida) {
+Game::Game() {
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow("Practica2", SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
@@ -10,28 +10,85 @@ Game::Game(int partida) {
 	else
 	{
 		srand(time(NULL));
-		if (partida == 1) {
-			loadTextures();
-			loadLevel();
-			createBow();
-		}
-		else {
-			try {
-				cout << "Buscando " << partida << "savegame.txt" << endl;
-				ofstream sal(partida + "savegame.txt");
-				sal.close();
-				ifstream ent(partida + "savegame.txt");
-				if (ent.is_open()) {
-					cout << "Partida encontrada";
-					createBow();
+		loadTextures();
+		loadLevel();
+		createBow();
+	}
+}
+
+Game::Game(int n) {
+	SDL_Init(SDL_INIT_EVERYTHING);
+	window = SDL_CreateWindow("Practica2", SDL_WINDOWPOS_CENTERED,
+		SDL_WINDOWPOS_CENTERED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_SHOWN);
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	if (window == nullptr || renderer == nullptr)
+		cout << "Error cargando SDL" << endl;
+	else
+	{
+		srand(time(NULL));
+		loadTextures();
+		cout << "Cargando " << n << ".txt" << endl;
+		loadGame(n);
+	}
+}
+
+void Game::loadGame(int name) {
+	//ofstream partida(to_string(n) + "txt");
+	ifstream partida ("savegame.txt");
+	if (partida.is_open()) {
+		int N = 0;	//Numero de enemigos
+		string aux;
+		int intaux;
+		int id_object;
+		int posx, posy, dirx, diry, h, w, angle, scale;
+		bool collisionable, deleiting;
+		partida >> aux; //nivel
+		partida >> aux; //dato
+		currLevel = stoi(aux);
+		partida >> aux;	//points
+		partida >> aux;	//dato
+		currPoints = stoi(aux);
+		partida >> aux; //arrows
+		partida >> aux; //dato
+		currArrows = stoi(aux);
+		partida >> aux;	//butterflies
+		partida >> aux;	//dato
+		currButterflies = stoi(aux);
+		partida >> aux; //bScale
+		partida >> aux; //dato
+		ballonScale = stoi(aux);
+		partida >> aux;	//bowCharged
+		partida >> aux;	//dato
+		intaux = stoi(aux);
+		if (intaux == 1) bowCharged = true;
+		else bowCharged = false;
+		partida >> aux;	//dato
+		N = stoi(aux);
+		for (int i = 0; i < N; i++) { //Para crear cada objeto
+			partida >> aux; //id
+			if (aux == "id") {	//Si la linea del objeto no empieza por id es que ese objeto es un Objeto No Cargable
+				partida >> aux; //dato
+				id_object = stoi(aux);
+				partida >> aux;	//posx
+				partida >> aux;	//dato
+				//La idea es coger ahora todos los datos de cada objeto y crearlos dentro del switch
+				switch (intaux) {
+				case OBJECT_BOW:
+					break;
+				case OBJECT_ARROW:
+					break;
+				case OBJECT_BALLON:
+					break;
+				case OBJECT_BUTTERFLY:
+					break;
+				case OBJECT_REWARD: 
+					break;
 				}
 			}
-			catch(exception e){
-				cout << "Partida no encontrada";
-			}
 		}
-		//createScoreBoard();
+		system("pause");
 	}
+	else throw new exception;
 }
 
 //Destructora, llama a todos los destructores de la clase game 
@@ -81,6 +138,7 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_s) {
+				
 				saveGame(99);
 			}
 			else {
@@ -337,7 +395,7 @@ void Game::nextLevel() {
 		deleteAllbutterflies();
 		deleteAllBallons();
 		deleteAllArrows();
-		//deleteAllEvents();
+		deleteAllRewards();
 		loadLevel();
 	}
 }
@@ -450,7 +508,7 @@ void Game::saveGame(int partida){
 			aux = "";
 		}
 		else {
-			sal << "ONG" << endl; //Objeto No Guardable
+			sal << "ONG" << endl; //Objeto No Guardable (Pasa con el Scoreboard)
 		}
 	}
 	sal.close();

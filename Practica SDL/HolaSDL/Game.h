@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <cstring>
 #include <iostream>
 #include "SDL.h"
 #include "SDL_image.h"
@@ -160,6 +161,7 @@ private:
 	void checkCollisions();
 	bool endGame();
 public:
+	Game();
 	Game(int partida);
 	~Game();
 	void run();
@@ -176,5 +178,6 @@ public:
 	void createReward(Point2D _pos);
 	int getNumPoints() { return currPoints; };
 	void saveGame(int partida);
+	void loadGame(int partida);
 };
 

@@ -48,3 +48,8 @@ void Butterfly::startDestruction() {
 	collisionable = false;
 	currState = DEAD;
 }
+
+void Butterfly::saveToFile(string& data) {
+	ArrowGameObject::saveToFile(data);
+	data += " currState " + to_string(currState);
+}

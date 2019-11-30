@@ -58,6 +58,11 @@ void Reward::render() const {
 	}
 }
 
+void Reward::saveToFile(string& data) {
+	ArrowGameObject::saveToFile(data);
+	data += " kind " + to_string(currRow);
+}
+
 void AddArrows::action() {
 	game->addArrows(ARROWS_TO_ADD); 
 };
@@ -73,5 +78,7 @@ void ReviveButterflies::action() {
 void BigBallons::action() {
 	game->setBallonScale(BALLON_BIG_SCALE);
 };
+
+
 
 

@@ -1,5 +1,6 @@
 #include "ArrowGameObject.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 ArrowGameObject::ArrowGameObject(Point2D _pos, Vector2D _dir, int _h, int _w, int _angle, int _scale, Texture* _texture, Game* _game,int _id){
@@ -24,9 +25,9 @@ void ArrowGameObject::loadFromFile() {
 
 }
 
+//Información para guardar que comparte cada ArrowGameObject
 void ArrowGameObject::saveToFile(string& data) {
-	//data = "ObjetoArrowGameObject guardado";
-	data = "posx " + pos.getX();
-	data += " posy " + pos.getY();
-	//" dirx " + dir.getX() + " diry " + dir.getY() + " h " + h;	//Aqui todos los datos que ya poseé ArrowGameObject
+	data = "id " + to_string(objectID) + " posx " + to_string(pos.getX()) + " posy " + to_string(pos.getY()) + " dirx " + to_string(dir.getX()) 
+		+ " diry " + to_string(dir.getY()) + " h " + to_string(h) + " w " + to_string(w) + " angle " + to_string(angle)
+		+ " scale " + to_string(scale) + " collisionable " + to_string(collisionable) + " deleting " + to_string(deleting);
 }

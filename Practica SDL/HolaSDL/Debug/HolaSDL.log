@@ -1,4 +1,7 @@
-﻿  ArrowGameObject.cpp
+﻿  Game.cpp
 C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,26): warning C4552:  "*": el resultado de la expresión no se usa
 C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Vector2D.h(20,32): warning C4552:  "*": el resultado de la expresión no se usa
+C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Game.cpp(12,13): warning C4244:  'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Game.cpp(28,13): warning C4244:  'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Oskar\Desktop\BowPractica\Practica SDL\HolaSDL\Game.cpp(454,72): warning C4244:  '+=': conversión de 'double' a 'int'; posible pérdida de datos
   HolaSDL.vcxproj -> C:\Users\Oskar\Desktop\BowPractica\Practica SDL\bin\HolaSDLDebug.exe

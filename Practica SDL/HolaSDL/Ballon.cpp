@@ -36,3 +36,8 @@ void Ballon::startDestruction() {
 	}
 }
 
+void Ballon::saveToFile(string& data) {
+	ArrowGameObject::saveToFile(data);
+	data += " speed " + to_string(ballonSpeed);
+}
+

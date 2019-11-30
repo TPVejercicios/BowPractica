@@ -17,6 +17,7 @@ public:
 	}
 	~Arrow() {};
 	virtual void update();
+	virtual void saveToFile(string& data);
 	void AddStack() { ballonsPunctured += 1; };
 	SDL_Rect getRectForCollision() const { return{ pos.getX() + GAP_COll,pos.getY(),W_FOR_COLLISION,H_FOR_COLLISION }; }
 };

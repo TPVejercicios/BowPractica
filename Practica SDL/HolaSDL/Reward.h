@@ -35,6 +35,7 @@ public:
 	~Reward();
 	virtual void render() const;
 	virtual void update();
+	virtual void saveToFile(string& data);
 	virtual void handleEvent(const SDL_Event event);
 	virtual void action() = 0;
 };

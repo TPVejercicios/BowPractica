@@ -26,14 +26,17 @@ int main(int argc, char* argv[]) {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Check Memory Leaks
 	try {
 		int op = Menu();	
-		int partida = 1;
+		int partida;
 		if (op == 2) {
 			cout << "Indique el numero de la partida a cargar: ";
 			cin >> partida;
-
-		}			
-		Game game(partida);
-		game.run();
+			Game gameL(partida);
+			gameL.run();
+		}
+		else {
+			Game game;
+			game.run();
+		}
 	}
 	catch (exception e) {
 		cout << "Error " << e.what() << endl;
