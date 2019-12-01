@@ -34,14 +34,18 @@ Game::Game(int n) {
 
 void Game::loadGame(int name) {
 	//ofstream partida(to_string(n) + "txt");
-	ifstream partida ("savegame.txt");
+	ifstream partida (to_string(name) + ".txt");
+	Bow* bow;
+	Arrow* arrow;
+	Ballon* ballon;
+	Butterfly* butterfly;
+	Reward* reward;
 	if (partida.is_open()) {
 		int N = 0;	//Numero de enemigos
 		string aux;
 		int intaux;
 		int id_object;
-		int posx, posy, dirx, diry, h, w, angle, scale;
-		bool collisionable, deleiting;
+		int posx, posy, dirx, diry, other;
 		partida >> aux; //nivel
 		partida >> aux; //dato
 		currLevel = stoi(aux);
@@ -64,29 +68,82 @@ void Game::loadGame(int name) {
 		else bowCharged = false;
 		partida >> aux;	//dato
 		N = stoi(aux);
+		cout << "N es " << N << endl;
 		for (int i = 0; i < N; i++) { //Para crear cada objeto
 			partida >> aux; //id
 			if (aux == "id") {	//Si la linea del objeto no empieza por id es que ese objeto es un Objeto No Cargable
-				partida >> aux; //dato
+				partida >> aux;
 				id_object = stoi(aux);
+				cout << "Objeto" << i << " con id " << id_object << endl;
 				partida >> aux;	//posx
 				partida >> aux;	//dato
+				posx = stoi(aux);
+				partida >> aux;	//posy
+				partida >> aux;	//dato
+				posy = stoi(aux);
+				partida >> aux;	//dirx
+				partida >> aux;	//dato
+				dirx = stoi(aux);
+				partida >> aux;	//diry
+				partida >> aux;	//dato
+				diry = stoi(aux);
+				partida >> aux;	//other
+				partida >> aux;	//dato
+				other = stoi(aux);
 				//La idea es coger ahora todos los datos de cada objeto y crearlos dentro del switch
-				switch (intaux) {
+				switch (id_object) {
 				case OBJECT_BOW:
+					if (other == 0) currArrows--;	//Entra a este if si el arco se guardó sin cargar, con lo cual le quitamos una flecha y lo metemos cargado 
+					bow = new Bow({ START_BOW_POS_X, posy }, { dirx, diry }, BOW_H, BOW_W, 0, BOW_SCALE, textures[BOW_1], this, BOW_ID);
+					gameObjects.push_back(bow);
+					eventObjects.push_back(bow);
+					bow = nullptr;
 					break;
 				case OBJECT_ARROW:
+					arrow = new Arrow({ posx, posy }, { dirx, diry }, ARROW_H, ARROW_W, 0, 1, textures[ARROW_1], this, ARROW_ID);
+					gameObjects.push_back(arrow);
+					arrows.push_back(arrow);
+					arrow = nullptr;
 					break;
 				case OBJECT_BALLON:
+					ballon = new Ballon({ posx, posy }, { dirx, diry }, BALLON_H, BALLON_W, 0, ballonScale, textures[BALLONS], this, other, BALLON_ID);
+					gameObjects.push_back(ballon);
+					ballon = nullptr;
 					break;
 				case OBJECT_BUTTERFLY:
+					butterfly = new Butterfly({ posx, posy }, { dirx, diry }, BUTTERFLY_H, BUTTERFLY_W, 0, 1, textures[BUTTERFLY], this, BUTTERFLY_ID);
+					gameObjects.push_back(butterfly);
+					butterfly = nullptr;
 					break;
 				case OBJECT_REWARD: 
-					break;
+					reward = nullptr;
+					switch (other)
+					{
+					case 0:
+						reward = new AddArrows({ posx, posy }, { dirx, diry }, REWARD_H, REWARD_W, 0, 1, textures[BUBBLE], this, textures[REWARDS], OBJECT_REWARD);
+						break;
+					case 1:
+						reward = new RemoveArrows({ posx, posy }, { dirx, diry }, REWARD_H, REWARD_W, 0, 1, textures[BUBBLE], this, textures[REWARDS], OBJECT_REWARD);
+						break;
+					case 2:
+						reward = new ReviveButterflies({ posx, posy }, { dirx, diry }, REWARD_H, REWARD_W, 0, 1, textures[BUBBLE], this, textures[REWARDS], OBJECT_REWARD);
+						break;
+					case 3:
+						reward = new BigBallons({ posx, posy }, { dirx, diry }, REWARD_H, REWARD_W, 0, 1, textures[BUBBLE], this, textures[REWARDS], OBJECT_REWARD);
+						break;
+					default:
+						break;
+					}
+					gameObjects.push_back(reward);
+					eventObjects.push_back(reward);
+					reward = nullptr;
 				}
 			}
 		}
-		system("pause");
+		background = new Background(WIN_HEIGHT, WIN_WIDTH, textures[LEVELS[currLevel].currTex]);
+		SCB = new ScoreBoard(textures[DIGITS], textures[ARROW_2], currPoints, currArrows, this);
+		gameObjects.push_back(SCB);
+		cout << "Objetos cargados correctamente";
 	}
 	else throw new exception;
 }
@@ -110,7 +167,7 @@ Game::~Game() {
 void Game::run() {
 	uint32_t startTime, frameTime, createBallon, ballonCreated;
 	startTime = ballonCreated = SDL_GetTicks();
-	while (!exit && !endGame()) {
+	while (!exit) {
 		handleEvents();
 		createBallon = SDL_GetTicks() - ballonCreated;
 		frameTime = SDL_GetTicks() - startTime;
@@ -127,7 +184,7 @@ void Game::run() {
 			createBallons();
 			ballonCreated = SDL_GetTicks();
 		}
-		//exit = endGame();
+		endGame();
 	}
 	cout << "Fin del juego" << endl;
 }
@@ -138,8 +195,10 @@ void Game::handleEvents() {
 	while (SDL_PollEvent(&event) && !exit) {
 		if (event.type != SDL_QUIT) {
 			if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_s) {
-				
-				saveGame(99);
+				int partida;
+				cout << "Introduce el nombre con el que quieres guardar el archivo(solo numeros): ";
+				cin >> partida;
+				saveGame(partida);
 			}
 			else {
 				for (auto eventIT = eventObjects.begin(); eventIT != eventObjects.end(); ++eventIT) {
@@ -462,17 +521,15 @@ void Game::arrowStacks(int _stacks) {
 }
 
 //Comprueba el jugador a perdido el juego
-bool Game::endGame() {
-	bool gameOver = false;
+void Game::endGame() {
 	if (currButterflies == 0) {
-		gameOver = true;
+		exit = true;
 		cout << "Has matado todas las mariposas " << endl;
 	}
-	else if (arrows.empty() && currArrows == 0 && !bowCharged) {
-		gameOver = true;
+	else if (arrows.empty() && currArrows == 0 && !bowCharged && eventObjects.size() <= 1) {
+		exit = true;
 		cout << "Te has quedado sin flechas" << endl;
 	}
-	return gameOver;
 }
 
 //Devuelve la textura de cargado o descargado al bow
@@ -495,7 +552,7 @@ void Game::addButterflies(int _butterfliesToAdd) {
 }
 
 void Game::saveGame(int partida){
-	string filename = "savegame.txt";
+	string filename = to_string(partida) + ".txt";
 	ofstream sal (filename);
 	string aux;
 	//Primera línea para guardar todos los datos de game

@@ -27,7 +27,6 @@ void ArrowGameObject::loadFromFile() {
 
 //Información para guardar que comparte cada ArrowGameObject
 void ArrowGameObject::saveToFile(string& data) {
-	data = "id " + to_string(objectID) + " posx " + to_string(pos.getX()) + " posy " + to_string(pos.getY()) + " dirx " + to_string(dir.getX()) 
-		+ " diry " + to_string(dir.getY()) + " h " + to_string(h) + " w " + to_string(w) + " angle " + to_string(angle)
-		+ " scale " + to_string(scale) + " collisionable " + to_string(collisionable) + " deleting " + to_string(deleting);
+	data = "id " + to_string(objectID) + " posx " + to_string(pos.getX()) + " posy " 
+		+ to_string(pos.getY()) + " dirx " + to_string(dir.getX()) + " diry " + to_string(dir.getY());
 }

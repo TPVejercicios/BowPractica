@@ -159,7 +159,7 @@ private:
 	//Métodos checkers
 	void mostrarGameObjects();
 	void checkCollisions();
-	bool endGame();
+	void endGame();
 public:
 	Game();
 	Game(int partida);
