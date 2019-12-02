@@ -38,12 +38,10 @@ const uint BOW_POS_Y = 0;
 const uint BOW_H = 100;
 const uint BOW_W = 100;
 const uint BOW_SCALE = 1;
-const int BOW_ID = 0;
 
 //Constantes para la creación de arrow
 const uint ARROW_H = 20;
 const uint ARROW_W = 100;
-const int ARROW_ID = 1;
 
 //Constantes para la creación de una butterfly
 const uint BUTTERFLY_H = 96;
@@ -51,13 +49,11 @@ const uint BUTTERFLY_W = 93;
 const uint BUTT_MIN_X = 150;
 const uint BUTT_MAX_X = 750;
 const uint BUTT_MAX_Y = 550;
-const int BUTTERFLY_ID = 3;
 
 //Constantes para rewards 
 const uint REWARD_H = 30;
 const uint REWARD_W = 50;
-const uint REWARD_SPEED = 2; //Cambiar a 5 he puesto 2 porque se me escapaban
-const int REWARD_ID = 4;
+const uint REWARD_SPEED = 1; 
 const int MAX_REWARDS = 4;
 
 //Constantes para los puntos
@@ -74,7 +70,6 @@ const uint BALLON_MAX_POS_X = 800 - BALLON_W;
 const uint BALLON_MIN_POS_Y = 700;
 const uint BALLON_MAX_SPEED = 18;
 const uint BALLON_MIN_SPEED = 5;
-const int BALLON_ID = 2;
 
 //Estructura que ayuda a organizar la carga de texturas
 struct image	
@@ -147,17 +142,19 @@ private:
 	void render();
 	void handleEvents();
 	void update();
+
 	//Métodos destructores
 	void deleteAllbutterflies();
 	void deleteAllRewards();
 	void deleteAllBallons();
 	void deleteAllArrows();
 	void deleteObjects();
+
 	//Métodos gestionadores
 	void loadLevel();
 	void nextLevel();
+
 	//Métodos checkers
-	void mostrarGameObjects();
 	void checkCollisions();
 	void endGame();
 public:
@@ -169,12 +166,11 @@ public:
 	int getRemainingShots() { return currArrows; };
 	Texture* getTextureBow(bool charged);
 	void killObject(GameObject* _object) {objectsToErase.push_back(_object);};
-	void gime100Arrows() { currArrows += 100; SCB->arrowsCheat(100); };
+	void gime100Arrows() { currArrows += 100; SCB->arrowsCheat(100); };	//CHEAT
 	void arrowStacks(int _stacks);
-	void info();
-	void addArrows(int _arrowsToAdd) { currArrows += _arrowsToAdd; };
-	void addButterflies(int _butterfliesToAdd);
-	void setBallonScale(int _newScale) { ballonScale = _newScale; };
+	void addArrows(int _arrowsToAdd) { currArrows += _arrowsToAdd; };	//REWARD
+	void addButterflies(int _butterfliesToAdd);							//REWARD
+	void setBallonScale(int _newScale) { ballonScale = _newScale; };	//REWARD
 	void createReward(Point2D _pos);
 	int getNumPoints() { return currPoints; };
 	void saveGame(int partida);

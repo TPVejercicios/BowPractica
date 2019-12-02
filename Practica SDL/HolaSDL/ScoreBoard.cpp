@@ -7,7 +7,6 @@ ScoreBoard::ScoreBoard(Texture* _score, Texture* _arrow, int _points, int _arrow
 	arrowTexture = _arrow;
 	arrowsToRender = _arrows;
 	game = _game;
-	cout << "Creado SCB" << endl;
 	updatePoints(_points);
 	render();
 }

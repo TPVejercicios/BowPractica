@@ -24,5 +24,6 @@ public:
 	virtual void render() const { texture->renderFrame(getRect(),currRow,currColl,SDL_FLIP_NONE); };
 	virtual void saveToFile(string& data);
 	virtual void startDestruction();
+	void setVelocity(int speed) { ballonSpeed = speed; };
 };
 

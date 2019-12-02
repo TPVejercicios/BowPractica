@@ -51,3 +51,8 @@ void Bow::saveToFile(string &data) {
 	data += " charged " + to_string(charged);
 }
 
+void Bow::notCharged() {
+	charged = false;
+	changeTexture();
+}
+

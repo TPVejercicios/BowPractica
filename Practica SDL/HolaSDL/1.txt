@@ -1,0 +1,14 @@
+nivel 0 points 12 arrows 6 butterflies 3 bScale 1 bowCharged 0
+12
+id 3 posx 252 posy 177 dirx -1 diry -1 currState 0
+id 3 posx 300 posy 178 dirx 2 diry 2 currState 0
+id 3 posx 288 posy 8 dirx 2 diry 1 currState 0
+ONG
+id 0 posx 31 posy 0 dirx 0 diry 0 charged 0
+id 2 posx 472 posy -188 dirx 0 diry 1 speed 6
+id 2 posx 430 posy 210 dirx 0 diry 1 speed 5
+id 4 posx 430 posy 443 dirx 0 diry 1 kind 2 state 1
+id 2 posx 628 posy 50 dirx 0 diry 1 speed 10
+id 2 posx 390 posy 412 dirx 0 diry 1 speed 6
+id 2 posx 450 posy 421 dirx 0 diry 1 speed 9
+id 2 posx 454 posy 490 dirx 0 diry 1 speed 14

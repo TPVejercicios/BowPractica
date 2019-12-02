@@ -21,5 +21,5 @@ public:
 	virtual void handleEvent(const SDL_Event event);
 	virtual void saveToFile(string &data);
 	void changeTexture();
-	void notCharged() { charged == false; };
+	void notCharged();
 };

@@ -60,7 +60,23 @@ void Reward::render() const {
 
 void Reward::saveToFile(string& data) {
 	ArrowGameObject::saveToFile(data);
-	data += " kind " + to_string(currRow);
+	data += " kind " + to_string(currRow) + " state " + to_string(currState);
+}
+
+void Reward::setState(int state) {
+	switch (state){
+	case INSIDE:
+		currState = INSIDE;
+		break;
+	case OUTSIDE:
+		currState = OUTSIDE;
+		break;
+	case PICKED:
+		currState = PICKED;
+		break;
+	default:
+		break;
+	}
 }
 
 void AddArrows::action() {

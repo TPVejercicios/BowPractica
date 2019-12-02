@@ -38,6 +38,7 @@ public:
 	virtual void saveToFile(string& data);
 	virtual void handleEvent(const SDL_Event event);
 	virtual void action() = 0;
+	void setState(int state);
 };
 
 class AddArrows : public Reward

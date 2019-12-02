@@ -29,5 +29,6 @@ public:
 	virtual void render() const;
 	virtual void saveToFile(string& data);
 	virtual void startDestruction();
+	void dead() { currState = DEAD; };
 };
 

@@ -2,29 +2,19 @@
 #include "Game.h"
 
 void Butterfly::update() {
-
 	if (currState == ALIVE) {
 		pos.setY(pos.getY() + dir.getY() * MAX_SPEED_BUT);
 		pos.setX(pos.getX() + dir.getX() * MAX_SPEED_BUT);
-
-		if (currCol >= 5) {
-			currCol = 0;
-		}
-		else
-		{
-			currCol++;
-		}
+		if (currCol >= 5) currCol = 0;
+		else currCol++;
 	}
-	else
-	{
+	else {
 		pos.setY(pos.getY() + DEAD_DIR * DEAD_SPEED);
 		if (pos.getY() > MAX_Y && !deleting) {
 			deleting = true;
 			game->killObject(this);
 		}
-
 	}
-
 	//Comprobar colisiones con los límites de la pantalla
 	if (pos.getX() > MAX_X || pos.getX() < MIN_X ) {
 		dir.setX(-dir.getX());
@@ -39,7 +29,6 @@ void Butterfly::update() {
 	}
 }
 
-//Falta la animación
 void Butterfly::render()const {
 	texture->renderFrame(getRect(),currRow,currCol,flip);
 }
